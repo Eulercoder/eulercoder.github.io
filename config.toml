@@ -1,0 +1,26 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Eulercoder"
+theme = "kube"
+description = "Kube is a professional  and a responsive Hugo theme for developers and designers that offers a documentation section mixed with a landing page and a blog"
+Paginate = 10
+enableEmoji = true
+[Params]
+  RSSLink = "/index.xml"
+  author = "Eulercoder" # add your company name
+  github = "vicky002" # add your github profile name
+  twitter = "vikesh002" # add your twitter profile
+  email = "hello@eulercoder.com"
+
+[[menu.main]]
+    name = "Courses"
+    weight = -100
+    url = "/docs/"
+[[menu.main]]
+    name = "Blog"
+    weight = -100
+    url = "/blog/"
+[[menu.main]]
+    name = "Faq"
+    weight = -100
+    url = "/faq/"
