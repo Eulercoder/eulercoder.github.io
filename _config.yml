@@ -42,7 +42,7 @@ permalink: /:year/:month/:title
 
 # gems and other configs
 plugins: [jekyll-paginate, jekyll-feed]
-exclude: [vendor]
+exclude: [vendor, node_modules]
 
 feed:
   path: feed.xml
