@@ -1,0 +1,280 @@
+<p>I read a thread on Reddit about WolframAlpha API and I decided to try my hands on it. I created two slack Bot using WolframAlpha and both work very nicely see some of the best tweets from <a href="https://twitter.com/The_L__">L</a>. There is an issue with WolframAlpha API it allows only 2000 API calls in a month, you need to take their paid plans if you make heavy usages.</p>
+
+<p>Ok, before we start the tutorial, I would like to mention, if you are preparing for the internship or full-time job, make sure you read one of the best guides currently available on the web: <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer Internship - The Ultimate Guide.</a> And, if you want to contribute to Open Source projects like this Slack bot, I highly recommend you to read our<a href="http://eulercoder.me/2017/07/getting-started-open-source/"> Getting started with Open Source Guide</a>.</p>
+
+<p>Ok so let’s get started.</p>
+
+<p>This tutorial is about How to create your own Slack Bot using WolframAlpha API. I created one but you can not use it directly as it uses my App-Id and can make only 2000 API calls. (Obviously, I’m not going to spend my money)</p>
+
+<p>You need basic knowledge of python to create your own Slack Bot.</p>
+
+<h1 id="steps-to-create-slack-bot">Steps to create Slack Bot</h1>
+
+<h2 id="step-1-basic-stuff">Step 1: Basic Stuff</h2>
+
+<ul>
+  <li>
+    <p><a href="https://developer.wolframalpha.com">Dev WolframAlpha</a></p>
+
+    <ul>
+      <li>
+        <p>Go to developer WolframAlpha and create your account.</p>
+      </li>
+      <li>
+        <p>Go to <a href="https://developer.wolframalpha.com/portal/myapps/index.html">My apps</a> section and click on Get an AppID.
+<img src="http://eulercoder.me/wp-content/uploads/2017/07/Webp.net-compress-image.jpg" alt="get App ID - Wolframalpha Eulercoder" /></p>
+      </li>
+      <li>
+        <p>Note your AppID. You will use this AppID to make calls.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.heroku.com">Heroku</a></p>
+
+    <ul>
+      <li>
+        <p>Go to Heroku and create an account there. Heroku allows you to deploy maximum 5 apps on the cloud for free.</p>
+      </li>
+      <li>
+        <p>Once you create your account there. Go to <a href="https://dashboard.heroku.com/">Dashboard</a>.</p>
+      </li>
+      <li>
+        <p>Click on the ‘+’ sign or ‘New’ on the top right, create a new app.
+<img src="http://eulercoder.me/wp-content/uploads/2017/07/heroku-new-app.png" alt="Create new app - heroku" /></p>
+      </li>
+      <li>
+        <p>Write the name and click on Create App.</p>
+      </li>
+      <li>
+        <p>You will be redirected to your app page. Click on Connect to Dropbox. I’ll tell you the reason why we are choosing Dropbox to for our code hosting.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-2-changes-in-code">Step 2: Changes in Code</h2>
+
+<ul>
+  <li>
+    <p>Download my repo in <a href="https://github.com/eulercoder/slack-TheL/archive/master.zip">Zip</a> or <a href="https://github.com/eulercoder/slack-TheL#fork-destination-box">fork</a> it to make changes on git in the future.</p>
+  </li>
+  <li>
+    <p>Files in your directory</p>
+
+    <ul>
+      <li>
+        <p>LICENCE: This is my LICENCE file.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">Procfile</code>: This is a startup file and tells what is the first step when we deploy our app on the cloud.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">app.json</code>: It is a manifest format for describing web apps. It declares environment variables, add-ons, and other information required to run an app on Heroku. This document describes the schema in detail.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">app.py</code>: Main part of your project.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">config.py.example</code>: <code class="highlighter-rouge">config.py</code> files store variables and other stuff which is used in your project (Flask).</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">requirements.txt</code>: This file specifies Python Module dependencies. All the required modules would be downloaded first while deploying your app. Read more about it <a href="https://devcenter.heroku.com/articles/python-pip">here</a>.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Changes to be made</p>
+
+    <ul>
+      <li>
+        <p>Open your project click on file<code class="highlighter-rouge">config.py.example</code> and add your APP_ID in single quotes.</p>
+      </li>
+      <li>
+        <p>Change the name of the file from <code class="highlighter-rouge">config.py.example</code> to <code class="highlighter-rouge">config.py</code>.</p>
+      </li>
+      <li>
+        <p>If I upload my file<code class="highlighter-rouge">config.py</code> on GitHub, anyone can use my APP_ID to make calls. That’s the reason naming it as <code class="highlighter-rouge">config.py.example</code> :p</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-3-upload-your-code-to-dropbox">Step 3: Upload your code to Dropbox</h2>
+
+<ul>
+  <li>
+    <p>open your <a href="http://eulercoder.me/recommends/dropbox/">Dropbox</a> account.</p>
+  </li>
+  <li>
+    <p>If you have connected your account to Dropbox as mentioned in step 1. Open this <a href="https://www.dropbox.com/home/Apps/Heroku">link</a>.</p>
+  </li>
+  <li>
+    <p>You’ll see a folder with the name of your app on <a href="https://dashboard.heroku.com/">Heroku</a> .</p>
+  </li>
+  <li>
+    <p>Open that folder and upload all your files there.</p>
+  </li>
+</ul>
+
+<h2 id="step-4-deploying-your-app-on-heroku">Step 4: Deploying your app on Heroku</h2>
+
+<ul>
+  <li>
+    <p>Open your Heroku <a href="https://dashboard.heroku.com/">Dashboard</a>.</p>
+  </li>
+  <li>
+    <p>Click on your app and then deploy.</p>
+  </li>
+  <li>
+    <p>In deploy tab, in Deploy changes section. Write and<code class="highlighter-rouge">commit</code> click on Deploy.</p>
+  </li>
+  <li>
+    <p>This will download all the app dependencies. If everything is fine, you will see a green tick and your deploy is on the cloud!</p>
+  </li>
+</ul>
+
+<h2 id="step-5-integrate-it-in-your-team">Step 5: Integrate it in your team</h2>
+
+<ul>
+  <li>
+    <p>Open your slack. It should be like.<code class="highlighter-rouge">{your_slack_url}/home</code></p>
+  </li>
+  <li>
+    <p>Click on Integration in the upper left section.</p>
+  </li>
+  <li>
+    <p>Click on Configured Integrations.</p>
+  </li>
+  <li>
+    <p>click on Add next to slash Commands.</p>
+
+    <ul>
+      <li>
+        <p>Command: <code class="highlighter-rouge">thel</code> [If you want to change this check explanation of the code below]</p>
+      </li>
+      <li>
+        <p>URL: <code class="highlighter-rouge">{your_herokuapp_url}/thel</code> [This can be changed see, code below]</p>
+      </li>
+      <li>
+        <p>Customize name: Give it some name. I gave it - <code class="highlighter-rouge">The L</code></p>
+      </li>
+      <li>
+        <p>For the <strong>Autocomplete help text</strong>, check to show the command in auto-complete list.</p>
+      </li>
+      <li>
+        <p>Description: <code class="highlighter-rouge">The Genius L, is now in slack to answer all your queries</code> OR [anything you want to write].</p>
+      </li>
+      <li>
+        <p>Usage Hint: <code class="highlighter-rouge">search query</code></p>
+      </li>
+      <li>
+        <p>Descriptive Level: Search Query</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-6-all-done">Step 6: All Done!</h2>
+
+<ul>
+  <li>
+    <p>Open your slack channel and type <code class="highlighter-rouge">/thel</code> or <code class="highlighter-rouge">[your command]</code> and type Query.</p>
+  </li>
+  <li>
+    <p>Everything is working fine you will see the result.</p>
+  </li>
+  <li>
+    <p>Try basic Queries first for the testing purpose, it will give an instant response.</p>
+  </li>
+  <li>
+    <p>Congratulation you just created a new Slack Bot for your own Team!! Have fun! :beers:</p>
+  </li>
+</ul>
+
+<h1 id="explanation-of-the-code">Explanation of the Code</h1>
+
+<p>I already explained usages of the files in the directory. I created this Slack Bot using <a href="https://pypi.python.org/pypi/wolframalpha">WolframAlpha Module</a> and <a href="http://flask.pocoo.org/">Flask</a> framework. You should know working with Python modules and all the syntax to understand the code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-python"&gt;__author__ = 'vikesh'  # this is the author name 
+
+import os  # This module provides a portable way of using operating system dependent functionality.
+import wolframalpha 
+# I have used Wolframalpha module, written in python to work with Wolframalpha API.
+# Read more about it here: https://pypi.python.org/pypi/wolframalpha
+
+from flask import Flask, request, Response, redirect
+# Modules from Flask
+
+
+
+try:
+    import config       # Import config.py file 
+    wol_id = config.wolframalpha['app_id']   # assign APP_ID from config.py to wol_id
+except:
+    wol_id = os.environ.get('APP_ID')   # load envoironment variable
+
+
+if not wol_id:        # if wol_id is not present display error and exit
+    import sys
+    print 'No config.py found exisiting...'
+    sys.exit(0)
+
+
+app = Flask(__name__)     # initiate flask app
+
+client = wolframalpha.Client(wol_id)      # this is from Wolframa moudule. Initiate Client using Wol_id
+
+
+@app.route('/thel',methods=['post'])
+def thel():
+    '''
+    :Example:
+    /thel current weather in mumbai?
+    '''
+    '''
+    this is about routing of the URL in flask.
+    If you want to change the command from `/thel` to something else. you have to change the app.route('/thel') to 
+    your own command. Also change the function name.
+    '''
+    text = request.values.get('text')    # Get Query
+    try:
+        res = client.query(text)       # Get result from Wolframalpha API.
+    except UnicodeEncodeError:    # if coudln't get the response show error.
+        return Response(('Sorry I did\'t get you. Would you please simplify your query?'
+                        '%s is not valid input.' % text),
+                        content_type='text\plain; charset=utf-8')
+    resp_qs = ['Hi Top Answer for "%s"\n' % text]    # if Query is successful show result.
+    resp_qs.extend(next(res.results).text)     # iterate the result 
+
+    return Response(''.join(resp_qs),
+                    content_type='text/plain; chatset=utf-8')     # return response.
+
+@app.route('/')
+def hello():      # if someone tries to open the link directy redirect him somewhere :p
+    return redirect('https://github.com/vicky002/slack-TheL')
+
+
+if __name__ == '__main__':   
+    port = int(os.environ.get('PORT',5000))    # run your app on local
+    app.run(host='0.0.0.0', port=port)&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Please comment below for the issues related to the post and anything related to My Slack bot Please use the <a href="https://github.com/vicky002/slack-TheL/issues">issue tracker</a> to report any bugs or file feature requests. You can also join <a href="http://eulercoder.me/about/">Eulercoder</a> Organization on Github, just us <a href="mailto:hi@eulercoder.me">an email </a>with following details - Your Name, Your Education level and whether you want to join as a contributor or a mentor.</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to <a href="http://eulercoder.me/contribute/">contribute</a> to our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in becoming a better developer and help them in learning programming. <a href="http://eepurl.com/bRklFn">Subscribe to our newsletter</a> and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+

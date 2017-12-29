@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>//</title>
+   
+   <link>//</link>
+   <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
+   <language>en-us</language>
+   
+   <title>
+   <![CDATA[ Eulercoder ]]>
+   </title>
+   <description>
+   <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
+   </description>
+   <link>//</link>
+   <image>
+   <url>//assets/images/favicon.png</url>
+   <title>Eulercoder</title>
+   <link>//</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>College and low GPA: Everything you need to know.</title>
+	  <link>//2017/08/college-low-gpa-know-everything</link>
+		
+				
+		
+	  <pubDate>2017-08-11T12:25:29+00:00</pubDate>
+	  <guid>//2017/08/college-low-gpa-know-everything</guid>
+	  <description><![CDATA[
+	     <p>Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let’s get started!</p>
+
+<h1 id="college-and-gpa-benefits-and-importance">College and GPA: Benefits and importance</h1>
+
+<ul>
+  <li>
+    <p>As companies get tons of resumes for every single job/internship, GPA is <strong>just a criteria </strong>for them to shortlist candidates. </p>
+  </li>
+  <li>
+    <p>It is impossible for companies to interview every single candidate, so companies use GPA as a yardstick to shortlist profiles.</p>
+  </li>
+  <li>
+    <p>It is generally seen that students from top colleges get higher preference over students from tier two or three.</p>
+  </li>
+  <li>
+    <p>If someone is studying in MIT or Standford then definitely he/she will get higher preference over someone who is studying in Mumbai University in India.</p>
+  </li>
+  <li>
+    <p>Reputed colleges and higher GPA shows that student has worked hard to get into a college and he was very punctual in college.</p>
+  </li>
+</ul>
+
+<!-- more -->
+
+<p>[clickToTweet tweet=”Your GPA is NOT going to feed you. What will do that is you practical skills.” quote=”your GPA is NOT going to feed you. What will do that is you practical skills. “]</p>
+
+<h3 id="few-things-to-remember-if-you-have-low-gpa">Few things to remember if you have low GPA</h3>
+
+<ul>
+  <li>
+    <p>GPA will only help you through campus placement that is during your first job only. Once you get your first job, no one will ask your GPA ever again.</p>
+  </li>
+  <li>
+    <p>What matters at the end is your experience, your practical skills.</p>
+  </li>
+  <li>
+    <p>If you have low GPA but you have many co-curricular achievements and good projects, you can easily get shortlisted for any company. In this case, both have equal chances of getting shortlisted.</p>
+  </li>
+  <li>
+    <p>I had 2.2/5 GPA, I got the internship at Slack and then full-time offer.**  Read:** <a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">My interview experience with Slack, Mozilla, BrowserStack, LinkedIn, and Amazon</a></p>
+  </li>
+  <li>
+    <p>Smart people can always get a good career - higher GPA not. </p>
+  </li>
+</ul>
+
+<p>[clickToTweet tweet=”Remember A 2.0 student can know more than a 4.0 student. Grades don’t determine intelligence, they test obedience. “ quote=”Remember A 2.0 student can know more than a 4.0 student. Grades don’t determine intelligence, they test obedience. “]</p>
+
+<h4 id="complete-python-bootcamp-go-from-zero-to-hero-in-python">Complete Python Bootcamp: Go from zero to hero in Python</h4>
+
+<h5 id="we-have-partnered-with-udemy-for-discount-and-offers-on-different-courses-get-upto-92-off-on-the-ultimate-course-on-python-using-our-links">We have partnered with Udemy for discount and offers on different courses. Get upto 92% off on the Ultimate Course on Python using our Links.</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+	
+		
+		Enroll Now!		
+](https://click.linksynergy.com/deeplink?id=WQz2hZgW0To&amp;mid=39197&amp;u1=eulercoder&amp;murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F)
+</code></pre></div></div>
+
+<h2 id="final-tips-to-get-an-engineering-job-and-internships-with-low-gpa">Final tips to get an Engineering job and internships with low GPA</h2>
+
+<ul>
+  <li>
+    <p><strong>Don’t Mention your GPA: </strong>If you have low GPA, leave it off. Do not mention your GPA in your resume. The hiring manager knows missing GPA means low GPA but leave it off anyway.</p>
+  </li>
+  <li>
+    <p><strong>Demonstrate Practical Knowledge: </strong>Having great projects on your resume, contribution to Open Source Projects, a solid Github profile (See my Github), relative internships, good co-curricular activities, competitive programming, hackathons etc. All these things are extremely important to get shortlisted and by having these things on your resume will definitely make you ahead of the competition. As we all know that Practical knowledge matters the most. Many students are great in schools/universities but can not translate the same in their practical outputs.<br />
+[clickToTweet tweet=”Knowledge and Experience will always trump superficial GPAs. “ quote=”Knowledge and Experience will always trump superficial GPAs. “]</p>
+  </li>
+  <li>
+    <p><strong>Apply to small companies/Startups first: </strong>All the big companies receive tons of resumes and they use specific tools and algorithms to filter out candidates based on keywords. Recruiting team in big MNCs don’t have time to go through every single resume so it’s better to apply to small companies and startups first. They get fewer applications compared to MNCs and you will have higher chances of getting noticed.</p>
+  </li>
+  <li>
+    <p><strong>Focus on Resume format: </strong>Make sure your resume is free from grammar, spelling and formatting errors. <strong>Use bullet points </strong>and <strong>highlight experience and achievements. </strong>We highly recommend you to read our <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer Internship: The Ultimate Guide</a> for best resume tips. You can also use my resume format mention in the guide.</p>
+  </li>
+  <li>
+    <p><strong>Network: </strong>Networking is extremely important in getting a good job. You have lower GPA, you may need referrals, the recruiter needs to know your skills and strength. Attend different on-campus placements sessions, go out of your way to talk to recruiters. When you and talk to engineers/recruiter, you create and control the very first impression - not your resume (your GPA).</p>
+  </li>
+</ul>
+
+<p>Talk to people on LinkedIn groups, connect with people on the internet (Facebook), show them your work, ask for help. Start a conversation, build a rapport with them, ask for a referral before applying to a job in their company.</p>
+
+<h3 id="lastly-dont-give-up">Lastly, Don’t give up.</h3>
+
+<p>Persistence and patience pay off. I was rejected from 12 companies straight before getting shortlisted for 8 companies. You need to keep improving your skills and your resume. Once you have gotten your first engineering job, all future job and promotions will be based on your work experience. The only time your GPA will come up again is if you are applying to your graduate job. (Not happening ever again :p)</p>
+
+<hr />
+
+<p>What do you think about college and low GPA? Does it really matter? Have you secured a job/internship without mentioning your GPA on the resume? Share your experiences below in comments.</p>
+
+<p><strong>Have something to talk about? Want to contribute in our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you to <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a></p>
+
+<p> </p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+<p> </p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Twitter Internship and Undergrad Role 2018: Everything you need to know</title>
+	  <link>//2017/08/twitter-internship-undergrad-role-2018</link>
+		
+				
+		
+	  <pubDate>2017-08-02T19:18:51+00:00</pubDate>
+	  <guid>//2017/08/twitter-internship-undergrad-role-2018</guid>
+	  <description><![CDATA[
+	     <p>We just received an email yesterday about Twitter Internship 2018 Application and their undergrad roles. Twitter internship application for 2018 is now live on their career page and in this post, we will be writing about everything you need to know to spend your summer in San Francisco at Twiter HQ, also Twitter has many offices in the US, Canada, Europe and Australia. Twitter’s building was right in front of my building when I was in San Francisco during <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">my summer internship at Slack</a>.  Ok, so let’s get started about the <strong>Twitter Internship</strong> and Undergrad application process, preparation plan and few other things that will be helpful in cracking the interview.</p>
+
+<p>#</p>
+
+<!-- more -->
+
+<h1 id="twitter-internship">Twitter Internship</h1>
+
+<p>Twitter internship application process started on 1st August, let’s see the application time. The Twitter internship opportunity is available for all three seasons, <strong>Spring **(Jan - April), **Summer</strong> (May- September), and <strong>Fall</strong> (Sep - December).</p>
+
+<p>##</p>
+
+<p>Application Timeline</p>
+
+<p>As per the Twitter Email, this is the timeline of the process.</p>
+
+<ul>
+  <li>
+    <p>Internship Application Opens on - <strong>August 1</strong></p>
+  </li>
+  <li>
+    <p>Application closes on - <strong>February 12</strong></p>
+  </li>
+  <li>
+    <p>Final Application Status will be available on - ** March 30** [ This means by March 30, they will let everyone know about their application status]</p>
+  </li>
+</ul>
+
+<p>NOTE: Students who will apply before November 6, will receive application statuses by December 20.</p>
+
+<h2 id="twitter-internship-and-undergrad-interview-process">Twitter Internship and Undergrad Interview process</h2>
+
+<p>We have tried to provide you everything about the Twitter internship and undergrad interview pattern, type of problems they ask. We all also know that it’s not guaranteed, they will follow the same pattern every year. Let’s see the pattern,</p>
+
+<p>So, Process starts with  <img src="http://eulercoder.me/wp-content/uploads/2017/08/Twitter-internship-min.png" alt="Twitter Internship Pattern" /></p>
+
+<ul>
+  <li>
+    <p><strong>60 Minutes - Tech Screening on <a href="https://www.hackerrank.com"><em>Hackerrank</em></a></strong></p>
+
+    <ul>
+      <li>
+        <p>There will be two coding problems that you have to solve in an hour.</p>
+      </li>
+      <li>
+        <p>Problems will be easy but you need to keep corner cases in mind.</p>
+      </li>
+      <li>
+        <p>This pre-screening is just to see whether a candidate is able to code or not.</p>
+      </li>
+      <li>
+        <p>**Possible problem types - **Strings, LinkedList, Arrays, Trees and basic ad-hoc implementation</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Phone Interview</strong></p>
+
+    <ul>
+      <li>
+        <p>Phone interview will be with the hiring manager</p>
+      </li>
+      <li>
+        <p>The hiring manager will ask you to code on a collaborative site.</p>
+      </li>
+      <li>
+        <p>This may last up to 45 minutes.</p>
+      </li>
+      <li>
+        <p>There will be few questions on your interests so that he can proceed further with team specific interviews.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>2-3 Core Interviews with different teams</strong></p>
+
+    <ul>
+      <li>
+        <p>In the host matching phase, you will be interviewing with different teams based on your performance and interests.</p>
+      </li>
+      <li>
+        <p>Sometimes the interview can be up to 3 rounds or even one if the interviewer is convinced that your interest and skills match with the requirement of the team.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Culture Fit Interview</strong></p>
+
+    <ul>
+      <li>
+        <p>You must be already knowing what possible questions can be asked in cultural fit interviews.</p>
+      </li>
+      <li>
+        <p>Possible questions can be about the company’s mission and values, team conflicts, about the manager, your personal views on things.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Finally The Offer Letter</strong> - And, once you clear all these rounds, you’ll receive the <em><strong>twitter internship</strong></em> offer letter or full-time job offer depending on the role you had applied.</p>
+  </li>
+</ul>
+
+<h2 id="important-topics-to-prepare-">Important topics to prepare** **</h2>
+
+<p>We will be writing articles on each of these topics very soon, but you need to start preparing and solving problems on these topics.</p>
+
+<ul>
+  <li>
+    <p>String Manipulation</p>
+  </li>
+  <li>
+    <p>Hashing and Hash Tables</p>
+  </li>
+  <li>
+    <p>Array and Linked list</p>
+  </li>
+  <li>
+    <p>Sorting algorithms</p>
+  </li>
+  <li>
+    <p>Binary Search Tree</p>
+  </li>
+  <li>
+    <p>Networking</p>
+  </li>
+  <li>
+    <p>Operating Systems</p>
+  </li>
+</ul>
+
+<h2 id="resume-critique">Resume Critique</h2>
+
+<p>We have written <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer internship guide on our blog</a>, which explains how to write and create your resume. Please read this guide once. Also, we’d love to help and critique your resume and if we find good resume, we will pass it directly to the Twitter HR people. You can mail us your resume at  -<a href="mailto:support@eulercoder.me?subject=Attaching%20resume%20for%20critique%20and%20refferal&amp;body=Hello%20Eulercoder%20Team%2C%20please%20have%20a%20look%20at%20my%20resume.%20"> support@eulercoder.me</a></p>
+
+<p><strong>Few Books I highly recommend you to read</strong></p>
+
+<ol>
+  <li>
+    <p>​<a href="https://amzn.to/2ul5KaC">Cracking</a><a href="https://amzn.to/2ul5KaC"> the coding Interview</a></p>
+  </li>
+  <li>
+    <p><a href="https://amzn.to/2vtXfPz">Elements of Programming Exposed</a></p>
+  </li>
+  <li>
+    <p>​<a href="https://amzn.to/2vtJ1ye">Coding</a><a href="https://amzn.to/2vtJ1ye"> Interview Questions</a></p>
+  </li>
+</ol>
+
+<p>##</p>
+
+<p>Lastly, where to apply?</p>
+
+<p>Ok, after all your preparation, you can apply to Twitter Internship or undergrad role using<a href="https://goo.gl/whS8td"> this link.</a> And after, tweet <em>#Twitter4Me</em> and tell Twitter why you want to work with them!</p>
+
+<h2 id="final-words">Final words:</h2>
+
+<p>Start preparing for the internships as the application process for all the companies have just started. Don’t wait too long fo create a great or in the preparation. Apply in different companies and also keep preparing parallely. You have the strength to crack any interview, don’t wait for the perfect time. This is the right time!</p>
+
+<p>That’s it! Ask us anything, comment below your queries, suggestions or feedback about the article. If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship and job. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you to <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a></p>
+
+<p><strong>Other Recommended articles:</strong></p>
+
+<ul>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">Slack, Amazon, Mozilla, Browserstack, LinkedIn: My Internship Interview Experience</a></p>
+  </li>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/basic-skills-needed-internship/">Basic skills needed prior to applying for internships </a></p>
+  </li>
+</ul>
+
+<p>##</p>
+
+<p>##</p>
+
+<p>Subscribe to our mailing list</p>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Basic skills needed prior to applying for internships</title>
+	  <link>//2017/07/basic-skills-needed-internship</link>
+		
+				
+		
+	  <pubDate>2017-07-30T10:14:00+00:00</pubDate>
+	  <guid>//2017/07/basic-skills-needed-internship</guid>
+	  <description><![CDATA[
+	     <p>You will be preparing for the interviews but you need to have some basic knowledge of computer science before beginning the preparation phase. In the last previous article, we discussed what is the ideal time to apply for internships and in this article, we are going to discuss what basic skills needed prior to applying for internships and starting the interview preparation.</p>
+
+<h3 id="basic-skills-needed-prior-to-internship-application-process">Basic skills needed prior to internship application process</h3>
+
+<p>Most of the students ask me, I am looking for an internship in the second year only, please suggest me what I should learn before applying. So, here is the list of things you should be knowing before you begin the application process.</p>
+
+<h4 id="1-programming-language">1. Programming Language</h4>
+
+<p>You should be good in one programming language. The interviewer will ask you to write code on a whiteboard or on a shared screen for a given problem. Generally, the interview looks for</p>
+
+<ul>
+  <li>
+    <p>Whether the code is readable or not</p>
+  </li>
+  <li>
+    <p>How well you choose functions available in that programming languages</p>
+  </li>
+  <li>
+    <p>How you name variables</p>
+  </li>
+  <li>
+    <p>Whether you are commenting your code or not</p>
+  </li>
+  <li>
+    <p>Your coding style</p>
+  </li>
+</ul>
+
+<p>I would suggest Java, C++, Python, and Javascript language. It doesn’t really matter which programming language you choose to write code in the interview. Just, learn and practice programming problems in the language of your choice. Crash courses on different programming languages will be available on Eulercoder very soon, I’ll highly recommend subscribing to our latest course updates.</p>
+
+<h4 id="2-algorithms-and-data-structures">2. Algorithms and Data Structures</h4>
+
+<!-- more -->
+<p>After the programming language, this is the most important part of any interview. Even though you will be preparing and revising algorithms and data structures in the preparation phase, you need some basic knowledge.</p>
+
+<ul>
+  <li>
+    <p>Know what is complexity and Big O notations</p>
+  </li>
+  <li>
+    <p>Clear your basics of Array, LinkedList, Stack, and Queue</p>
+  </li>
+  <li>
+    <p>Understand and implement different sorting algorithms</p>
+  </li>
+  <li>
+    <p>Understand and implement searching, graph, and tree algorithms etc.</p>
+  </li>
+</ul>
+
+<p>The interviewer will give you a problem and ask you to code. Just coming up with an appropriate answer is not sufficient, the interviewer will ask you to optimize your code, think of different corner cases and give a solid approach to the problem. This is where Data structures and algorithms are important. You need to know different possible scenarios where an algorithm can be applied or an appropriate data structure can be used. Most common data structures and algorithms will be available on Eulercoder very soon.</p>
+
+<h4 id="3-cs-related-fundamentals">3. CS Related fundamentals</h4>
+
+<p>Apart from programming knowledge and Algorithms, companies also ask questions on basic CS fundamentals. These are generally theoretical questions but very useful in your internship.</p>
+
+<ul>
+  <li>
+    <p>Know basics of Networking</p>
+  </li>
+  <li>
+    <p>Basics of Linux Commands</p>
+  </li>
+  <li>
+    <p>Database (MySQL or MongoDB) etc</p>
+  </li>
+</ul>
+
+<h4 id="4--good-communication-skills">4.  Good Communication Skills</h4>
+
+<p>This is also very important. You will be working in a team, you will have to communicate with team members and explain work, projects and your solution. Previously I used to struggle while explaining my solutions, this happens with most of us. So, you need to practice, explains things to your friends, work on creating a good flow of your solution, use examples, speak closely and, in the interview keep your interviewer involved, being quite and coding doesn’t work.</p>
+
+<h4 id="5-projects">5. Projects</h4>
+
+<p>You need to have projects in your resume before you start the application process. The resume should contain projects related to CS, if you are not from CS background, you can still work and find projects on Github. Do independent projects or work on open source projects. If you can’t think of any project ideas, I have created <a href="https://github.com/vicky002/1000_Projects">1000 Projects repository, which contains over 500+ projects</a> right now. Don’t create projects just to show and fill your resume, create something useful. School Management system, Library management system, all such projects are already available on the web. Unless, something you have built something unique, it won’t contribute in your resume.</p>
+
+<p>So, this was all about the basic skills you need prior to applying for internships.</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship and job. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you to <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a></p>
+
+<p><strong>Recommended Articles:</strong></p>
+
+<ul>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">Slack, Amazon, LinkedIn, Browserstack and Mozilla - My internship interview experience</a></p>
+  </li>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">Slack, San Francisco and Silicon Valley - My Summer 2016</a></p>
+  </li>
+</ul>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+<p>[clickToTweet tweet=”http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/ “ quote=”Slack Internship, San Francisco, and Silicon Valley - Summer 2016” theme=”style5”]</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience</title>
+	  <link>//2017/07/slack-amazon-mozilla-linkedin-interview</link>
+		
+				
+		
+	  <pubDate>2017-07-25T15:14:37+00:00</pubDate>
+	  <guid>//2017/07/slack-amazon-mozilla-linkedin-interview</guid>
+	  <description><![CDATA[
+	     <p>In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same <a href="https://www.greenhouse.io">Greenhouse</a> rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.</p>
+
+<p><strong>Read</strong>: <a href="http://eulercoder.me/2017/07/what-is-the-ideal-time-to-apply-for-internships-and-jobs/">What is the ideal time to apply for internship?</a></p>
+
+<p>[This post was written before summer 2016]</p>
+
+<p>I had already started my internship at <a href="https://www.codechef.com">CodeChef</a> (Jan’16 - April’16), my daily schedule is 8 - 4 PM college and then 4:30 - 9,10 at CodeChef. I reach home by 11-11:30, so I used to sleep late and bunk lectures in college to prepare for the interviews. I have written about the<a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/"> interview preparation plan, books and resume tips here </a>read it after completing this post, Let’s discuss about the interview process today.</p>
+
+<!-- more -->
+<h3 id="mozilla">Mozilla</h3>
+
+<p>I applied to <a href="https://www.mozilla.org/en-US">Mozilla</a> through <a href="https://careers.mozilla.org/">career website</a> for multiple internship position in many places. I got shortlisted for Developer Tools (Device Simulation) and Engineering Build Productivity intern positions in Paris and Mountain View respectively. For both positions first round was on <a href="https://www.hackerrank.com">Hackerrank</a>.</p>
+
+<!-- more -->
+
+<ul>
+  <li>
+    <p>There were 4 - 5 multiple choice questions and two coding problems.</p>
+  </li>
+  <li>
+    <p>For each MCQs, you need to give an explanation as well.</p>
+  </li>
+  <li>
+    <p>Questions were very easy.</p>
+  </li>
+  <li>
+    <p>Allowed languages depends on the position you’re applying to. For me, allowed language was JavaScript only.</p>
+  </li>
+</ul>
+
+<p>Questions can be found <a href="https://goo.gl/hX8QU6">here</a> .</p>
+
+<p>I got rejected for a Developer Tools (Device Simulation) Intern position in Paris after the first round and moved to the second round for Engineering Build Intern (Mountain View).</p>
+
+<ul>
+  <li>
+    <p>Second round was on Skype.</p>
+  </li>
+  <li>
+    <p>Interview was a bit more technical but easy. I had to write <a href="http://www.geeksforgeeks.org/write-a-recursive-function-to-print-reverse-of-a-linked-list">C program to reverse a singly linked list</a>.</p>
+  </li>
+  <li>
+    <p>And interviewer asked me about my projects and internship.</p>
+  </li>
+</ul>
+
+<p>I had performed well but I don’t know why they replied with this ‘we appreciate your commitment to Mozilla, we will unfortunately not be moving forward at this time.’ I said OK :p.</p>
+
+<h3 id="browserstack">Browserstack</h3>
+
+<p>I applied through career website and got a response after almost 20 days. First round was on <a href="https://www.hackerearth.com">Hackerearth</a> . There were total three problems to solve in three hours.</p>
+
+<p><strong>Problems</strong></p>
+
+<ul>
+  <li>
+    <p>XPath Query Parse</p>
+  </li>
+  <li>
+    <p>Docs Generator</p>
+  </li>
+  <li>
+    <p>Server Log Analysis</p>
+  </li>
+</ul>
+
+<p>Among all my first rounds this was the most challenging. Detailed questions can be found <a href="https://goo.gl/2OTWXM">here</a>. I could solve just one problem in three hours and they rejected me.</p>
+
+<h3 id="amazon">Amazon</h3>
+
+<p>I got shortlisted for Amazon internship two times. Last year they asked me if I’m available for six months internship which wasn’t possible so I said No. This time I got shortlisted again for 3 months internship. Applied through career care website and received a response from them after 15 - 20 days.</p>
+
+<p>The first round was on Hackerrank. There were total 2-3 problems to solve in an hour.</p>
+
+<p><strong>Problems</strong></p>
+
+<ul>
+  <li>
+    <p><a href="http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/">Parenthesis Matching problem </a></p>
+  </li>
+  <li>
+    <p><a href="http://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/">Longest Path in Binary Tree</a></p>
+  </li>
+  <li>
+    <p>I don’t remember the third problem.</p>
+  </li>
+</ul>
+
+<p>Problems were easy, I solved all the three problems and moved to next round.</p>
+
+<h3 id="slack">Slack</h3>
+
+<p>I had moved to the second round of Amazon internship and suddenly one day BAM! <strong>Subject</strong> : ‘Phone Interview with <a href="https://www.slack.com">Slack</a>!. I wasn’t expecting this as no internship positions were mentioned on the website. I had mailed them my resume only because I really love the product and wanted to work on it. Read this : <a href="http://eulercoder.me/2016/02/21/Slack-the-evolution-of-messaging/">Slack the evolution of messaging</a>.</p>
+
+<p>Now I was just focusing on this internship, I didn’t want to lose this one.</p>
+
+<h4 id="interview-process">Interview Process</h4>
+
+<p>There were total fours rounds. I can’t write about the question but here is the summary of it.</p>
+
+<p><strong>First round</strong></p>
+
+<p>First round was with the recruiter it was kind of behavioral interview.</p>
+
+<p><strong>Second Round</strong></p>
+
+<p>In the second round I was given a coding assignment with two tasks to complete in a week. Both the tasks were of medium level one Coding task and one design problem. This depends on the position you’re applying for.</p>
+
+<p>I completed both tasks in 3-4 days and they took 4-5 days to review my solutions. I got a mail after a week saying I’m moving to the next round. Now this was very exciting I started working hard for the next interviews. Next interview was with my mentor and senior engineering manager. I solved almost 50+ problems in 3-4 days on different coding platforms like <a href="https://leetcode.com">LeetCode</a> and <a href="http://www.topcoder.co">TopCoder</a>. I was expecting it to be very technical.</p>
+
+<p><strong>Third Round</strong></p>
+
+<p>Third round was with the Manager and it wasn’t very technical.</p>
+
+<p><strong>Fourth Round</strong></p>
+
+<p>After, a week I got an email saying I’m moving to the next round. Now this was so exciting and I was trying my hardest. Fourth round was very surprising. We talked about the company and my previous interviews. Finally, I was offered the internship on call.</p>
+
+<p><strong>Bonus Read:</strong> <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">Summer Internship Experience, San Francisco and Silicon Valley</a></p>
+
+<p>Frankly telling I had never imagined that I’d intern in the US. I accepted the offer and will be joining the company in June. Recruiting team is very friendly and helpful. I’m very excited to join the Automation and Testing Team this summer at Slack. [This post was written in 2016]</p>
+
+<h3 id="linkedin">LinkedIn</h3>
+
+<p>While I was interviewing with Slack (Third round), I got shortlisted for the LinkedIn Internship too. They send me a link of a coding challenge on Hackerrank. I wanted to solve the coding challenges. There were total 3 problems to solve in 3 hours.</p>
+
+<p><strong>Problems</strong></p>
+
+<p>I can not share the full problem statements but problems were purely algorithmic.</p>
+
+<ul>
+  <li>
+    <p><strong>Angry Children</strong>: Distribute X candy packets to K children. A greedy problem.</p>
+  </li>
+  <li>
+    <p><strong>ZigZagArray</strong>: Print Array in Zig Zag manner based on some conditions.</p>
+  </li>
+  <li>
+    <p><strong>Acme Substring</strong>: String Based problem.</p>
+  </li>
+</ul>
+
+<p>After the first round I mailed them about my Internship at Slack.</p>
+
+<hr />
+
+<p><a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Getting a great summer internship</a> should absolutely be your first priority, nothing else will beat the things you’ll learn and experience. The amount of impact you’ll end up having cannot be matched easily, especially as a student. As a third year student it was my first priority too. I applied to 20+ companies from Best of the best to average companies. One thing that I learnt in these three years is that networking is really important. You should talk to employees, recruiters and alumni. Tell them what you’re doing currently, tell them about your projects, past experiences and publicize it on sites like <a href="https://www.producthunt.com">ProductHunt</a>, <a href="https://www.reddit.com/">Reddit</a> and <a href="https://news.ycombinator.com">Hackernews</a>.</p>
+
+<p>There are so many opportunities available so the first step to getting an internship, is apply. A lot of people I know are just too afraid to apply, even to companies they really want to work at because they are waiting to get the perfect resume. Even I used to feel the same thanks to <a href="http://krishmunot.com">Krish Munot</a> he’s an awesome guy! Last year in december we were discussing about the internships.</p>
+
+<p>Here is our short discussion on FB:</p>
+
+<p><em><strong>Me</strong></em>: <em>I’m thinking of applying for the internship .. next sem for the full time</em></p>
+
+<p><em><strong>Krish</strong></em>: <em>Don’t think. Just apply. Most people make this mistake of not applying. Did you apply for the summer?</em></p>
+
+<p><em><strong>Me</strong></em>: <em>No..not sure whether they would shortlist me.</em></p>
+
+<p><strong>Krish</strong>: <em>That is there decision bro. Maybe they might think you might be the right fit. Damn! Dont do this ever again man..trust me! You are losing out on a lot of opportunities like that.</em></p>
+
+<p>And this was true! Thanks to my family and friends for all the support.</p>
+
+<hr />
+
+<p>Also, <strong>Read this</strong> <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">guide on summer internship recommended by over 1000+ students</a>.</p>
+
+<p>Friends, if you liked this article and found it useful, please share it with your friends. Let’s help everyone in getting a bettern internship and job. Also if anything is not clear and you want more in-depth information about something, please join our community  - <a href="https://www.facebook.com/groups/eulercoder/">Computer Science students group </a>on Fb. There will be open discussion everyday at 9 PM and there are many other people to help and guide.</p>
+
+<p>Also, subscribe to our mailing list for weekly mails with top articles, directly in your mailbox. Write your comments below if anything you want me</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Summer Internship: The Ultimate Guide to get one!</title>
+	  <link>//2017/07/summer-internship-ultimate-guide</link>
+		
+				
+		
+	  <pubDate>2017-07-23T11:23:30+00:00</pubDate>
+	  <guid>//2017/07/summer-internship-ultimate-guide</guid>
+	  <description><![CDATA[
+	     <p>As a student, each one of us has a dream. Dream of doing a great internship and landing a job in a company that you really love and want to work for! There are jazillion websites, articles, blog posts and videos available on how to land an internship. Chances are, you’ve already read or known 98 percent of this advice: edit and proofread your resume and cover letters, dress appropriately for an interview, be on time or 15 minutes early to an interview, send thank you notes etc. You won’t get any such advice in this blog post. This post will take you from zero to one. Get a notebook and pen, this is going to be a long post. Grab some snacks and start making a note of points that you think would be helpful for you in the future.</p>
+
+<p>I’m assuming you are currently in the second year and you’ll be applying for your dream internship in the third year. You already know C/C++ or any object oriented programming knowledge and basics data structures like Linked List, Stack, Queues etc.</p>
+
+<p>Let’s divide the blog into three sections.</p>
+
+<!-- more -->
+<h3 id="things-you-need-to-do-before-applying-for-an-internship">Things you need to do before applying for an internship.</h3>
+
+<p>Most of the US based companies start their summer internship interview process very early, in December. After your fourth semester that is the completion of the second year, you’ll have 1.5-2 months of vacation (depends on your college) and that’s the perfect time to improve your basics of computer science and coding skills.</p>
+
+<p>I interviewed with 5-6 companies and from my experience here is the list of topics you should know (if you haven’t decided your field).</p>
+<table>
+
+<tr>
+Data Structure
+Algorithms
+Networking
+Operating System
+Database
+</tr>
+
+<tbody>
+<tr>
+
+<td>Linked List
+</td>
+
+<td>Complexity Analysis
+</td>
+
+<td>Network Layer
+</td>
+
+<td>Process and Threads
+</td>
+
+<td>SQL Query
+</td>
+</tr>
+<tr>
+
+<td>Doubly Linked List
+</td>
+
+<td>Searching (Linear and Binary)
+</td>
+
+<td>HTTP Protocol
+</td>
+
+<td>Memory Organization
+</td>
+
+<td>Indexing
+</td>
+</tr>
+<tr>
+
+<td>Queue
+</td>
+
+<td>Sorting Algorithms
+</td>
+
+<td>TCP &amp; UDP Protocol
+</td>
+
+<td>Booting Process
+</td>
+
+<td>Normalization
+</td>
+</tr>
+<tr>
+
+<td>Stack
+</td>
+
+<td>Basics of Graphs
+</td>
+
+<td>Subnetting
+</td>
+
+<td>Paging
+</td>
+
+<td>ACID Property
+</td>
+</tr>
+<tr>
+
+<td>Hash Table
+</td>
+
+<td>BFS and DFS
+</td>
+
+<td>Masking
+</td>
+
+<td>Deadlock
+</td>
+
+<td>SQL Injection and Prevention
+</td>
+</tr>
+<tr>
+
+<td>Binary Tree
+</td>
+
+<td>KMP Algorithm
+</td>
+
+<td>SMTP and POP3
+</td>
+
+<td>Starvation
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Binary Search Tree
+</td>
+
+<td>Robin-Karp Algorithm
+</td>
+
+<td>Working of PING
+</td>
+
+<td>Critical Section
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Priority Queue
+</td>
+
+<td>Dijkstra's Algorithm
+</td>
+
+<td>TCP Handshake
+</td>
+
+<td>IPC
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Trie
+</td>
+
+<td>Prim's Algorithm
+</td>
+
+<td>
+</td>
+
+<td>Inode
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Suffix Tree
+</td>
+
+<td>Divide &amp; Conqure and DP
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="but-vicky-i-would-be-applying-for-position-specific-internship-where-is-my-list">But Vicky, I would be applying for position specific internship. Where is my list?</h4>
+
+<p>Here you go!</p>
+<table>
+
+<tr>
+Frontend Devs
+Backend Stuff
+Android Devs
+iOS Devs (I don't know much)
+</tr>
+
+<tbody>
+<tr>
+
+<td>HTML5
+</td>
+
+<td>HTML
+</td>
+
+<td>Java
+</td>
+
+<td>Objective C
+</td>
+</tr>
+<tr>
+
+<td>CSS3
+</td>
+
+<td>CSS
+</td>
+
+<td>Android Versions and changes
+</td>
+
+<td>Swift
+</td>
+</tr>
+<tr>
+
+<td>JavaScript
+</td>
+
+<td>Server configs
+</td>
+
+<td>Working with Android Studio
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>JQuery
+</td>
+
+<td>Working with APIs
+</td>
+
+<td>Android UI and UX
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Saas
+</td>
+
+<td>Chrome Dev Tools
+</td>
+
+<td>Best Practices
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>React
+</td>
+
+<td>Python, PHP or Ruby
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Angular
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+</tr>
+<tr>
+
+<td>Chrome Dev Tools
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<p>I’m not listing here very basic stuff like Working with Ubuntu, Curl and telnet command etc.</p>
+
+<p><strong>Note:</strong> You don’t need to do know everything mentioned in the table above. Algorithm and Data structure is very important to crack any interview so you should spend most of the time learning and practice problems.</p>
+
+<h4 id="vicky-thats-a-huge-list-are-there-any-good-resources-available">Vicky, That’s a huge list! Are there any good resources available?</h4>
+
+<p>Yes! All the useful websites, PDFs and article links are mentioned at the end of the post.</p>
+
+<hr />
+
+<p>Getting shortlisted for the interviews is the toughest part and for that, your resume should be very strong and of very high quality. So what are the different factors that the recruiter would love to see on your resume?</p>
+
+<ul>
+  <li>
+    <p><strong>College</strong></p>
+  </li>
+  <li>
+    <p><strong>Projects</strong></p>
+  </li>
+</ul>
+
+<p>Yes, before applying for an internship make sure that you have some good quality projects to mention in your resume. Upload your code on <a href="https://github.com/vicky002">Github</a>, make it open source and add links to code in your resume. If you’re searching for project ideas, I have a list of <a href="https://github.com/vicky002/1000_Projects">more than 500 projects</a>.</p>
+
+<ul>
+  <li><strong>Open Source Contributions</strong></li>
+</ul>
+
+<p>Search for good projects to <a href="https://github.com/explore">contribute on Github</a> improve documentation and fix bugs and do some enhancements. Companies really love it! If you don’t have a good GPA then projects and open source contributions really add value to your resume.</p>
+
+<ul>
+  <li><strong>Past internships</strong> (If any)</li>
+</ul>
+
+<p>Before applying to top companies in US or India, you should do at least one internship in any startup. Startup internships are really a great place to learn a lot of things in a very short time. Don’t think of stipend, if you really love their idea just email and ask them about internship positions. There are many websites available for startup internships list of websites can be found at the bottom of the post.</p>
+
+<ul>
+  <li><strong>Leadership Qualities</strong></li>
+</ul>
+
+<p>Volunteer in a nonprofit organization and be a part of college committees.</p>
+
+<ul>
+  <li>
+    <p><strong>Programming Skills</strong></p>
+  </li>
+  <li>
+    <p><strong>GPA</strong> (rare)</p>
+  </li>
+</ul>
+
+<h3 id="things-you-need-to-do-while-applying">Things you need to do while applying</h3>
+
+<p>Ok, now you have some good quality projects, you know basics of CS fundamentals and you have a good knowledge of data structure and algorithms. This is time to write a good resume!</p>
+
+<p>Your resume should have following sections.</p>
+
+<ol>
+  <li><strong>Education</strong></li>
+</ol>
+
+<p>Degree and stream, College Name, Current year and graduation year. Don’t include your GPA if it’s less than 7/10.</p>
+
+<ol>
+  <li><strong>Skills</strong></li>
+</ol>
+
+<p>Be honest here and mention languages and framework only if you really know. Once you get shortlisted for the interviews, the recruiter may ask any questions on that and you’ll be messed up badly.</p>
+
+<ol>
+  <li><strong>Technical Experience</strong> (If you have any)</li>
+</ol>
+
+<p>Write sentences in past tense. Use words like ‘created’, ‘implemented’, ‘designed’, ‘fixed’. Implemented X using Y or Implemented X using Y to fix Z. Where X = any new feature, Y = language or framework, and Z = issue.</p>
+
+<ol>
+  <li><strong>Projects</strong></li>
+</ol>
+
+<p>Same points apply to project as well. Don’t forget to add links of code or websites if you have any.</p>
+
+<ol>
+  <li><strong>Leadership Experience</strong></li>
+</ol>
+
+<p>Add your volunteering or committee work in this section.</p>
+
+<ol>
+  <li><strong>Extra-Curricular</strong></li>
+</ol>
+
+<p>All your competitive programming rankings, awards, and Hackathon related stuff goes here.</p>
+
+<ol>
+  <li><strong>Work Authorization</strong></li>
+</ol>
+
+<p>You’ll be applying to US based companies so don’t forget to add this line.</p>
+
+<p>I haven’t updated my resume since last two month but have a look at it once. Ignore objective section it’s just a waste of space.</p>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/602d6292eb0a5e6ab7d6ef0c65c194097bbc52fc/img/Resume.png" alt="" /></p>
+
+<p>Once you created your resume, proofread it 2-3 times. Ask your friends and employees to go through your resume and finally post your resume <a href="https://www.reddit.com/r/resumes/">here</a>. This subreddit is awesome and people are very helpful. It’ll be brutal but they’ll critique your resume brilliantly.</p>
+
+<hr />
+
+<p>Now you have a very good resume and you know all basics of CS. The time has come to apply for best of the best internships!</p>
+
+<h3 id="this-is-the-right-time">This is the right time!</h3>
+
+<p>Yes! This is December 2016 and Internship process for Summer 2017 has just started. I have already created a sheet for you! Open <a href="https://docs.google.com/spreadsheets/d/1-0M50QEHjB64WhdcMFDlAbp4atND8QrlWJwKkfpNJ2k/edit?usp=sharing">this sheet</a> and make a copy for yourself. Edit companies as per your preferences.</p>
+
+<p>Apply everywhere! Don’t think that you don’t have a perfect resume, just visit their career website or <a href="https://www.linkedin.com/vsearch/j?keywords=Internship&amp;title=Internship&amp;sb=Jobs%20for%20Internship%20titles&amp;trk=tyah&amp;trkInfo=clickedVertical%3Asuggestion%2CclickedEntityId%3A166%2Cidx%3A1-1-1%2CtarId%3A1457835727447%2Ctas%3Ainternship%20">LinkedIn internship posts</a> and fill the form. I applied to <a href="http://eulercoder.me/2016/02/27/My-internship-interview-experience-with-Amazon-LinkedIn-BrowserStack-Mozilla-and-Slack/">more than 20 companies this year</a>.</p>
+
+<p>Once you get shortlisted for the interviews search the everywhere about past internship interview process, questions on Glassdoor, Geeksforgeeks and reddit. When I got shortlisted for the internship at Slack, I searched everywhere about interview process and questions asked. I couldn’t find any except a post on reddit. If you don’t find anything and just goto <a href="https://www.reddit.com/r/cscareerquestions/">this sub</a> and post questions or search for past interns on LinkedIn add them in your profile and message them directly. Three out of ten people will give you perfect reply and this is enough for you!</p>
+
+<p>Some tips from my side:</p>
+
+<ul>
+  <li>
+    <p>Read emails properly and search for keywords.</p>
+  </li>
+  <li>
+    <p>Be prepared for technical questions which don’t require programming knowledge.</p>
+  </li>
+  <li>
+    <p>Be polite while responding to emails. (Search how to send emails to recruiters :p)</p>
+  </li>
+  <li>
+    <p>Before interviews read the email properly and make a list of all the questions that can be asked.</p>
+  </li>
+  <li>
+    <p>Make a list of all the behavioral questions and their answers.</p>
+  </li>
+</ul>
+
+<p>I have collected some interview experiences of top companies from different resources. I hope you find <a href="https://www.evernote.com/pub/tvicky002/interview">this</a> useful.</p>
+
+<h3 id="resources">Resources</h3>
+
+<h4 id="for-startup-internships">For startup internships</h4>
+
+<ul>
+  <li>
+    <p><a href="http://angel.co/">AngelList</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.hellointern.com/">Hello Intern</a></p>
+  </li>
+  <li>
+    <p><a href="http://heysuccess.com/">HeySuccess</a></p>
+  </li>
+  <li>
+    <p><a href="http://hired.com/">Hired</a></p>
+  </li>
+  <li>
+    <p><a href="http://internshala.com/">Internshala</a></p>
+  </li>
+</ul>
+
+<h4 id="algorithms-and-data-structure">Algorithms and Data Structure</h4>
+
+<ul>
+  <li>
+    <p><a href="https://www.geeksforgeeks.org">Geeksforgeeks </a> (Website).</p>
+  </li>
+  <li>
+    <p><a href="http://sist.sysu.edu.cn/~isslxm/DSA/textbook/Skiena.-.TheAlgorithmDesignManual.pdf">The Algorithm Design Manual</a> (Book - PDF)</p>
+  </li>
+  <li>
+    <p><a href="https://leetcode.com">LeetCode</a> (For Practice)</p>
+  </li>
+  <li>
+    <p><a href="https://topcoder.com">TopCoder</a> (For Practice)</p>
+  </li>
+  <li>
+    <p>Elements of Programming Interviews (Book) <a href="http://amzn.to/2trD6pl">Amazon</a></p>
+  </li>
+  <li>
+    <p>Coding Interview Questions by Narasimha Karumanchi <a href="http://amzn.to/2tMlYcX">Amazon</a></p>
+  </li>
+</ul>
+
+<h4 id="networking">Networking</h4>
+
+<ul>
+  <li>
+    <p><a href="https://drive.google.com/file/d/0BwKu-h8_pNchRWhMSWczU29jVTA/view?usp=sharing">HTTP - The Definite Guide</a> (Book - PDF)</p>
+  </li>
+  <li>
+    <p><a href="http://www3.nd.edu/~cpoellab/teaching/cse40814_fall14/networks.pdf">Basics of Networking</a> (Website)</p>
+  </li>
+  <li>
+    <p><a href="https://docs.google.com/file/d/0B3ABfanK6Vkya2dsVHdMQ0l5bkk/edit">Computer Networks</a> (Book-PDF)</p>
+  </li>
+</ul>
+
+<h4 id="operating-system">Operating System</h4>
+
+<ul>
+  <li><a href="http://infoman.teikav.edu.gr/~stpapad/OS_8th_Edition.pdf">Operating system concepts</a> (Book - PDF)</li>
+</ul>
+
+<h4 id="web-stuff">Web Stuff</h4>
+
+<p><a href="http://freecodecamp.com">FreeCodeCamp</a> <a href="https://learn.javascript.ru/">Best JavaScript tutorial</a> (It’s a Russian website use Chrome to translate) <a href="http://www.w3schools.com/">W3Schools</a></p>
+
+<h4 id="interview-preparation">Interview preparation</h4>
+
+<p><a href="http://www.geeksforgeeks.org/about/interview-corner/">GeeksforGeeks - Interview</a> <a href="http://www.indiabix.com/">IndiaBix</a> <a href="http://www.careercup.com">CareerCup</a> <a href="http://katemats.com/hiring-interviews/">KateMats</a></p>
+
+<h4 id="other">Other</h4>
+
+<ul>
+  <li><a href="https://github.com/sindresorhus/awesome">Awesome</a> (This contains everything you need!)</li>
+</ul>
+
+<p>Other highly recommended books. - <a href="http://amzn.to/2trYdri">Cracking the Coding Interview</a> - <a href="http://amzn.to/2sPdmFd">Programming Interview Exposed</a></p>
+
+<p>Last thing:</p>
+
+<p>Keep talking and asking to people who have more knowledge than you, networking is really important.</p>
+
+<p>Also, if anything is not clear and you want more in-depth information about something, please join our community  - <a href="https://www.facebook.com/groups/eulercoder/">Computer Science students group </a>on Fb. There will be open discussion everyday at 9 PM and there are many other people to help and guide.</p>
+
+<h2 id="-we-are-launching-summer-internship-course-">» We are launching Summer Internship course «</h2>
+
+<p>Summer Internship Course, contains series of articles on Preparation strategy, How to work on your resume, application process and referrals. Everything will be covered from the beginning to the end. Top software engineers of few great companies will be giving their suggestions on interviews. So please subscribe and get notified when we launch this course.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+<p><strong>Disclaimer:</strong> <em>I am not a recruiter or a brilliant coder who works in your dream company. I am a student just like you and I have spent last two months searching for the internship blogs, articles and interview experiences. I applied to more than twenty companies for summer internship and <a href="http://eulercoder.me/2016/02/27/My-internship-interview-experience-with-Amazon-LinkedIn-BrowserStack-Mozilla-and-Slack/">interviewed with some top companies</a> and I’d be interning at <a href="https://www.slack.com">Slack</a> this summer. Read and follow things mentioned in this post at your own risk!</em></p>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/602d6292eb0a5e6ab7d6ef0c65c194097bbc52fc/img/job.gif" alt="right?" /> <em>Run..Run fast!!</em></p>
+
+<p><a href="http://www.bigrock.in/linux-php-hosting.php?594a275ddbf64&amp;a_aid=594a275ddbf64&amp;a_bid=7403effb"><img src="http://affiliates.bigrock.com/accounts/default1/banners/7403effb.jpg" alt="" /></a><img src="http://affiliates.bigrock.com/scripts/imp.php?a_aid=594a275ddbf64&amp;a_bid=7403effb" alt="" /></p>
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>//</title>
+   
+   <link>//</link>
+   <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
+   <language>en-us</language>
+   
+   <title>
+   <![CDATA[ Eulercoder ]]>
+   </title>
+   <description>
+   <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
+   </description>
+   <link>//</link>
+   <image>
+   <url>//assets/images/favicon.png</url>
+   <title>Eulercoder</title>
+   <link>//</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Getting Started with Open Source</title>
+	  <link>//2017/07/getting-started-open-source</link>
+		
+				
+		
+	  <pubDate>2017-07-23T08:59:00+00:00</pubDate>
+	  <guid>//2017/07/getting-started-open-source</guid>
+	  <description><![CDATA[
+	     <p>After my post on <a href="http://eulercoder.me/2017/07/competitive-programming-open-source/">Competitive programming or Open Source development which one to choose?</a>, I received so many emails asking How to start with open source. I wanted to write about this since a very long time so as the title suggests, this blog post is for beginners who want to work on their own projects or contribute to other open source projects. <strong>This is going to be a long post so grab some snacks, take a notebook and make a note of points that you think may help in the future.</strong></p>
+
+<p>Before we start, Don’t think about:</p>
+
+<p><em>Am I good enough?</em>
+<em>Will my pull request get rejected?</em>
+<em>Will my code bring me shame for years?</em>
+<em>Is it worth the hassle?</em></p>
+
+<p>Many people are afraid to contribute to open source because they don’t feel up to the task or don’t have years of experience or enough in-depth knowledge about something.</p>
+
+<p>Trust me,
+<em>The first time is <strong>always</strong> the hardest, and once you get started contributing to open source you will see how easy it is and what are the benefits and rewards.</em></p>
+
+<p>You do not need a degree or an invitation to contribute to open source. If you want one, you are hereby cordially invited :).</p>
+
+<p>So let’s get started!</p>
+
+<!-- more -->
+<h1 id="so-vicky-tell-me-what-exactly-is-open-source">So Vicky, tell me what exactly is open source?</h1>
+
+<p>The term “open source” refers to something that can be modified and shared because its code is publicly accessible. Open source software is</p>
+
+<blockquote>_a computer software or application with its source code made available for **free** with a **license** which can be modified, changed and distributed to anyone and for any purpose._</blockquote>
+
+<ul>
+  <li>
+    <p><strong>free</strong>: A software is not open source if you need to pay for the source code</p>
+  </li>
+  <li>
+    <p><strong>license</strong>: License provides the rights to study, change and distribute the software.</p>
+  </li>
+</ul>
+
+<p>Companies make their projects open source which allows developers to stop complaining about the bugs or required features and actually solve them.</p>
+
+<h1 id="ok-vicky-now-i-know-about-open-source-but-why-should-i-contribute">Ok Vicky. Now I know about Open Source but why should I contribute?</h1>
+
+<p>I’m glad you asked this question before we actually start the main part. There are tons of benefits associated with open source. I can write another blog post on benefits of Open source.</p>
+
+<p>Below are some benefits of contributing to open source.</p>
+
+<ul>
+  <li>
+    <p>Open source is an excellent way to level-up your skills as a developer. It’s handy to point to your open source projects and contribution work as an example of what you’re capable of.</p>
+  </li>
+  <li>
+    <p>It makes you learn more.</p>
+  </li>
+  <li>
+    <p>Gives a good impression of you that you work with development because you love it. Love it enough to spend your free time on a free project.</p>
+  </li>
+  <li>
+    <p>You help eagerly to make a better software for yourself and others. It gives immense pleasure to contribute to a software which is used by thousands of people.</p>
+  </li>
+  <li>
+    <p>This will improve your development skills, more skills’ means more opportunity, and by working on projects you enjoy, that opportunity can be more enjoyable too.</p>
+  </li>
+  <li>
+    <p>Open source is fun, challenging, and totally worth your time and effort.</p>
+  </li>
+</ul>
+
+<h1 id="whoah-this-seems-very-interesting-vicky-tell-me-the-very-first-step">Whoah! This seems very interesting Vicky, tell me the very first step?</h1>
+
+<p>Yeah! :)
+The undisputed center of the open source universe is <a href="https://github.com/vicky002">GitHub</a>. Github enables individuals and organizations to create projects, fork them and contribute to it. The very step is to learn about <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Git version control system</a>, <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing git in your system</a> and <a href="https://www.atlassian.com/git/tutorials">know about basic git commands</a>. You can also try this <a href="https://try.github.io/levels/1/challenges/1">interactive course on Git</a>.</p>
+
+<p><strong>You know what’s the best thing about Github?</strong> Anyone can fork any project without approval or oversight from the original authors. Changes can be committed locally, pulled to the parent repository with a code review. Anyone can comment on any single line of code or a pull request. You can use your fork immediately in your project.</p>
+
+<p>Oh, I forgot to tell you about these words that developers use :p. Check what’s the meaning of a commit, pull request, fetch, pull, fork, local and parent repository in <a href="https://help.github.com/articles/github-glossary/">Github glossary</a>.</p>
+
+<h1 id="vicky-i-completed-the-first-step-whats-next">Vicky, I completed the first step. What’s next?</h1>
+
+<p>That’s good! You’re now ready to contribute to open source. There are two major ways you can contribute to open source</p>
+
+<ol>
+  <li>
+    <p>Contribute to an existing open source project.</p>
+  </li>
+  <li>
+    <p>Start an open source project.</p>
+  </li>
+</ol>
+
+<p>I am writing on the first aspect - Contributing to an existing project because almost all beginners find this hard. <em>The hardest hurdle in open source is The first contribution</em>. Trust me you may not feel like a super genius, but you definitely don’t need to be one to contribute to open source. It’s just that first contribution to get you started, then you’re hooked. It doesn’t have to be monumental or anything. So <strong>what open source project should you contribute to?</strong> The best answer to this question is: <strong><em>You contribute to something you use regularly.</em></strong> This post is for beginners so I’ll take my project <a href="https://github.com/vicky002/AlgoWiki">AlgoWiki- Collection of all CS resources at one place!</a> and will contribute something to it. It’s extremely easy to contribute to AlgoWiki, it’s just a collection of links. I think this is a perfect project for you and don’t worry I am nice sometimes and accept all pull requests. :p</p>
+
+<p>After your first contribution, search projects on Github that you use regularly. Read code, install it on your local system and start contributing to it.</p>
+
+<h1 id="vicky-im-excited-to-contribute-to-algowiki-tell-me-how">Vicky, I’m excited to contribute to AlgoWiki. Tell me how!</h1>
+
+<p>Ohh That’s super awesome! So let’s get started :). When you see any big project on Github there will always be this three main files.</p>
+
+<ul>
+  <li>
+    <p><strong>README.md</strong>: This contains the description of the project, installation, License, contributors i.e. the summary of the project.</p>
+  </li>
+  <li>
+    <p><strong>LICENSE</strong>: This contains License and other copyright data.</p>
+  </li>
+  <li>
+    <p><strong>Contributing.md</strong>: This file is for developers who want’s to contribute in the project.</p>
+  </li>
+</ul>
+
+<h3 id="fork-the-project">Fork the project:</h3>
+
+<ul>
+  <li>Open <a href="https://github.com/vicky002/AlgoWiki">AlgoWiki</a>, click on fork on the top right corner.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/fork.png" alt="" /></p>
+
+<ul>
+  <li>You can now see AlgoWiki in your profile.</li>
+</ul>
+
+<h3 id="clone-that-repo-in-your-local-machine">Clone that repo in your local machine</h3>
+
+<ul>
+  <li>
+    <p>Open Your Github Profile, open AlgoWiki forked repo in your profile.</p>
+  </li>
+  <li>
+    <p>Copy Clone Link to clipboard.</p>
+  </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/clone.png" alt="" /></p>
+
+<ul>
+  <li>Open terminal in your local machine and paste that URL.
+<code class="highlighter-rouge">git clone https://github.com/{your_username}/AlgoWiki.git</code></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/local_clone.png" alt="" /></p>
+
+<h3 id="making-changes-in-your-local-repository">Making changes in your local repository</h3>
+
+<ul>
+  <li>
+    <p>Read <a href="https://github.com/vicky002/AlgoWiki/wiki/Contribution">Contribution.md</a> file of AlgoWiki. It has all details on how to make changes and maintain section, subsections etc.</p>
+  </li>
+  <li>
+    <p>Now add links of article, videos or books anything you that want to contribute.</p>
+  </li>
+  <li>
+    <p>Save those files.</p>
+  </li>
+</ul>
+
+<h3 id="push-your-local-changes-to-the-main-repository">Push your local changes to the main repository.</h3>
+
+<ul>
+  <li>
+    <p>Now you already know how to add files, commit and push to the main repo.</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">git add file1 file2 file3</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">git commit -m 'commit message'</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">git push origin master</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>You made changes, pushed to master branch from your local machine. This is the to create a pull request.</p>
+  </li>
+</ul>
+
+<h3 id="your-first-pull-request">Your first Pull Request</h3>
+
+<p>For your first <a href="https://help.github.com/articles/using-pull-requests/">pull request</a>, Let the project manager know that you’re new and want some guidance to learn how to get into it. It may so happen that maybe they’re too busy to help if so, move on and find another project. That first contribution is the hardest, you may want some help and coaching. The actual code contribution matters less than learning the process. So find a project or someone who has time and patience to mentor you.</p>
+
+<p>Here, I know you are contributing for the first time so I’ll be kind here and accept your pull requests in AlgoWiki :p and I am 24/7 online to accept pull requests, discuss changes or anything related to my projects.</p>
+
+<ul>
+  <li>Go create a pull request and contribute to AlgoWiki!</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/pull_request.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Once you create a pull request, the owner will check everything.</p>
+  </li>
+  <li>
+    <p>If the author finds it useful, he will merge your pull request.</p>
+  </li>
+  <li>
+    <p>Don’t forget to say thanks because this is your first contribution to open source.</p>
+  </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/merged.png" alt="" /></p>
+
+<p><strong>Once your pull request is accepted, you can check your GitHub profile. See that green square on your heat map calendar and that streak? Congratulations!! You’ve made an open source contribution!</strong></p>
+
+<p>As you contribute to larger and larger projects, you’ll get better at learning code bases well enough to track down bugs and add functionality.</p>
+
+<p>That’s how you learn. That’s you grow as a developer. And that’s how you prove to future employers that you can collaborate with other people and code that’s worth sharing!</p>
+
+<h1 id="what-i-learned-from-open-source">What I learned from Open Source</h1>
+
+<p>I have learned so many valuable skills from my time using and contributing to open source projects. I’ve learned how many different build systems work, different styles of structuring code and files to enhance readability, Swagger for API I didn’t know existed, etc. etc. etc.</p>
+
+<h4 id="job-opportunities">Job opportunities</h4>
+
+<p>You must be knowing about this. Open source contributions matter a lot. I get so many emails from recruiters to my Github email address. And by developing some street credibility on Github, people start paying attention and are interested in what you’re working on.</p>
+
+<blockquote>
+
+&gt; 
+&gt; When it comes to hiring, I'll take a Github commit log over a resume any day.
+&gt; 
+&gt; 
+— John Resig (@jeresig) [February 5, 2011](https://twitter.com/jeresig/status/33968704983138304)</blockquote>
+
+<h4 id="friends">Friends</h4>
+
+<p>Lots of conversation that started on Github turn into friendships that extend to Twitter. It gets really fun when you meet these awesome people in real life and I’m super excited to meet few people during <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">my internship at Slack in San Francisco</a>. Friends make open source fun and rewarding.</p>
+
+<h3 id="helping-others">Helping others</h3>
+
+<p>One of the most rewarding things when working in open source is when someone says something like: “This is amazing!” “Thank you so much!” “It’s saved me so much time!” or “I wish that I’d found this earlier!” <strong>Call to action</strong>: If a project has saved you some time, go ahead and create an issue to simply tell them thanks. (When shown copied Github projects in college.)</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>If you haven’t contributed to open source before, I recommend you give it a whirl. It’s fun, it’s rewarding, and it’s good for your career. If you’re looking for a good project to contribute to, remember that</p>
+
+<blockquote>You contribute best to something you use regularly.</blockquote>
+
+<p>Contributing to open source has been awesome for me! It’s really hard getting started, but once you get over the first contribution, making future contributions is much easier. It’s not all roses. The open source community has its warts here and there. Keep working at it. You’ll do great! Good luck!</p>
+
+<p>So, <strong>Do yourself a favor and move to Github! Your open source contributions will play in your favor!</strong></p>
+
+<p>PS: You are always welcome to contribute to my projects. Check out my <a href="https://github.com/vicky002?tab=repositories">GitHub Projects</a>.</p>
+
+<p>If you liked this articles. Don’t forget to share it with your friends. :)</p>
+
+<p>Ohh <a href="https://github.com/vicky002/vicky002.github.io/blob/master/_posts/2016-05-02-getting-started-with-open-source.md">see a typo</a>?</p>
+
+<p><a href="https://twitter.com/share">Tweet</a></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>You may also like: <a href="http://eulercoder.me/2017/07/competitive-programming-open-source/">Competitve Programming or Open Source</a></td>
+      <td><a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">My interview experience with Slack, Mozilla, LinkedIn, Browserstack and Amazon</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Slack Bot using Wolframalpha API : Basic Guide</title>
+	  <link>//2017/07/create-slack-bot-using-wolframalpha-api</link>
+		
+				
+		
+	  <pubDate>2017-07-23T06:19:54+00:00</pubDate>
+	  <guid>//2017/07/create-slack-bot-using-wolframalpha-api</guid>
+	  <description><![CDATA[
+	     <p>I read a thread on Reddit about WolframAlpha API and I decided to try my hands on it. I created two slack Bot using WolframAlpha and both work very nicely see some of the best tweets from <a href="https://twitter.com/The_L__">L</a>. There is an issue with WolframAlpha API it allows only 2000 API calls in a month, you need to take their paid plans if you make heavy usages.</p>
+
+<p>Ok, before we start the tutorial, I would like to mention, if you are preparing for the internship or full-time job, make sure you read one of the best guides currently available on the web: <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer Internship - The Ultimate Guide.</a> And, if you want to contribute to Open Source projects like this Slack bot, I highly recommend you to read our<a href="http://eulercoder.me/2017/07/getting-started-open-source/"> Getting started with Open Source Guide</a>.</p>
+
+<p>Ok so let’s get started.</p>
+
+<p>This tutorial is about How to create your own Slack Bot using WolframAlpha API. I created one but you can not use it directly as it uses my App-Id and can make only 2000 API calls. (Obviously, I’m not going to spend my money)</p>
+
+<p>You need basic knowledge of python to create your own Slack Bot.
+<!-- more --></p>
+
+<h1 id="steps-to-create-slack-bot">Steps to create Slack Bot</h1>
+
+<h2 id="step-1-basic-stuff">Step 1: Basic Stuff</h2>
+
+<ul>
+  <li>
+    <p><a href="https://developer.wolframalpha.com">Dev WolframAlpha</a></p>
+
+    <ul>
+      <li>
+        <p>Go to developer WolframAlpha and create your account.</p>
+      </li>
+      <li>
+        <p>Go to <a href="https://developer.wolframalpha.com/portal/myapps/index.html">My apps</a> section and click on Get an AppID.
+<img src="http://eulercoder.me/wp-content/uploads/2017/07/Webp.net-compress-image.jpg" alt="get App ID - Wolframalpha Eulercoder" /></p>
+      </li>
+      <li>
+        <p>Note your AppID. You will use this AppID to make calls.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.heroku.com">Heroku</a></p>
+
+    <ul>
+      <li>
+        <p>Go to Heroku and create an account there. Heroku allows you to deploy maximum 5 apps on the cloud for free.</p>
+      </li>
+      <li>
+        <p>Once you create your account there. Go to <a href="https://dashboard.heroku.com/">Dashboard</a>.</p>
+      </li>
+      <li>
+        <p>Click on the ‘+’ sign or ‘New’ on the top right, create a new app.
+<img src="http://eulercoder.me/wp-content/uploads/2017/07/heroku-new-app.png" alt="Create new app - heroku" /></p>
+      </li>
+      <li>
+        <p>Write the name and click on Create App.</p>
+      </li>
+      <li>
+        <p>You will be redirected to your app page. Click on Connect to Dropbox. I’ll tell you the reason why we are choosing Dropbox to for our code hosting.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-2-changes-in-code">Step 2: Changes in Code</h2>
+
+<ul>
+  <li>
+    <p>Download my repo in <a href="https://github.com/eulercoder/slack-TheL/archive/master.zip">Zip</a> or <a href="https://github.com/eulercoder/slack-TheL#fork-destination-box">fork</a> it to make changes on git in the future.</p>
+  </li>
+  <li>
+    <p>Files in your directory</p>
+
+    <ul>
+      <li>
+        <p>LICENCE: This is my LICENCE file.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">Procfile</code>: This is a startup file and tells what is the first step when we deploy our app on the cloud.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">app.json</code>: It is a manifest format for describing web apps. It declares environment variables, add-ons, and other information required to run an app on Heroku. This document describes the schema in detail.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">app.py</code>: Main part of your project.</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">config.py.example</code>: <code class="highlighter-rouge">config.py</code> files store variables and other stuff which is used in your project (Flask).</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">requirements.txt</code>: This file specifies Python Module dependencies. All the required modules would be downloaded first while deploying your app. Read more about it <a href="https://devcenter.heroku.com/articles/python-pip">here</a>.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Changes to be made</p>
+
+    <ul>
+      <li>
+        <p>Open your project click on file<code class="highlighter-rouge">config.py.example</code> and add your APP_ID in single quotes.</p>
+      </li>
+      <li>
+        <p>Change the name of the file from <code class="highlighter-rouge">config.py.example</code> to <code class="highlighter-rouge">config.py</code>.</p>
+      </li>
+      <li>
+        <p>If I upload my file<code class="highlighter-rouge">config.py</code> on GitHub, anyone can use my APP_ID to make calls. That’s the reason naming it as <code class="highlighter-rouge">config.py.example</code> :p</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-3-upload-your-code-to-dropbox">Step 3: Upload your code to Dropbox</h2>
+
+<ul>
+  <li>
+    <p>open your <a href="http://eulercoder.me/recommends/dropbox/">Dropbox</a> account.</p>
+  </li>
+  <li>
+    <p>If you have connected your account to Dropbox as mentioned in step 1. Open this <a href="https://www.dropbox.com/home/Apps/Heroku">link</a>.</p>
+  </li>
+  <li>
+    <p>You’ll see a folder with the name of your app on <a href="https://dashboard.heroku.com/">Heroku</a> .</p>
+  </li>
+  <li>
+    <p>Open that folder and upload all your files there.</p>
+  </li>
+</ul>
+
+<h2 id="step-4-deploying-your-app-on-heroku">Step 4: Deploying your app on Heroku</h2>
+
+<ul>
+  <li>
+    <p>Open your Heroku <a href="https://dashboard.heroku.com/">Dashboard</a>.</p>
+  </li>
+  <li>
+    <p>Click on your app and then deploy.</p>
+  </li>
+  <li>
+    <p>In deploy tab, in Deploy changes section. Write and<code class="highlighter-rouge">commit</code> click on Deploy.</p>
+  </li>
+  <li>
+    <p>This will download all the app dependencies. If everything is fine, you will see a green tick and your deploy is on the cloud!</p>
+  </li>
+</ul>
+
+<h2 id="step-5-integrate-it-in-your-team">Step 5: Integrate it in your team</h2>
+
+<ul>
+  <li>
+    <p>Open your slack. It should be like.<code class="highlighter-rouge">{your_slack_url}/home</code></p>
+  </li>
+  <li>
+    <p>Click on Integration in the upper left section.</p>
+  </li>
+  <li>
+    <p>Click on Configured Integrations.</p>
+  </li>
+  <li>
+    <p>click on Add next to slash Commands.</p>
+
+    <ul>
+      <li>
+        <p>Command: <code class="highlighter-rouge">thel</code> [If you want to change this check explanation of the code below]</p>
+      </li>
+      <li>
+        <p>URL: <code class="highlighter-rouge">{your_herokuapp_url}/thel</code> [This can be changed see, code below]</p>
+      </li>
+      <li>
+        <p>Customize name: Give it some name. I gave it - <code class="highlighter-rouge">The L</code></p>
+      </li>
+      <li>
+        <p>For the <strong>Autocomplete help text</strong>, check to show the command in auto-complete list.</p>
+      </li>
+      <li>
+        <p>Description: <code class="highlighter-rouge">The Genius L, is now in slack to answer all your queries</code> OR [anything you want to write].</p>
+      </li>
+      <li>
+        <p>Usage Hint: <code class="highlighter-rouge">search query</code></p>
+      </li>
+      <li>
+        <p>Descriptive Level: Search Query</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="step-6-all-done">Step 6: All Done!</h2>
+
+<ul>
+  <li>
+    <p>Open your slack channel and type <code class="highlighter-rouge">/thel</code> or <code class="highlighter-rouge">[your command]</code> and type Query.</p>
+  </li>
+  <li>
+    <p>Everything is working fine you will see the result.</p>
+  </li>
+  <li>
+    <p>Try basic Queries first for the testing purpose, it will give an instant response.</p>
+  </li>
+  <li>
+    <p>Congratulation you just created a new Slack Bot for your own Team!! Have fun! :beers:</p>
+  </li>
+</ul>
+
+<h1 id="explanation-of-the-code">Explanation of the Code</h1>
+
+<p>I already explained usages of the files in the directory. I created this Slack Bot using <a href="https://pypi.python.org/pypi/wolframalpha">WolframAlpha Module</a> and <a href="http://flask.pocoo.org/">Flask</a> framework. You should know working with Python modules and all the syntax to understand the code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-python"&gt;__author__ = 'vikesh'  # this is the author name 
+
+import os  # This module provides a portable way of using operating system dependent functionality.
+import wolframalpha 
+# I have used Wolframalpha module, written in python to work with Wolframalpha API.
+# Read more about it here: https://pypi.python.org/pypi/wolframalpha
+
+from flask import Flask, request, Response, redirect
+# Modules from Flask
+
+
+
+try:
+    import config       # Import config.py file 
+    wol_id = config.wolframalpha['app_id']   # assign APP_ID from config.py to wol_id
+except:
+    wol_id = os.environ.get('APP_ID')   # load envoironment variable
+
+
+if not wol_id:        # if wol_id is not present display error and exit
+    import sys
+    print 'No config.py found exisiting...'
+    sys.exit(0)
+
+
+app = Flask(__name__)     # initiate flask app
+
+client = wolframalpha.Client(wol_id)      # this is from Wolframa moudule. Initiate Client using Wol_id
+
+
+@app.route('/thel',methods=['post'])
+def thel():
+    '''
+    :Example:
+    /thel current weather in mumbai?
+    '''
+    '''
+    this is about routing of the URL in flask.
+    If you want to change the command from `/thel` to something else. you have to change the app.route('/thel') to 
+    your own command. Also change the function name.
+    '''
+    text = request.values.get('text')    # Get Query
+    try:
+        res = client.query(text)       # Get result from Wolframalpha API.
+    except UnicodeEncodeError:    # if coudln't get the response show error.
+        return Response(('Sorry I did\'t get you. Would you please simplify your query?'
+                        '%s is not valid input.' % text),
+                        content_type='text\plain; charset=utf-8')
+    resp_qs = ['Hi Top Answer for "%s"\n' % text]    # if Query is successful show result.
+    resp_qs.extend(next(res.results).text)     # iterate the result 
+
+    return Response(''.join(resp_qs),
+                    content_type='text/plain; chatset=utf-8')     # return response.
+
+@app.route('/')
+def hello():      # if someone tries to open the link directy redirect him somewhere :p
+    return redirect('https://github.com/vicky002/slack-TheL')
+
+
+if __name__ == '__main__':   
+    port = int(os.environ.get('PORT',5000))    # run your app on local
+    app.run(host='0.0.0.0', port=port)&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Please comment below for the issues related to the post and anything related to My Slack bot Please use the <a href="https://github.com/vicky002/slack-TheL/issues">issue tracker</a> to report any bugs or file feature requests. You can also join <a href="http://eulercoder.me/about/">Eulercoder</a> Organization on Github, just us <a href="mailto:hi@eulercoder.me">an email </a>with following details - Your Name, Your Education level and whether you want to join as a contributor or a mentor.</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to <a href="http://eulercoder.me/contribute/">contribute</a> to our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in becoming a better developer and help them in learning programming. <a href="http://eepurl.com/bRklFn">Subscribe to our newsletter</a> and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

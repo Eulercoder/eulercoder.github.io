@@ -1,28 +1,74 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title> - Articles</title>
+    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
     <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
+    </link>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <title>2 Years of Self-Learning Into a Developer: Eulercoder Motivation</title>
+        
+          <description>&lt;p&gt;#&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 06 Aug 2017 13:50:37 +0000</pubDate>
         <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        /2017/08/2-years-of-self-learning-into-a-developer</link>
+        <guid isPermaLink="true">/2017/08/2-years-of-self-learning-into-a-developer</guid>
       </item>
-      {% endunless %}
-    {% endfor %}
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <item>
+        <title>What Is The Ideal Time To Apply For Internships And Jobs</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;http://blog.eulercoder.me/p/ultimate-course.html&quot;&gt;In the last article&lt;/a&gt;, we read about this course on getting software engineering internship and jobs. The course contains series of articles on internships and jobs right from the preparation plan to the first day of the job. If you are visiting this page directly I’d suggest you go and check out &lt;a href=&quot;http://blog.eulercoder.me/p/ultimate-course.html&quot;&gt;the roadmap for Software engineering jobs.&lt;/a&gt; (Link to Roadmap)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+        <link>
+        /2017/04/what-is-the-ideal-time-to-apply-for-internships-and-jobs</link>
+        <guid isPermaLink="true">/2017/04/what-is-the-ideal-time-to-apply-for-internships-and-jobs</guid>
+      </item>
+      
+    
   </channel>
 </rss>

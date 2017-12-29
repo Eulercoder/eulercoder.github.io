@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-29T04:40:39+00:00</updated><id>/</id><title type="html">Eulercoder</title><subtitle>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</subtitle><entry><title type="html">Eulercoder Project Series —Fabulous Bot First Project Announcement</title><link href="/2017/09/eulercoder-project-series-fabulous-bot" rel="alternate" type="text/html" title="Eulercoder Project Series —Fabulous Bot First Project Announcement" /><published>2017-09-17T09:22:21+00:00</published><updated>2017-09-17T09:22:21+00:00</updated><id>/2017/09/eulercoder-project-series-fabulous-bot</id><content type="html" xml:base="/2017/09/eulercoder-project-series-fabulous-bot">&lt;p&gt;Hello!&lt;/p&gt;
+
+&lt;p&gt;In our previous post, Eulercoder &lt;a href=&quot;http://eulercoder.me/weekly-project/&quot;&gt;announced our weekly project series&lt;/a&gt; based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday.&lt;/p&gt;
+
+&lt;p&gt;Today &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Eulercoder&lt;/a&gt; is announcing the very first project in the&lt;a href=&quot;http://eulercoder.me/weekly-project/&quot;&gt; weekly projects series&lt;/a&gt;, The Fabulous bot for Slack. (Will be available for Messenger, Telegram too)&lt;/p&gt;
+
+&lt;h3 id=&quot;fabulous-bot-forslack&quot;&gt;Fabulous Bot for Slack&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*BDwu0v1rHBpfFdYGx30yTw.png&quot; alt=&quot;fabulous bot - project series&quot; /&gt; Designed by Eulercoder Team[/caption]&lt;/p&gt;
+
+&lt;h3 id=&quot;the-idea&quot;&gt;The Idea&lt;/h3&gt;
+
+&lt;p&gt;Most of the top companies and startups are already using Slack and on an average, in the weekdays, people stay active on Slack for almost 5–6 hours. Fabulous Bot is a bot which does the basic work of searching from different platforms and showing the results directly in your Slack channel. Users don’t have to leave Slack, open browser and search for something.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User will be able to&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search from Google, Wikipedia, YouTube etc—( top 3 results will be shown)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Check weather of any city&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search Query from Stack Overflow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get commits data of any repository, Branch or pull request&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get stocks data&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search images from Google Images, Flickr etc&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Do mathematical Calculations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Check meaning of words — From Urban Dictionary&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;View maps&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and will be able to perform lot more tasks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-are-we-going-to-implement-this&quot;&gt;How are we going to Implement this?&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;User will call fabulous Bot as &lt;code class=&quot;highlighter-rouge&quot;&gt;_\fabulous service_name Query_&lt;/code&gt;. We will read the service name and Query.
+&lt;em&gt;Ex- &lt;/em&gt;&lt;strong&gt;&lt;em&gt;Service_name&lt;/em&gt;&lt;/strong&gt;&lt;em&gt; = YouTube, &lt;/em&gt;&lt;strong&gt;&lt;em&gt;Query&lt;/em&gt;&lt;/strong&gt;&lt;em&gt; = despacito&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Most of these services have APIs available. We will call those APIs and get the results.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Parse the results in the Slack response format.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And post in the Slack channel.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;What is API is not available? &lt;/strong&gt;Then we will use BeautifulSoup (mostly) or Flask to scrap the results form the source code.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-python&quot;&amp;gt;query = quote(query)
+url = &quot;https://encrypted.google.com/search?q={0}&quot;.format(query)&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Here &lt;em&gt;quote&lt;/em&gt; function formats the query and using beautiful soup, we are scraping that URL. You can copy that URL and try it in the browser. It works!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-technologies-we-are-using-to-build-fabulousbot&quot;&gt;What Technologies we are using to build Fabulous Bot?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Python Programming Language&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Working with APIs — (Slack and Third Party)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BeautifulSoup Framework — in Python&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit Testing in Python&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;AWS for Bot Deployment&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;HTML, Bootstrap or (React) — For the website&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Shell Scripting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://mrbook.org/blog/tutorials/make/&quot;&gt;Makefiles&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Git — For source code management and collaboration&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Few more — (Depending on the usages as we start working on this)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-are-the-different-tasks-in-thisproject&quot;&gt;What are the different tasks in this project?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a beautiful website (like our Logo) for Fabulous Bot&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Write Documentations of the code structure and the working&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reviewing Pull Requests, merging and maintaining the repository&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Project Development.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-does-the-source-code-folder-structure-looklike&quot;&gt;How does the source code folder structure look like?&lt;/h3&gt;
+
+&lt;p&gt;Folder structure will look something like this. This is not permanent but we will try to stick to this structure. If you have any suggestions related to this, feel free to post it in &lt;a href=&quot;http://bit.ly/EulercoderOnSlack&quot;&gt;our Slack channel&lt;/a&gt; or &lt;a href=&quot;https://github.com/Eulercoder/fabulous/issues/new&quot;&gt;make an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-markup&quot;&amp;gt;.
+├── fabulous
+ ├── plugins [This will contain different supported services]
+ ├── tests [This folder will contains all the tests]
+ ├── fabulous.py [Initiate, test all the available services]
+ ├── server.py [Will handle the server]
+ ├── dummyserver.py [this will create the dummy server]
+├── LICENSE
+├── README.md
+├── bin
+ ├── fabulous   [This file will contain automated installation script]
+├── .gitignore  [files and folders to avoid while pushing code]
+├── setup.py [This file is used to upload project as Python package]
+├── requirements.txt [This is for all the project module requirements]
+├── Makefile [To automagically build and manage the project]&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;how-are-we-going-to-collaborate-together&quot;&gt;How are we going to collaborate together?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;All the discussions related to this project will happen on &lt;a href=&quot;https://github.com/Eulercoder/fabulous/issues/new&quot;&gt;Slack in “fabulousbot” channel&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Based on your knowledge set and total number of people working on this, we will assign the tasks. Task assigning will happen in the same channel.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you agree to work on a task, you are free to set the deadlines. Make sure you try your hardest to meet the deadlines.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;who-can-work-on-thisproject&quot;&gt;Who can work on this project?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Anyone who knows a little programming. &lt;/strong&gt;You are more than welcome to join us and contribute to this project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To make sure that our master branch is clean, &lt;em&gt;*YOU WILL NEVER PUSH TO MASTER BRANCH. **&lt;/em&gt;(After a warning, user will be removed from the organization)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fork this project in your Github, start working, once you’re done with any feature or fix. Raise a PR, we will review your PR and if everything is perfect, your commits will be merged in to the master branch.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;finally-any-specificterms&quot;&gt;Finally, any specific terms?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Source code can be made private at any stage also, all the contributor names will be made public on the website.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eulercoder is the primary owner of the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eulercoder will make this bot public for all the Slack teams. There can be little pricing depending on the extra features that will be added by the Eulercoder team.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eulercoder is totally a non-profit organization, to keep up the work, to handle our daily operations and maintain our websites and hosting, we need to have a source of income.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;get-started&quot;&gt;Get Started!&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The very first thing you have to do is — &lt;a href=&quot;http://eulercoder.me/about/community/&quot;&gt;Join Eulercoder Community on Slack!&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Head over to “fabulousbot” channel and write a short intro, tell us what technologies you know and what you want to learn.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tell us which part of the project, would you like to handle/work on.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you are in, fork Fabulous Bot repository in your profile.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Follow the folder structure and start working.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Raise a pull request, once you complete any feature or a fix.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Please, write proper commit messages so that our future collaborators can easily understand what your code does from your commit messages.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;That’s almost it.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking forward to work, collaborate and learn together.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;We started &lt;/em&gt;&lt;a href=&quot;http://eulercoder.me/&quot;&gt;&lt;em&gt;Eulercoder&lt;/em&gt;&lt;/a&gt;&lt;em&gt; with a mission to be the best computer science portal on the web. We need to do a lot of work, it will require extremely hard work, the content and the courses need to be the best. We extremely value our readers and take each feedback very seriously. With this, today we are launching our Eulercoder weekly project series, I request you to join us. Let’s improve ourselves as a developer and also &lt;/em&gt;&lt;a href=&quot;http://eulercoder.me/contribute/&quot;&gt;&lt;em&gt;contribute — help everyone&lt;/em&gt;&lt;/a&gt;&lt;em&gt; in becoming better at programming.&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;http://eepurl.com/bRklFn&quot;&gt;&lt;strong&gt;Subscribe to our Weekly Updates&lt;/strong&gt;&lt;/a&gt;**&lt;/td&gt;
+      &lt;td&gt; **&lt;a href=&quot;https://publicslack.com/slacks/eulercodercommunity/invites/new&quot;&gt;&lt;strong&gt;Join Eulercoder Community on Slack!&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Thank you!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute to our &lt;/strong&gt;&lt;a href=&quot;http://eulercoder.me/about&quot;&gt;&lt;strong&gt;Mission and Goal&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;? Write on Eulercoder. Write an &lt;/strong&gt;&lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;&lt;strong&gt;email to us&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; or &lt;/strong&gt;&lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;&lt;strong&gt;contact us&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt; for guest posts.&lt;/strong&gt;&lt;/p&gt;</content><author><name>vicky002</name></author><category term="learning" /><summary type="html">Hello!</summary></entry><entry><title type="html">ChatWeb — Build websites that understand users with full (free) Microsoft Stack</title><link href="/2017/09/build-chatweb-using-microsoft-stack" rel="alternate" type="text/html" title="ChatWeb — Build websites that understand users with full (free) Microsoft Stack" /><published>2017-09-02T13:41:39+00:00</published><updated>2017-09-02T13:41:39+00:00</updated><id>/2017/09/build-chatweb-using-microsoft-stack</id><content type="html" xml:base="/2017/09/build-chatweb-using-microsoft-stack">&lt;p&gt;Just another weekend to C&amp;amp;C (Chill &amp;amp; Code) in Taiwan&lt;/p&gt;
+
+&lt;h3 id=&quot;chatweb&quot;&gt;ChatWeb?&lt;/h3&gt;
+
+&lt;p&gt;Chatbot has been a hot topic around for sure. I still remember how 4 teams out of the 12 teams in &lt;a href=&quot;http://ecjamming.tech&quot;&gt;E.C. Jamming&lt;/a&gt;, a Hackathon I organized with Microsoft a couple of months ago in Hong Kong, were working on chatbot projects.
+&lt;!-- more --&gt;
+But I am a real web lover and evangelist.&lt;/p&gt;
+
+&lt;p&gt;There are great frameworks out there like Google &lt;a href=&quot;https://api.ai&quot;&gt;API.ai&lt;/a&gt;, &lt;a href=&quot;https://dev.botframework.com/&quot;&gt;Microsoft Bot Framework&lt;/a&gt; and &lt;a href=&quot;https://www.luis.ai&quot;&gt;Microsoft LUIS&lt;/a&gt; (Language Understanding Intelligence Service) that enable developers to build and launch chatbots in multiple channels with not much an effort.&lt;/p&gt;
+
+&lt;p&gt;In other words, to empower chatbot developers, the tech giants have invested a considerable amount of resources to build up the components and micro-/web-services that can perform a single specific task in a chatbot’s pipeline both efficiently and accurately. For example, LUIS helps you understand a user with training models backed by Machine Learning with a single API endpoint.&lt;/p&gt;
+
+&lt;p&gt;Now, why don’t we &lt;strong&gt;take these services to build a website that understands users’ intentions and interests just like a chatbot&lt;/strong&gt;, and at the same time, with the rich elements the web has to offer, we are able to provide more interactions than a traditional chatbot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*FMBO66chD18WVdITPk_5VQ.png&quot; alt=&quot;background prototype - chatweb Microsoft stack eulercoder&quot; /&gt; The background of prototype was from https://tympanus.net/codrops/2014/09/23/animated-background-headers/[/caption]&lt;/p&gt;
+
+&lt;p&gt;In my case, I am now building a personal portfolio page for the applications for graduate programs in the US.&lt;/p&gt;
+
+&lt;p&gt;On top of the static, standard resume-alike HTML contents, I am implementing a header that interacts with users and rearranges the styles and components rendered on the page once users ask a specific question regarding my experiences — Just as if I was there, 1 on 1, with this user to answer questions like “What have you been working on at Microsoft?”.&lt;/p&gt;
+
+&lt;h4 id=&quot;read-build-your-first-slack-bot-using-wolframalpha-api-in-python&quot;&gt;Read: &lt;a href=&quot;http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/&quot;&gt;Build your first Slack Bot using WolframAlpha API in Python&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;What’s even better is this tutorial and the so-called ChatWeb is built with a server-less architecture (thanks to &lt;a href=&quot;https://azure.microsoft.com/en-us/services/functions/&quot;&gt;Azure Functions&lt;/a&gt;), which means you won’t have to worry about building and maintaining a server at all. Just front-end. Just &lt;strong&gt;ReactJS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*JdAeqbbDO3LCP-29FbAPZg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Everything below assumes a working Azure account. Azure provides free trial for a month for you to play around. Even after the free trial expires, all the products in this architecture have monthly free quotas that are not easily exceeded.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;contents&quot;&gt;Contents&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Training and Publishing a Microsoft LUIS endpoint&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build Azure Functions&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;React and Fetch&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*-ZOlRRQFUcOWumuAqUVBPg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;microsoft-luis&quot;&gt;Microsoft LUIS&lt;/h3&gt;
+
+&lt;p&gt;So again. LUIS plays a significant role in the chatbot’s ecosystem by empowering bots to understand the literal from users. The end goal of a LUIS endpoint is by consuming a query, it returns a JSON data with the answers to questions like “What does the user want?” and “Any specific entities involved?”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;Example:
+query = &quot;What have you done at Microsoft?&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;-----&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-json&quot;&amp;gt;LUIS API returns
+{
+“query”: “what have you done at microsoft”,&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-json&quot;&amp;gt;“topScoringIntent”: {
+“intent”: “WhatDidYouDo”,
+“score”: 0.729854763
+},&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-json&quot;&amp;gt;“entities”: [ {
+“entity”: “microsoft”,
+“type”: “Company”,
+“startIndex”: 22,
+“endIndex”: 30,
+“score”: 0.9897579
+} ]
+}&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this information and the functional component rendering mechanism in React JS, you are already ready to build your LUIS web app.&lt;/p&gt;
+
+&lt;p&gt;But before we dive into just that, and how we can protect our subscription key with Azure Functions, let me also show you how I trained my language understanding models on &lt;a href=&quot;https://www.luis.ai&quot;&gt;&lt;strong&gt;LUIS.ai&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-by-step-guide-to-build-a-luisapp&quot;&gt;Step-By-Step Guide to Build a LUIS App&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*cnVWjxUFHP_E78--heNZqw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After creating an account on LUIS, you should be led to this page.&lt;/p&gt;
+
+&lt;p&gt;Click the button New App. It should ask you about the name of your app and its culture (en-us, for example. I haven’t tried with other cultures.).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*o-Zd3zuwEVg7hpo5KOYf5A.png&quot; alt=&quot;&quot; /&gt;LUIS Dashboard&lt;/p&gt;
+
+&lt;p&gt;On the sidebar, click Intent where you will start to define the possible intents your users might possess. For example, if you are making an e-commerce website, the possible intents the website should observe can be “Purchase”, “Browse”, “Customer Support”, etc. Basically, try to list out all the possible reasons for a user to come and use your app.&lt;/p&gt;
+
+&lt;blockquote&gt;In my case of building a portfolio page, I want my LUIS app to help me detect from a sentence if a user is more interested in what did I learn (the technology stacks), or what did I do (the project details), and at which company, so I can deliver a suitable and personalized layout.&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*MoMqIagOd6uKOqdyNHXQew.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After an intent is created, you can give LUIS some examples where this specific intent should be expected. For this example, I told LUIS a user who asks questions like “What did you do for Microsoft”, “What have you been doing in Microsoft”, etc, are likely to hold the intent of asking “What Did You Do” (Intent) with “Microsoft” being mapped to the company entity.&lt;/p&gt;
+
+&lt;p&gt;After you input a solid 10 examples per intents defined, go to &lt;strong&gt;Train &amp;amp; Test&lt;/strong&gt; on the sidebar and click “&lt;strong&gt;Train Application&lt;/strong&gt;”. LUIS will handle the machine learning part for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Magic.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I love being an application developer in the early 21st century; fresh and cool, but not yet completely taken over by AI.&lt;/p&gt;
+
+&lt;p&gt;Once it is done, go to “&lt;strong&gt;Publish App&lt;/strong&gt;” page and you can straight up just one-click push the app to production and get an endpoint that looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-http&quot;&amp;gt;https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/{app id}?subscription-key={app key}&amp;amp;timezoneOffset=0&amp;amp;verbose=true&amp;amp;q={user query}&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And bang.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*h5xztCIsevgeFnH15T4Uug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You now have an endpoint that translates a user’s literal inputs, into structured and self-defined intents and entities in JSON format.&lt;/p&gt;
+
+&lt;h3 id=&quot;azure-functions&quot;&gt;Azure Functions&lt;/h3&gt;
+
+&lt;p&gt;Now, this step is not compulsory but highly recommended, for the reason that it is generally a bad practice to expose your secrets and keys to client browsers.&lt;/p&gt;
+
+&lt;p&gt;Especially LUIS starts to charge you once the amount of your monthly request exceeds 10K — This is not that ambitious as you think. Request means transactions. A happy user who is just too excited to stop asking questions for fun can be one heavy load.&lt;/p&gt;
+
+&lt;p&gt;You really don’t want to take the risk to let other people use your subscription keys on their LUIS app — You might not be aware of the usage on other sites, but their bills would be on you.&lt;/p&gt;
+
+&lt;p&gt;We could solve this problem by implementing a proxy server, perhaps with Node and Express, and have the HTTP requests done on the backend.&lt;/p&gt;
+
+&lt;p&gt;But, &lt;strong&gt;Azure Function is another better solution, if not the best.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;And it is very simple.&lt;/p&gt;
+
+&lt;p&gt;Let’s see how we can build a proxy endpoint with Azure Functions &lt;strong&gt;in 5 min&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*CpRBltKvIAuA47b-4fycjw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Just search “Function App” on Azure Dashboard and create one with an App name (I named mine “LUIS-proxy”), subscription plan (Yep… My Internship at Microsoft ends. Free Trial time.) and all other simple and expected inputs. Nothing should surprise you here.&lt;/p&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”1600”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*sJ-Rik66EL4JTkluFb1Abg.png&quot; alt=&quot;chatweb microsoft web - eulercoder&quot; /&gt; Click the + next to “Functions” on sidebar to create a Function App[/caption]&lt;/p&gt;
+
+&lt;p&gt;So what this Function App is going to do, is that it is going to act just like the LUIS endpoint we got from the previous steps, but without giving users the access to your API IDs and Subscription Keys.&lt;/p&gt;
+
+&lt;p&gt;Let me just quote this from the official site of Azure Functions — Who can possibly explain Azure Functions other than the team themselves.&lt;/p&gt;
+
+&lt;blockquote&gt;“Functions provides a fully managed compute platform with high reliability and security. With scale on demand, you get the resources you need — when you need them.”&lt;/blockquote&gt;
+
+&lt;p&gt;With Azure Functions, the client-side code will be calling this Azure endpoint where it will then complete the HTTP request using API key of LUIS on Azure’s computing platform and simply return the LUIS result to the client side. Think of this like a lambda function on the Azure cloud, if you are familiar with Functional Programming.&lt;/p&gt;
+
+&lt;p&gt;Again, if you are not familiar with this, this step is not a must to achieve a website that understands users. This is for security reason. And also, you are welcome to build this proxy with Node and Express stack and setup the API endpoint with &lt;a href=&quot;http://eulercoder.me/recommends/digitalocean/&quot;&gt;Digital Ocean&lt;/a&gt;, &lt;a href=&quot;https://www.linode.com/&quot;&gt;Linode&lt;/a&gt; or &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt;. They are all nice and neat in this case.&lt;/p&gt;
+
+&lt;p&gt;But if you decided to follow me on this,&lt;/p&gt;
+
+&lt;p&gt;Here is what you will do on your Function App:&lt;/p&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”2000”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*E193G13sLrhjOHUDJv3Vzw.png&quot; alt=&quot;chat web - Microsoft stack - eulercoder&quot; /&gt; functions[/caption]&lt;/p&gt;
+
+&lt;p&gt;This function is written in C#, primarily because I felt like C# can finish the task (simply download the responding resource from LUIS) in a more efficient manner with. &lt;code class=&quot;highlighter-rouge&quot;&gt;WebClient&lt;/code&gt; Azure Functions do support JavaScript, feel free to do this part the way you are comfortable with.&lt;/p&gt;
+
+&lt;p&gt;But you can really use this code I wrote to shield any API keys you have from any web-service providers. Just paste the Url link you would use in AJAX into the placeholder I had on this screenshot, and click the &lt;strong&gt;&amp;lt;/&amp;gt; Get function URL&lt;/strong&gt; on the top right corner to get the proxy endpoint for LUIS in this case.&lt;/p&gt;
+
+&lt;p&gt;Finally, under {Your App} &amp;gt; CORS, remember to define and manage a list of white-list origins to call this endpoint. I really love this feature. This ensures &lt;strong&gt;only your websites have the permission to consume these API endpoints&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;react-andfetch&quot;&gt;React and Fetch&lt;/h3&gt;
+
+&lt;p&gt;Finally, for the client side code, I am choosing to React once again.&lt;/p&gt;
+
+&lt;p&gt;But this time, there are reasons besides “React is cool and clean”. I promise.&lt;/p&gt;
+
+&lt;p&gt;React has the ability to control the components rendered with,&lt;code class=&quot;highlighter-rouge&quot;&gt;this.state&lt;/code&gt; we don’t have to do AJAX request so frequently into a callback hell. And the polyfill Fetch library that returns a ES6 Promise works seamlessly with React.&lt;/p&gt;
+
+&lt;p&gt;Before I start showing some codes. Remember to run the create-react-app.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-git&quot;&amp;gt;# in your terminal
+create-react-app &amp;lt;project name&amp;gt;
+cd &amp;lt;project name&amp;gt;
+npm install --save whatwg-fetch
+npm start&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This should set you up with everything you will need and also open up the app at localhost:3000.&lt;/p&gt;
+
+&lt;p&gt;With fetch and React’s &lt;code class=&quot;highlighter-rouge&quot;&gt;state&lt;/code&gt; available right now, we will be able to let the app render components based on users intent returned from LUIS. My high-level architecture will be something like this (a constructor, a function that handles LUIS query, and a render function)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;… standard React import statements
+import ‘whatwg-fetch’;&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;class ChatWeb extends Component {
+constructor(props) {
+super(props);
+this.state = {
+query: “”,
+intent: “”,
+company: “”
+}
+}&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;submitLUISQuery(e) {
+e.preventDefault();&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;fetch ({Azure Functions Endpoint}&amp;amp;query=${this.state.query})
+.then(res =&amp;gt; JSON.parse(res.json()))
+.then(json =&amp;gt; {
+this.setState({
+intent: json.topScoringIntent.intent,
+company: json.entities[0].entity
+});
+});
+}&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;render() {
+const { intent, company } = this.state;&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;return ( { intent === “WhatDidYouDo” &amp;amp;&amp;amp; &amp;lt;TheComponentForThisCase company={company} /&amp;gt; } { intent === “WhatDidYouLearn” &amp;amp;&amp;amp; &amp;lt;TheComponentForThisCase company={company} /&amp;gt; } ); } }&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I think the control of rendering can certainly be cleaner with &lt;code class=&quot;highlighter-rouge&quot;&gt;react-router-dom&lt;/code&gt;. And my job on this portfolio project, from now on, will be exactly on this — To find a more efficient and modularized way to properly pipeline the technology stacks and data.&lt;/p&gt;
+
+&lt;p&gt;Again, this is a concept and high-level prototype that I just can’t wait to share with the community. Especially the new (and last) semester starts this week, and I will be stuck in applications of graduate programs, GRE, and potential job searches (Yes. I am still hoping to have employers sponsoring my visa, so I don’t need OPT that desperately.)&lt;/p&gt;
+
+&lt;p&gt;[caption id=”attachment_864” align=”aligncenter” width=”728”]&lt;a href=&quot;http://eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer/&quot;&gt;&lt;img src=&quot;http://eulercoder.me/wp-content/uploads/2017/09/two-year-of-selflearning-in-article-post.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt; Two years of Self-Learning into a developer[/caption]&lt;/p&gt;
+
+&lt;h3 id=&quot;finally&quot;&gt;Finally…&lt;/h3&gt;
+
+&lt;p&gt;I just want to say that, of course, this is not an optimal user experience as of the moment. People do not (yet) expect to talk to your websites, which is also the reason these technologies have been used on Chatbot primarily. But I think this is definitely a fun and interesting experiment that I would dive farther— &lt;strong&gt;We can definitely make websites understand users just like chatbots&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is really exciting for me!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This opens a lot of new possibility of web UX.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you do have any better UX design that can synergy with this ChatWeb concept, definitely reach me out at &lt;a href=&quot;mailto:kevin@projectable.hk&quot;&gt;kevin@projectable.hk&lt;/a&gt;, connect me on &lt;a href=&quot;https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4&quot;&gt;LinkedIn&lt;/a&gt;, or simply leave comments below. WE have jobs to do!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute to our &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Mission and Goal&lt;/a&gt;? Write on Eulercoder. Write an &lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;email to us&lt;/a&gt; or &lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;contact us&lt;/a&gt; for guest posts. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Did you found this article useful? Have questions? Write your comments below. 🙂&lt;/p&gt;
+
+&lt;p&gt;If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you Like &lt;a href=&quot;https://www.facebook.com/eulercoder&quot;&gt;our FB page&lt;/a&gt; and &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt; for discussions and latest updates.&lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;</content><author><name>Kevin</name></author><category term="learning" /><category term="tutorials" /><summary type="html">Just another weekend to C&amp;amp;C (Chill &amp;amp; Code) in Taiwan</summary></entry><entry><title type="html">LinkedIn tips that actually work: Set up your News Feed on LinkedIn</title><link href="/2017/08/linkedin-tips-actually-works" rel="alternate" type="text/html" title="LinkedIn tips that actually work: Set up your News Feed on LinkedIn" /><published>2017-08-30T15:10:34+00:00</published><updated>2017-08-30T15:10:34+00:00</updated><id>/2017/08/linkedin-tips-actually-works</id><content type="html" xml:base="/2017/08/linkedin-tips-actually-works">&lt;p&gt;In my experience, scrolling through job boards pumping out applications targeted at large companies isn’t the best way to go about &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;getting a job or internship&lt;/a&gt;. By following a few people on LinkedIn, I managed to get into a conversation with Laszlo Bock, the Former Head of People Operations at Google. Here are a few LinkedIn tips on how to take full advantage of your LinkedIn feed.&lt;/p&gt;
+
+&lt;h2 id=&quot;linkedin-tips-1-finding-who-to-follow&quot;&gt;LinkedIn Tips #1: Finding who to follow&lt;/h2&gt;
+
+&lt;p&gt;Looking for people to follow can be daunting, but with a little effort, your LinkedIn will supply with tons of useful information. An easy place to start is to click on the 3 dots in the top right any post, and click “improve my feed”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Following people at companies you want to work for is another easy start. Generally, a few people in every company are very active on LinkedIn. Sometimes they post information about what they like to see at their company and what they are working on (and that knowledge pays off in interviews!)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Look at the top contributors on LinkedIn, a lot of them post articles almost daily.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Find influential figures, such as Bill Gates. They also post relevant content, especially if they work in tech.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Some people (or companies) that don’t work in tech can post useful information too though. For example, Asana, a tool like Slack, has a great LinkedIn and posts lots of workplace-focused articles&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&quot;if-you-go-to-college-follow-your-professors-some-professors-are-very-active-outside-of-teaching-and-have-very-active-linkedin-profiles&quot;&gt;If you go to college, follow your professors! Some professors are very active outside of teaching and have very active LinkedIn profiles.&lt;/h4&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;http://eulercoder.me/2017/08/college-low-gpa-know-everything/&quot;&gt;College and Low GPA: Everything you need to know.&lt;/a&gt;&lt;a href=&quot;http://eulercoder.me/2017/08/college-low-gpa-know-everything/&quot;&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you don’t go to college, you can apply this concept by following professors at nearby or prestigious universities. For example, some Stanford professors post a lot of content and are worth following.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finally, follow all the people you know! I find it fascinating to see what people I used to work with are up to, and some are working at places I dream of working at.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;readslack-internship-san-francisco-and-silicon-valley&quot;&gt;Read: &lt;a href=&quot;http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/&quot;&gt;Slack Internship, San Francisco, and Silicon Valley&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Make sure to like and/or comment on things you see on LinkedIn&lt;/strong&gt;; your activity shows up on your profile and it looks good if your profile is lively. Being active on LinkedIn shows you care about your professional image.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;&lt;img src=&quot;http://eulercoder.me/wp-content/uploads/2017/08/Internship-in-article-post.jpg&quot; alt=&quot;Summer Internship guide on eulercoder&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[clickToTweet tweet=”“80% of jobs are found through networking and recommendations” “ quote=”“80% of jobs are found through networking and recommendations” “]&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h2 id=&quot;linkedin-tips-2parsing-your-newly-active-feed&quot;&gt;LinkedIn Tips #2: Parsing your newly active feed&lt;/h2&gt;
+
+&lt;p&gt;After a round of following people, refresh your feed and see if you like the content. I prefer some balance to my feed; I follow a few people who aren’t business serious all the time, and it helps me scroll through my feed without boredom.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Try to identify people whose content you like:&lt;/strong&gt; Just like on Facebook or Instagram, there are always people you look forward to seeing more content from, and clicking on their content and liking it lets LinkedIn’s feed algorithm know you want to see more of them.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;**Remove people you find dull or boring: **Try to avoid following people who you actively avoid when scrolling through your feed. I remove people or companies that post lots of clickbait-style articles.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;**Save interesting articles: **Keeping a list of articles that had interesting content or titles for later is great for curbing boredom and you can get even more out of your feed. I try to read at least one helpful article each time I scroll through my feed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;have-you-readmy-internship-interview-experience-with-amazon-slack-mozilla-linkedin-and-browserstack&quot;&gt;Have you read: &lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;My Internship Interview Experience with Amazon, Slack, Mozilla, LinkedIn, and Browserstack? &lt;/a&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;**Rise and repeat! **This process should be organic and repeated a few times, especially when your interests change or you switch positions. It took me about a month to get it where I was very happy with my feed, and I visited the site a couple of times a week.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope these LinkedIn tips help make LinkedIn more appealing as a place to get information. If you don’t have a LinkedIn account already, I would _highly _recommend getting one. It might take a while to set up the first time, but updating is quite easy. It works as a pseudo-resume and allows employers to see a lot more about yourself. I include my LinkedIn on my resume and use my LinkedIn to go into further detail about what is on my resume.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-linkedin-tips&quot;&gt;Final LinkedIn Tips:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Follow companies on LinkedIn and people who work at those companies&lt;/strong&gt;. They post information about hiring every once in a while; they also post great articles to read about what they do and like. Employers can also see who you follow Sand if you follow their company on LinkedIn. This can help you not get filtered out and shows you really care about the position and company.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;**Stay active: **After spending time setting up an account and customizing your feed, why not enjoy all the hard work you put in? Keep scrolling, posting, and updating your feed so it stays relevant to your interests. A little work here and there makes your LinkedIn feel like a lot less work overall&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;**Have fun: **If it feels like you’re falling into a pit of professionalism, spice it up a bit and post something that you’re happy about. Even if it’s something you work on outside of your job, posting about hobbies shows your multidimensional, and that is very appealing.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s all!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute to our &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Mission and Goal&lt;/a&gt;? Write on Eulercoder. Write an &lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;email to us&lt;/a&gt; or &lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;contact us&lt;/a&gt; for guest posts. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Did you found this article useful? Write your comments below. 🙂&lt;/p&gt;
+
+&lt;p&gt;If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you Like &lt;a href=&quot;https://www.facebook.com/eulercoder&quot;&gt;our FB page&lt;/a&gt; and &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt; for discussions and latest updates.&lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;</content><author><name>Nicholas</name></author><category term="learning" /><summary type="html">In my experience, scrolling through job boards pumping out applications targeted at large companies isn’t the best way to go about getting a job or internship. By following a few people on LinkedIn, I managed to get into a conversation with Laszlo Bock, the Former Head of People Operations at Google. Here are a few LinkedIn tips on how to take full advantage of your LinkedIn feed.</summary></entry><entry><title type="html">Let’s Build a React Chatroom Component in 100 Lines of Code</title><link href="/2017/08/react-chatroom-100-lines" rel="alternate" type="text/html" title="Let's Build a React Chatroom Component in 100 Lines of Code" /><published>2017-08-28T03:10:37+00:00</published><updated>2017-08-28T03:10:37+00:00</updated><id>/2017/08/react-chatroom-100-lines</id><content type="html" xml:base="/2017/08/react-chatroom-100-lines">&lt;h1 id=&quot;lets-build-a-react-chatroom-component&quot;&gt;Let’s Build a React Chatroom Component&lt;/h1&gt;
+
+&lt;blockquote&gt;Oh hey, how’s it going!&lt;/blockquote&gt;
+
+&lt;p&gt;So — I was building this React Chatroom Component for my side-project, which I don’t think I will be able to launch soon due to &lt;strong&gt;a lot of things&lt;/strong&gt;, I would love to chat about. But yeah, instead of letting this sit it my Gitlab for months, I thought open sourcing it to &lt;a href=&quot;https://github.com/WigoHunter/react-chatapp&quot;&gt;Github&lt;/a&gt; might just be a better idea.&lt;/p&gt;
+
+&lt;p&gt;Who knows. I might even receive early feedbacks!&lt;/p&gt;
+
+&lt;p&gt;And I love writing. So I will try to explain how I built this React Chatroom Component in 100 lines of JavaScript along with some high-level introductions of how React applications and components work!React applications and components work!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/2000/1*kjOH0q5D2vKlHq7Z5QrATQ.png&quot; alt=&quot;react chatroom - eulercoder&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+&lt;h3 id=&quot;why-react&quot;&gt;Why React&lt;/h3&gt;
+
+&lt;p&gt;I guess you might have your reasons if you decided to click into this post. You might find it cool. You might be hearing a lot of the library and just want to know more about it.&lt;/p&gt;
+
+&lt;p&gt;For me, though, React is fun. It really disrupts the minimal unit level in web applications to become functional &lt;strong&gt;components&lt;/strong&gt;, where you would define how a component is being rendered, along with the data it consumes and the functionalities it controls.&lt;/p&gt;
+
+&lt;p&gt;This largely increases the re-usability of codes.&lt;/p&gt;
+
+&lt;p&gt;For instance, I can very much write&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;class Chatroom extends React.Component {
+submitMessage() {
+// JS Code here
+}&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;render() {
+const { chatHistory } = this.props;&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;return (
+{/* HTML code here */}
+);
+}
+}&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and from there, I would be able to render a Chatroom anywhere with&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;&amp;lt;Chatroom chatHistory={chatHistory} /&amp;gt;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You see how data is being streamed in this case. You can simply inject the chat data from your App to a Chatroom component, which you would use just like HTML tags, and in the Chatroom component’s code, you will gain access to the data source with this.props.&lt;/p&gt;
+
+&lt;p&gt;Beautiful isn’t it.&lt;/p&gt;
+
+&lt;p&gt;And the missing HTML code and JS code are what will be covered in this tutorial.&lt;/p&gt;
+
+&lt;p&gt;You can check out my source code on &lt;a href=&quot;https://github.com/WigoHunter/react-chatapp&quot;&gt;my Github repo&lt;/a&gt; where I also have a &lt;a href=&quot;https://react-chatapp.surge.sh/&quot;&gt;demo&lt;/a&gt; hosted on &lt;a href=&quot;https://surge.sh&quot;&gt;Surge&lt;/a&gt; (Definitely recommend Surge for its amazing and free single command line deployment)&lt;/p&gt;
+
+&lt;blockquote&gt;Final Disclaimer: I will not include how I stream data with Meteor in this tutorial. That would make this too long to write for me, and of course, for you to read. If I do get the time, I will make another blog post about the createContainer functions that come with Meteor.&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;create-react-app&quot;&gt;Create-React-App&lt;/h3&gt;
+
+&lt;p&gt;Another great thing about React is the support of open source community. Since all you will ever make with React are components, people are open sourcing their components like this front-end React-Chatapp on Github or Npm as well.&lt;/p&gt;
+
+&lt;p&gt;This pretty much realizes the dream of “&lt;strong&gt;Don’t reinvent the wheels.&lt;/strong&gt;” It’s completely possible for you to develop a website or application without writing any of these components. Just look up from Github or any other frameworks and inject the right data into the right components and you are good to go.&lt;/p&gt;
+
+&lt;p&gt;It might bring you troubles to config webpacks and those magics in the background at first — But Facebook even mitigates this by providing a CLI to get a React app up and running with a single command line.&lt;/p&gt;
+
+&lt;p&gt;So first, if you don’t have this tool installed, let’s first go to your terminal or iTerm and run (assuming npm is installed)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-git&quot;&amp;gt;npm install -g create-react-app
+create-react-app &amp;lt;the project name you want&amp;gt;
+cd &amp;lt;the project name&amp;gt;
+npm start&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;from here, you will see a generic starting page run on localhost:3000&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*bwFxqbpXBb0u4JS8IRw9Zg.png&quot; alt=&quot;react initilization - eulercoder&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And if you open the project folder with VSCode (Yup, Microsoft pride.), you will see the App Component in /src like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;class App extends Component {
+render() {
+return (
+{/* SKIP: Generic HTML codes */}
+);
+}
+}&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can try to edit anything here and you will notice the website at localhost:3000 hot reloads. That is, You don’t need to refresh the page, the project will observe the file changes and hot reload the page for you.&lt;/p&gt;
+
+&lt;h3 id=&quot;build-thechatroom&quot;&gt;Build the Chatroom&lt;/h3&gt;
+
+&lt;p&gt;SO — Let’s get straight to the point. Let’s modify the render function of this App to only render a background div where we apply an easy Flexbox layout to pin the Chatroom in the center of the page (You can simply copy my CSS code from &lt;a href=&quot;http://react-chatapp.surge.sh/static/css/main.b5d0bdf9.css&quot;&gt;here&lt;/a&gt;, as I won’t be covering CSS in this post), and of course, the Chatroom component itself.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;return (
+&amp;lt;div className=“App”&amp;gt;
+&amp;lt;Chatroom /&amp;gt;
+&amp;lt;/div&amp;gt;
+);&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice this should break your project because it doesn’t yet recognize the Chatroom Component. So now let’s plan how we would want our Chatroom to look like.&lt;/p&gt;
+
+&lt;p&gt;You might have other ideas, but to me: a chatroom has two most critical missions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Render the chat history&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Allow user to submit a new message&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And this is also why I felt like this Component I made for my side-project, could be an alternative example other than to-do apps — Because these two objectives pretty much map to Create and Read operations in CRUD. Of course, Update and Delete are something you could add to chatrooms as well, but I just didn’t plan to have these functions in the prototype level of ChillTime.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*AZHXZeU1kHwjRRQLNKSRxQ.png&quot; alt=&quot;chatroom submit message image - eulercoder&quot; /&gt;The central part of the chatroom that renders chat history&lt;/p&gt;
+
+&lt;h3 id=&quot;render-data&quot;&gt;Render Data&lt;/h3&gt;
+
+&lt;p&gt;In the source code &lt;a href=&quot;https://github.com/WigoHunter/react-chatapp/blob/master/src/Chatroom.js&quot;&gt;here in src/Chatroom.js&lt;/a&gt;, you will see that I have prepared a set, or more specifically, an array of mock data of chat history. And in React, if you want to iterate and render each element in an array, you should make use of the map function.&lt;/p&gt;
+
+&lt;p&gt;One thing to note though, is that instead of using React states to store data, in the cases you do have a Backend for data streaming, whether it is with Meteor methods, GraphQL queries, or any other server technics you are familiar with, you should inject data to the Chatroom Component as properties like &lt;em&gt;&amp;lt;Chatroom chatHistory={chatHistory} /&amp;gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the comparisons of props and states in React, there are already tons of great documents out there. So if you are interested in it, I would recommend you to checkout &lt;a href=&quot;https://facebook.github.io/react/docs/state-and-lifecycle.html&quot;&gt;this official doc&lt;/a&gt;. But in short, I would use State to control the component’s UI status, for example, whether a user is typing or not, and Props for actual data of the application.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;&amp;lt;ul className=“chats” ref=“chats”&amp;gt;
+{
+chats.map((chat) =&amp;gt;
+&amp;lt;Message chat={chat} user={username} /&amp;gt;
+);
+}
+&amp;lt;/ul&amp;gt;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is how I really render data with the map function. It will map each element in the array of chats to a Message Component where, this time, I do pass data as properties to this Message Component.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-javascript&quot;&amp;gt;const Message = ({chat, user}) =&amp;gt; (
+{/* SKIP: HTML codes /}
+{/ Check out details at https://github.com/WigoHunter/react-chatapp/blob/master/src/Message.js */}
+);&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And the functional declaration of this Message Component in &lt;a href=&quot;https://github.com/WigoHunter/react-chatapp/blob/master/src/Message.js&quot;&gt;src/Message.js&lt;/a&gt; is simpler. It doesn’t own JavaScript functions and simply renders HTML codes expecting two data inputs: chat and user to be used in the HTML codes.&lt;/p&gt;
+
+&lt;h3 id=&quot;submit-newmessage&quot;&gt;Submit New Message&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*Vxqxe9UPRmzL83ssCOvqKQ.png&quot; alt=&quot;submit a new message - eulercoder&quot; /&gt;The bottom part that submits a new message&lt;/p&gt;
+
+&lt;p&gt;Submitting in React is not much different from what you would do with pure JavaScript, or Vanilla JS if you prefer (xD). Just remember that you can get data from UI with the library ReactDOM that comes with create-react-app. So for example, we have an input like this in the bottom of the chatroom.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-markup&quot;&amp;gt;&amp;lt;input type=“text” ref=“msg” /&amp;gt;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We would be able to get its value by:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-markup&quot;&amp;gt;ReactDOM.findDOMNode(this.refs.msg).value&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Therefore the texting part in the bottom would be like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-markup&quot;&amp;gt;&amp;lt;form className=“input” onSubmit={(e) =&amp;gt; this.submitMessage(e)}&amp;gt;
+&amp;lt;input type=“text” ref=“msg” /&amp;gt;
+&amp;lt;input type=“submit” value=“Submit” /&amp;gt;
+&amp;lt;/form&amp;gt;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And in the submitMessage function, (again, since we are using State to store the chat history in this case), we will use the native React function setState to modify the origin state of data and one more additional entry whenever users type and submit. For the sake of UX, let’s also reset the value of the input to an empty string on success.&lt;/p&gt;
+
+&lt;p&gt;Another thing worth noting with React state is that it is immutable: so even if you want to insert an element into an array in states, you should use the JavaScript array method &lt;strong&gt;concat&lt;/strong&gt; rather than &lt;strong&gt;push&lt;/strong&gt;, which actually mutate the value of the state.&lt;/p&gt;
+
+&lt;h3 id=&quot;finally-deployment-withsurge&quot;&gt;Finally, Deployment with Surge&lt;/h3&gt;
+
+&lt;p&gt;So if everything goes right, you should have this Chatroom running just fine now. And the final part of deployment is where another great synergy of Create-react-app and &lt;a href=&quot;https://surge.sh&quot;&gt;Surge&lt;/a&gt; comes in handy.&lt;/p&gt;
+
+&lt;p&gt;Now just trust me with this.&lt;/p&gt;
+
+&lt;p&gt;Go to the root directory of this project in your terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;code class=&quot;language-git&quot;&amp;gt;#If you don’t have surge yet then do this:
+npm install -g surge&amp;lt;/code&amp;gt;
+
+
+
+
+&amp;lt;code class=&quot;language-git&quot;&amp;gt;#If you already have surge, or after installing it:
+npm start build
+cd build
+surge&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There you go. Literally, three commands in Terminal and your first React site will be running healthy and at no cost at a &lt;a href=&quot;http://Surge.sh&quot;&gt;Surge.sh&lt;/a&gt; sub-domain just like my &lt;a href=&quot;https://react-chatapp.surge.sh&quot;&gt;react-chatapp.surge.sh&lt;/a&gt; with free and built-in SSL/HTTPS.&lt;/p&gt;
+
+&lt;h3 id=&quot;whoa-my-firstattempt&quot;&gt;Whoa! My First Attempt&lt;/h3&gt;
+
+&lt;p&gt;This is the first time I have ever made a blog post that is even close to being a tutorial.&lt;/p&gt;
+
+&lt;p&gt;Now I think I did skip some of the codes in this post, primarily because I don’t believe copying all the codes and explain to them line by line is a good way to elaborate. So I took another approach and tried to reason the high-level designs and functions we have in this Chatroom Component, along with the introduction of some concepts and tools that synergy well with React.&lt;/p&gt;
+
+&lt;p&gt;I would definitely appreciate if some of you can share some opinions in the comment section.&lt;/p&gt;
+
+&lt;p&gt;But yeah, this is how I made this React Chatroom Component in 100 lines explained — Now I am more comfortable to say that at least I made some uses of these codes, and put it aside, for now, to prepare for my GRE test, graduate program applications and job searches!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Highly Recommended articles: &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are looking for Summer Internship or preparing for full-time job, I highly recommend you to read out &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;Summer Internship: The Ultimate Guide&lt;/a&gt;. We have also written a beginner’s guide on &lt;a href=&quot;http://eulercoder.me/2017/07/getting-started-open-source/&quot;&gt;Getting Started with Open Source Development&lt;/a&gt;. Do read them!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Anyways, if you are interested in talking to me, perhaps there is something in this tutorial I failed to explain enough, or even if you see potential synergies between you and me (just like create-react-app and surge), feel free to reach me at &lt;a href=&quot;mailto:kevin@projectable.hk&quot;&gt;kevin@projectable.hk&lt;/a&gt; or connect me on &lt;a href=&quot;https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4&quot;&gt;Linkedin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute in our &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Mission and Goal&lt;/a&gt;? Write on Eulercoder. Write an &lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;email to us&lt;/a&gt; or &lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;contact us&lt;/a&gt; for guest posts. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Did you found this article useful? Write your comments below. 🙂&lt;/p&gt;
+
+&lt;p&gt;If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you Like &lt;a href=&quot;https://www.facebook.com/eulercoder&quot;&gt;our FB page&lt;/a&gt; and &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt; for discussions and latest updates.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;</content><author><name>Kevin</name></author><category term="react" /><summary type="html">Let’s Build a React Chatroom Component</summary></entry><entry><title type="html">College and low GPA: Everything you need to know.</title><link href="/2017/08/college-low-gpa-know-everything" rel="alternate" type="text/html" title="College and low GPA: Everything you need to know." /><published>2017-08-11T12:25:29+00:00</published><updated>2017-08-11T12:25:29+00:00</updated><id>/2017/08/college-low-gpa-know-everything</id><content type="html" xml:base="/2017/08/college-low-gpa-know-everything">&lt;p&gt;Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let’s get started!&lt;/p&gt;
+
+&lt;h1 id=&quot;college-and-gpa-benefits-and-importance&quot;&gt;College and GPA: Benefits and importance&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;As companies get tons of resumes for every single job/internship, GPA is &lt;strong&gt;just a criteria &lt;/strong&gt;for them to shortlist candidates. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is impossible for companies to interview every single candidate, so companies use GPA as a yardstick to shortlist profiles.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is generally seen that students from top colleges get higher preference over students from tier two or three.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If someone is studying in MIT or Standford then definitely he/she will get higher preference over someone who is studying in Mumbai University in India.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reputed colleges and higher GPA shows that student has worked hard to get into a college and he was very punctual in college.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;[clickToTweet tweet=”Your GPA is NOT going to feed you. What will do that is you practical skills.” quote=”your GPA is NOT going to feed you. What will do that is you practical skills. “]&lt;/p&gt;
+
+&lt;h3 id=&quot;few-things-to-remember-if-you-have-low-gpa&quot;&gt;Few things to remember if you have low GPA&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;GPA will only help you through campus placement that is during your first job only. Once you get your first job, no one will ask your GPA ever again.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What matters at the end is your experience, your practical skills.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you have low GPA but you have many co-curricular achievements and good projects, you can easily get shortlisted for any company. In this case, both have equal chances of getting shortlisted.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I had 2.2/5 GPA, I got the internship at Slack and then full-time offer.**  Read:** &lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;My interview experience with Slack, Mozilla, BrowserStack, LinkedIn, and Amazon&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Smart people can always get a good career - higher GPA not. &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[clickToTweet tweet=”Remember A 2.0 student can know more than a 4.0 student. Grades don’t determine intelligence, they test obedience. “ quote=”Remember A 2.0 student can know more than a 4.0 student. Grades don’t determine intelligence, they test obedience. “]&lt;/p&gt;
+
+&lt;h4 id=&quot;complete-python-bootcamp-go-from-zero-to-hero-in-python&quot;&gt;Complete Python Bootcamp: Go from zero to hero in Python&lt;/h4&gt;
+
+&lt;h5 id=&quot;we-have-partnered-with-udemy-for-discount-and-offers-on-different-courses-get-upto-92-off-on-the-ultimate-course-on-python-using-our-links&quot;&gt;We have partnered with Udemy for discount and offers on different courses. Get upto 92% off on the Ultimate Course on Python using our Links.&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[
+	
+		
+		Enroll Now!		
+](https://click.linksynergy.com/deeplink?id=WQz2hZgW0To&amp;amp;mid=39197&amp;amp;u1=eulercoder&amp;amp;murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;final-tips-to-get-an-engineering-job-and-internships-with-low-gpa&quot;&gt;Final tips to get an Engineering job and internships with low GPA&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Don’t Mention your GPA: &lt;/strong&gt;If you have low GPA, leave it off. Do not mention your GPA in your resume. The hiring manager knows missing GPA means low GPA but leave it off anyway.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Demonstrate Practical Knowledge: &lt;/strong&gt;Having great projects on your resume, contribution to Open Source Projects, a solid Github profile (See my Github), relative internships, good co-curricular activities, competitive programming, hackathons etc. All these things are extremely important to get shortlisted and by having these things on your resume will definitely make you ahead of the competition. As we all know that Practical knowledge matters the most. Many students are great in schools/universities but can not translate the same in their practical outputs.&lt;br /&gt;
+[clickToTweet tweet=”Knowledge and Experience will always trump superficial GPAs. “ quote=”Knowledge and Experience will always trump superficial GPAs. “]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Apply to small companies/Startups first: &lt;/strong&gt;All the big companies receive tons of resumes and they use specific tools and algorithms to filter out candidates based on keywords. Recruiting team in big MNCs don’t have time to go through every single resume so it’s better to apply to small companies and startups first. They get fewer applications compared to MNCs and you will have higher chances of getting noticed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Focus on Resume format: &lt;/strong&gt;Make sure your resume is free from grammar, spelling and formatting errors. &lt;strong&gt;Use bullet points &lt;/strong&gt;and &lt;strong&gt;highlight experience and achievements. &lt;/strong&gt;We highly recommend you to read our &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;Summer Internship: The Ultimate Guide&lt;/a&gt; for best resume tips. You can also use my resume format mention in the guide.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Network: &lt;/strong&gt;Networking is extremely important in getting a good job. You have lower GPA, you may need referrals, the recruiter needs to know your skills and strength. Attend different on-campus placements sessions, go out of your way to talk to recruiters. When you and talk to engineers/recruiter, you create and control the very first impression - not your resume (your GPA).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Talk to people on LinkedIn groups, connect with people on the internet (Facebook), show them your work, ask for help. Start a conversation, build a rapport with them, ask for a referral before applying to a job in their company.&lt;/p&gt;
+
+&lt;h3 id=&quot;lastly-dont-give-up&quot;&gt;Lastly, Don’t give up.&lt;/h3&gt;
+
+&lt;p&gt;Persistence and patience pay off. I was rejected from 12 companies straight before getting shortlisted for 8 companies. You need to keep improving your skills and your resume. Once you have gotten your first engineering job, all future job and promotions will be based on your work experience. The only time your GPA will come up again is if you are applying to your graduate job. (Not happening ever again :p)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;What do you think about college and low GPA? Does it really matter? Have you secured a job/internship without mentioning your GPA on the resume? Share your experiences below in comments.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute in our &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Mission and Goal&lt;/a&gt;? Write on Eulercoder. Write an &lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;email to us&lt;/a&gt; or &lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;contact us&lt;/a&gt; for guest posts. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Did you found this article useful? Write your comments below. 🙂&lt;/p&gt;
+
+&lt;p&gt;If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you to &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content><author><name>vicky002</name></author><category term="discussion" /><category term="internship" /><summary type="html">Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let’s get started!</summary></entry><entry><title type="html">2 Years of Self-Learning Into a Developer: Eulercoder Motivation</title><link href="/2017/08/2-years-of-self-learning-into-a-developer" rel="alternate" type="text/html" title="2 Years of Self-Learning Into a Developer: Eulercoder Motivation" /><published>2017-08-06T13:50:37+00:00</published><updated>2017-08-06T13:50:37+00:00</updated><id>/2017/08/2-years-of-self-learning-into-a-developer</id><content type="html" xml:base="/2017/08/2-years-of-self-learning-into-a-developer">&lt;p&gt;#&lt;/p&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”1024”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*6Z_FxH-h8rcfDdGb9-gn1w.jpeg&quot; alt=&quot;Kevin Hsu teaching students - eulecoder&quot; /&gt; Kevin taking a workshop[/caption]&lt;/p&gt;
+
+&lt;h1 id=&quot;first-thing-first-self-learning-and-why-did-i-even-start-coding&quot;&gt;First thing first. Self-learning and Why did I even start coding?&lt;/h1&gt;
+
+&lt;p&gt;My first try with coding was with &lt;a href=&quot;https://www.youtube.com/user/sdwuntnu&quot;&gt;Dr Wu&lt;/a&gt; at National Taiwan Normal University. I was a high school student at the time and Dr Wu was my mentor. During the weekends, he would lead me and another friend to learn coding with assignments like developing a &lt;a href=&quot;https://en.wikipedia.org/wiki/Big_two&quot;&gt;Big Two game&lt;/a&gt; with C++. And that was without any GUI, you would have to play my game with C++ consoles…&lt;/p&gt;
+
+&lt;p&gt;And it was certainly fun. The sense of achievement when my program compiles and runs properly was thrilling.&lt;/p&gt;
+
+&lt;p&gt;I really liked it, but when the time came to choose a major to pursue in my University career, I was more gravitated towards Business subjects — They somehow seemed cooler to me.&lt;/p&gt;
+
+&lt;p&gt;I think I will skip the part where I had my miserable experiences studying Business and doing my first internships (If you are actually interested in knowing this suffering part, do check out my post on LinkedIn — &lt;a href=&quot;https://www.linkedin.com/pulse/from-businessstartup-kid-software-engineer-intern-microsoft-hsu&quot;&gt;From a Business/Startup Kid to a Software Engineer Intern at Microsoft&lt;/a&gt;), but anyway, that was how I started to reconsider my career choices and decided to give coding a second chance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Read: &lt;/strong&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;Summer Internship: The Ultimate Guide Recommended by 1000+ students&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;have-a-cleargoal&quot;&gt;Have a Clear Goal&lt;/h2&gt;
+
+&lt;p&gt;In addition to studying Business is really just not my thing, another dominant reason for me to start coding was that I wanted to develop a platform for students to meet other student talents from different backgrounds. I have always been a startup enthusiast. So the ability to develop and deliver a website or app to users was really in demand from myself.&lt;/p&gt;
+
+&lt;p&gt;I later think this is also one of the crucial reasons I made it through — I had a straight and clear goal and rationale behind these learning activities.&lt;/p&gt;
+
+&lt;p&gt;This is definitely something I would recommend beginners to think about. Try to come up with a goal, the reason why you are thinking about self-learning to code, or even reading this article. That would help you a lot on the way through. In my case, I was &lt;strong&gt;motivated&lt;/strong&gt; to dive into web programming.&lt;/p&gt;
+
+&lt;p&gt;But you might ask this. How would you know what the &lt;em&gt;right&lt;/em&gt; languages or knowledge to start with are?&lt;/p&gt;
+
+&lt;p&gt;My answer is that you really have to &lt;strong&gt;do your own research&lt;/strong&gt;. Take me for example, I learned that web development can be broke down into frontend and backend components and that frontend typically consists of HTML, CSS while backend can be JavaScript, Python or even Java, C#. And all these research is also a crucial part of my self-learning process. On the other hand, or hands, if you are more into the hot topics like AI, Machine Learning or VR, there are yet other toys to play with.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;learning-with-online-resources&quot;&gt;Learning with Online Resources&lt;/h2&gt;
+
+&lt;p&gt;Once you have your own goal, it’s the exciting fun time to mine useful resources online. There are really just a number of great tutorials available on the Internet. A lot of them are even free. Let me try to list down the ones I used and would recommend.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/&quot;&gt;FreeCodeCamp&lt;/a&gt; is a great example of &lt;strong&gt;online resources that are free&lt;/strong&gt; when it comes to getting started with learning web programming. It provides detailed step-by-step instructions to create and style website elements (which is called DOM) as well as using JavaScript to interact with them. They did a great job gamify the learning process and community building. You can pretty much find a FreeCodeCamp meetup group in every city (&lt;a href=&quot;https://www.facebook.com/groups/free.code.camp.taipei/&quot;&gt;FCC TP&lt;/a&gt;, for example). I would definitely recommend this to fresh starters to finish until at least the section of JSON APIs and AJAX. These are really important foundations to any complex projects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”1600”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/0*5X-j0zr9ZV4Qgt4c.png&quot; alt=&quot;image - self-learning on Freecodecamp website&quot; /&gt; Freecodecamp course[/caption]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scott from &lt;a href=&quot;https://leveluptutorials.com/&quot;&gt;Levelup Tutorials&lt;/a&gt; is someone I secretly feel like I can’t thank enough to. Once I finish most of the FreeCodeCamp content, I went on to find some video tutorials with real-life examples. I mean, I agree with how some people say technology stacks grow fast nowadays, you don’t have to re-invent the wheel when there are tools and frameworks available to help you build efficient server and UI. After building up solid foundations from FreeCodeCamp, the &lt;a href=&quot;https://www.leveluptutorials.com/tutorials/meteor-1-4-for-everyone&quot;&gt;Meteor For Everyone&lt;/a&gt; and &lt;a href=&quot;https://www.leveluptutorials.com/tutorials/meteor-react-for-everyone&quot;&gt;Meteor &amp;amp; React For Everyone&lt;/a&gt; series from Levelup Tutorials (both free of charge) really prepared me to apply HTML, CSS, JavaScript knowledge onto modern frameworks like Meteor and React using real-world web development examples.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”1600”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/0*DhmwZYDF_IbEQIK5.png&quot; alt=&quot;Image - Self-learning on LevelTuts by eulercoder&quot; /&gt; LevelTuts[/caption]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.udemy.com/&quot;&gt;Udemy&lt;/a&gt; is another platform that I would definitely recommend you to check out. Both FCC and LevelupTuts lean towards introducing web technologies. On the other hand, Udemy is a platform where teachers from all over the world upload paid or free tutorials with contents ranged from web development to native apps and even chatbots. Now, because a lot of them are paid, I won’t do specific recommendations on purchasing which ones of them here, but Udemy did do an &lt;a href=&quot;https://about.udemy.com/students/student-profile-kevin-hsu/&quot;&gt;interview with me&lt;/a&gt; (see how active I was using this platform haha). You can always check out the post for some more information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[caption id=”” align=”alignnone” width=”1600”]&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/0*KhRymPHcW44IoIky.png&quot; alt=&quot;Self-learning on Udemy website image - eulercoder&quot; /&gt; Udemy Website[/caption]&lt;/p&gt;
+
+&lt;h2 id=&quot;build-your-ownprojects&quot;&gt;Build Your Own Projects&lt;/h2&gt;
+
+&lt;p&gt;After finishing a couple Meteor tutorials with Levelup Tutorials, I really felt empowered and had that desire and confidence to develop projects myself. At the time, I also just bumped into Dr Ray when I interned at Cocoon, a coworking space, who runs &lt;a href=&quot;http://appslab.hk/&quot;&gt;CityU Apps Lab&lt;/a&gt;. So I randomly just asked Dr Ray if I can join his lab although I don’t even study at City University.&lt;/p&gt;
+
+&lt;p&gt;He said yes. &lt;strong&gt;Why not&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We were both excited really. I was the first guy to actually join his lab as a trainee I think. But yeah, this is also something I learn along the way — the Can Do Spirit. If I hadn’t interned at a coworking space, I wouldn’t have met Dr Ray. And if I hadn’t overcome the shyness and demanded challenges for myself, I wouldn’t have come to develop a file streaming web app with the lab — with which experience, I got my first internship as a developer at a wonderful startup called &lt;a href=&quot;http://www.25sprout.com/&quot;&gt;25Sprout&lt;/a&gt; in Taiwan.&lt;/p&gt;
+
+&lt;p&gt;Everything above, from getting started to getting my first internship, happened in exactly one year since I started to learn to code.&lt;/p&gt;
+
+&lt;p&gt;The point is: try to always look for opportunities building projects with the technologies you like. They are your resume and therefore valuable tickets to your next bigger and more exciting opportunities.&lt;/p&gt;
+
+&lt;p&gt;But, you may think, what if there is just no opportunity.&lt;/p&gt;
+
+&lt;p&gt;Then &lt;strong&gt;make one&lt;/strong&gt;. Build your own personal website for example. This is also something I think every developer should do. I also made &lt;a href=&quot;http://kevinhsu.info/&quot;&gt;mine&lt;/a&gt; (which I am currently revamping) when I finished FreeCodeCamp with Bootstrap. Getting one up and running isn’t just a fine exercise, you will also get to try to ship a website by buying and configuring your first domain and hosting server.&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-learning&quot;&gt;Keep Learning&lt;/h2&gt;
+
+&lt;p&gt;Now it’s been another year since I joined 25Sprout as a summer intern. In this year, I do feel like my learning curve has not been as thrilling as it was before, but there are different exciting exposures as I started to lead and develop my dream projects with friends, had my first experience being a speaker in a &lt;a href=&quot;https://www.youtube.com/watch?v=auNTp1lc2ZE&quot;&gt;student tech conference&lt;/a&gt; introducing React and Meteor. I can, in fact, keep this list on and on. I met my partner to co-host a &lt;a href=&quot;http://ecjamming.tech/&quot;&gt;Hackathon&lt;/a&gt; that is nominated as one of the &lt;a href=&quot;https://medium.com/@dottechdomains/10-mind-blowing-student-hackathons-from-around-the-world-833c139f8026&quot;&gt;Ten Mind-blowing Student Hackathons&lt;/a&gt; [Medium Blog Link] from around the world, and finally now working as an intern at Microsoft, a tech giant company I am personally a fan of.&lt;/p&gt;
+
+&lt;p&gt;I too had my setbacks along the way, which I mentioned in my &lt;a href=&quot;https://www.linkedin.com/pulse/from-businessstartup-kid-software-engineer-intern-microsoft-hsu&quot;&gt;blog post&lt;/a&gt; on Medium, but all of them have nurtured me to become more ready for my next success (if it does exist, of course, you never know).&lt;/p&gt;
+
+&lt;p&gt;If I had to say there’s one thing I’ve learned from the 2 years of self-learning, that is more important than the coding skills, it has to be the ability to be proactive and always looking for next opportunities in the current ones. This is what truly drove and supported me to make every single challenging yet rewarding decisions including even to start learning something that is once completely alien to me — coding.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it!&lt;/p&gt;
+
+&lt;p&gt;This article was written by Kevin Hsu, read all his articles and &lt;a href=&quot;https://medium.com/@kevin.wcb&quot;&gt;follow Kevin on Medium&lt;/a&gt; also, connect with Kevin on &lt;a href=&quot;https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4/&quot;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have something to talk about? Want to contribute in our &lt;a href=&quot;http://eulercoder.me/about&quot;&gt;Mission and Goal&lt;/a&gt;? Write on Eulercoder. Write an &lt;a href=&quot;mailto:hi@eulercoder.me&quot;&gt;email to us&lt;/a&gt; or &lt;a href=&quot;http://eulercoder.me/contact&quot;&gt;contact us&lt;/a&gt; for guest posts. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Did you found this article useful? Write in comments, your thoughts on Kevin’s journey and wish him luck. :)&lt;/p&gt;
+
+&lt;p&gt;If you found this article motivating, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you to &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other Recommended articles:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;Slack, Amazon, Mozilla, Browserstack, LinkedIn: My Internship Interview Experience&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/basic-skills-needed-internship/&quot;&gt;Basic skills needed prior to applying for internships &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Kevin</name></author><category term="learning" /><category term="motivation" /><summary type="html">#</summary></entry><entry><title type="html">Twitter Internship and Undergrad Role 2018: Everything you need to know</title><link href="/2017/08/twitter-internship-undergrad-role-2018" rel="alternate" type="text/html" title="Twitter Internship and Undergrad Role 2018: Everything you need to know" /><published>2017-08-02T19:18:51+00:00</published><updated>2017-08-02T19:18:51+00:00</updated><id>/2017/08/twitter-internship-undergrad-role-2018</id><content type="html" xml:base="/2017/08/twitter-internship-undergrad-role-2018">&lt;p&gt;We just received an email yesterday about Twitter Internship 2018 Application and their undergrad roles. Twitter internship application for 2018 is now live on their career page and in this post, we will be writing about everything you need to know to spend your summer in San Francisco at Twiter HQ, also Twitter has many offices in the US, Canada, Europe and Australia. Twitter’s building was right in front of my building when I was in San Francisco during &lt;a href=&quot;http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/&quot;&gt;my summer internship at Slack&lt;/a&gt;.  Ok, so let’s get started about the &lt;strong&gt;Twitter Internship&lt;/strong&gt; and Undergrad application process, preparation plan and few other things that will be helpful in cracking the interview.&lt;/p&gt;
+
+&lt;p&gt;#&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;twitter-internship&quot;&gt;Twitter Internship&lt;/h1&gt;
+
+&lt;p&gt;Twitter internship application process started on 1st August, let’s see the application time. The Twitter internship opportunity is available for all three seasons, &lt;strong&gt;Spring **(Jan - April), **Summer&lt;/strong&gt; (May- September), and &lt;strong&gt;Fall&lt;/strong&gt; (Sep - December).&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;Application Timeline&lt;/p&gt;
+
+&lt;p&gt;As per the Twitter Email, this is the timeline of the process.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Internship Application Opens on - &lt;strong&gt;August 1&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Application closes on - &lt;strong&gt;February 12&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Final Application Status will be available on - ** March 30** [ This means by March 30, they will let everyone know about their application status]&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NOTE: Students who will apply before November 6, will receive application statuses by December 20.&lt;/p&gt;
+
+&lt;h2 id=&quot;twitter-internship-and-undergrad-interview-process&quot;&gt;Twitter Internship and Undergrad Interview process&lt;/h2&gt;
+
+&lt;p&gt;We have tried to provide you everything about the Twitter internship and undergrad interview pattern, type of problems they ask. We all also know that it’s not guaranteed, they will follow the same pattern every year. Let’s see the pattern,&lt;/p&gt;
+
+&lt;p&gt;So, Process starts with  &lt;img src=&quot;http://eulercoder.me/wp-content/uploads/2017/08/Twitter-internship-min.png&quot; alt=&quot;Twitter Internship Pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;60 Minutes - Tech Screening on &lt;a href=&quot;https://www.hackerrank.com&quot;&gt;&lt;em&gt;Hackerrank&lt;/em&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;There will be two coding problems that you have to solve in an hour.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Problems will be easy but you need to keep corner cases in mind.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;This pre-screening is just to see whether a candidate is able to code or not.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;**Possible problem types - **Strings, LinkedList, Arrays, Trees and basic ad-hoc implementation&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Phone Interview&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Phone interview will be with the hiring manager&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The hiring manager will ask you to code on a collaborative site.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;This may last up to 45 minutes.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;There will be few questions on your interests so that he can proceed further with team specific interviews.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;2-3 Core Interviews with different teams&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;In the host matching phase, you will be interviewing with different teams based on your performance and interests.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Sometimes the interview can be up to 3 rounds or even one if the interviewer is convinced that your interest and skills match with the requirement of the team.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Culture Fit Interview&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;You must be already knowing what possible questions can be asked in cultural fit interviews.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Possible questions can be about the company’s mission and values, team conflicts, about the manager, your personal views on things.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Finally The Offer Letter&lt;/strong&gt; - And, once you clear all these rounds, you’ll receive the &lt;em&gt;&lt;strong&gt;twitter internship&lt;/strong&gt;&lt;/em&gt; offer letter or full-time job offer depending on the role you had applied.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;important-topics-to-prepare-&quot;&gt;Important topics to prepare** **&lt;/h2&gt;
+
+&lt;p&gt;We will be writing articles on each of these topics very soon, but you need to start preparing and solving problems on these topics.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;String Manipulation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hashing and Hash Tables&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Array and Linked list&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sorting algorithms&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Binary Search Tree&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Networking&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Operating Systems&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;resume-critique&quot;&gt;Resume Critique&lt;/h2&gt;
+
+&lt;p&gt;We have written &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;Summer internship guide on our blog&lt;/a&gt;, which explains how to write and create your resume. Please read this guide once. Also, we’d love to help and critique your resume and if we find good resume, we will pass it directly to the Twitter HR people. You can mail us your resume at  -&lt;a href=&quot;mailto:support@eulercoder.me?subject=Attaching%20resume%20for%20critique%20and%20refferal&amp;amp;body=Hello%20Eulercoder%20Team%2C%20please%20have%20a%20look%20at%20my%20resume.%20&quot;&gt; support@eulercoder.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Few Books I highly recommend you to read&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;​&lt;a href=&quot;https://amzn.to/2ul5KaC&quot;&gt;Cracking&lt;/a&gt;&lt;a href=&quot;https://amzn.to/2ul5KaC&quot;&gt; the coding Interview&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://amzn.to/2vtXfPz&quot;&gt;Elements of Programming Exposed&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;​&lt;a href=&quot;https://amzn.to/2vtJ1ye&quot;&gt;Coding&lt;/a&gt;&lt;a href=&quot;https://amzn.to/2vtJ1ye&quot;&gt; Interview Questions&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;Lastly, where to apply?&lt;/p&gt;
+
+&lt;p&gt;Ok, after all your preparation, you can apply to Twitter Internship or undergrad role using&lt;a href=&quot;https://goo.gl/whS8td&quot;&gt; this link.&lt;/a&gt; And after, tweet &lt;em&gt;#Twitter4Me&lt;/em&gt; and tell Twitter why you want to work with them!&lt;/p&gt;
+
+&lt;h2 id=&quot;final-words&quot;&gt;Final words:&lt;/h2&gt;
+
+&lt;p&gt;Start preparing for the internships as the application process for all the companies have just started. Don’t wait too long fo create a great or in the preparation. Apply in different companies and also keep preparing parallely. You have the strength to crack any interview, don’t wait for the perfect time. This is the right time!&lt;/p&gt;
+
+&lt;p&gt;That’s it! Ask us anything, comment below your queries, suggestions or feedback about the article. If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship and job. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you to &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other Recommended articles:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;Slack, Amazon, Mozilla, Browserstack, LinkedIn: My Internship Interview Experience&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/basic-skills-needed-internship/&quot;&gt;Basic skills needed prior to applying for internships &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;Subscribe to our mailing list&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;</content><author><name>vicky002</name></author><category term="internship" /><summary type="html">We just received an email yesterday about Twitter Internship 2018 Application and their undergrad roles. Twitter internship application for 2018 is now live on their career page and in this post, we will be writing about everything you need to know to spend your summer in San Francisco at Twiter HQ, also Twitter has many offices in the US, Canada, Europe and Australia. Twitter’s building was right in front of my building when I was in San Francisco during my summer internship at Slack. Ok, so let’s get started about the Twitter Internship and Undergrad application process, preparation plan and few other things that will be helpful in cracking the interview.</summary></entry><entry><title type="html">Basic skills needed prior to applying for internships</title><link href="/2017/07/basic-skills-needed-internship" rel="alternate" type="text/html" title="Basic skills needed prior to applying for internships" /><published>2017-07-30T10:14:00+00:00</published><updated>2017-07-30T10:14:00+00:00</updated><id>/2017/07/basic-skills-needed-internship</id><content type="html" xml:base="/2017/07/basic-skills-needed-internship">&lt;p&gt;You will be preparing for the interviews but you need to have some basic knowledge of computer science before beginning the preparation phase. In the last previous article, we discussed what is the ideal time to apply for internships and in this article, we are going to discuss what basic skills needed prior to applying for internships and starting the interview preparation.&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-skills-needed-prior-to-internship-application-process&quot;&gt;Basic skills needed prior to internship application process&lt;/h3&gt;
+
+&lt;p&gt;Most of the students ask me, I am looking for an internship in the second year only, please suggest me what I should learn before applying. So, here is the list of things you should be knowing before you begin the application process.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-programming-language&quot;&gt;1. Programming Language&lt;/h4&gt;
+
+&lt;p&gt;You should be good in one programming language. The interviewer will ask you to write code on a whiteboard or on a shared screen for a given problem. Generally, the interview looks for&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Whether the code is readable or not&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How well you choose functions available in that programming languages&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;How you name variables&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Whether you are commenting your code or not&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Your coding style&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I would suggest Java, C++, Python, and Javascript language. It doesn’t really matter which programming language you choose to write code in the interview. Just, learn and practice programming problems in the language of your choice. Crash courses on different programming languages will be available on Eulercoder very soon, I’ll highly recommend subscribing to our latest course updates.&lt;/p&gt;
+
+&lt;h4 id=&quot;2-algorithms-and-data-structures&quot;&gt;2. Algorithms and Data Structures&lt;/h4&gt;
+
+&lt;!-- more --&gt;
+&lt;p&gt;After the programming language, this is the most important part of any interview. Even though you will be preparing and revising algorithms and data structures in the preparation phase, you need some basic knowledge.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Know what is complexity and Big O notations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Clear your basics of Array, LinkedList, Stack, and Queue&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand and implement different sorting algorithms&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand and implement searching, graph, and tree algorithms etc.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The interviewer will give you a problem and ask you to code. Just coming up with an appropriate answer is not sufficient, the interviewer will ask you to optimize your code, think of different corner cases and give a solid approach to the problem. This is where Data structures and algorithms are important. You need to know different possible scenarios where an algorithm can be applied or an appropriate data structure can be used. Most common data structures and algorithms will be available on Eulercoder very soon.&lt;/p&gt;
+
+&lt;h4 id=&quot;3-cs-related-fundamentals&quot;&gt;3. CS Related fundamentals&lt;/h4&gt;
+
+&lt;p&gt;Apart from programming knowledge and Algorithms, companies also ask questions on basic CS fundamentals. These are generally theoretical questions but very useful in your internship.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Know basics of Networking&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basics of Linux Commands&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Database (MySQL or MongoDB) etc&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;4--good-communication-skills&quot;&gt;4.  Good Communication Skills&lt;/h4&gt;
+
+&lt;p&gt;This is also very important. You will be working in a team, you will have to communicate with team members and explain work, projects and your solution. Previously I used to struggle while explaining my solutions, this happens with most of us. So, you need to practice, explains things to your friends, work on creating a good flow of your solution, use examples, speak closely and, in the interview keep your interviewer involved, being quite and coding doesn’t work.&lt;/p&gt;
+
+&lt;h4 id=&quot;5-projects&quot;&gt;5. Projects&lt;/h4&gt;
+
+&lt;p&gt;You need to have projects in your resume before you start the application process. The resume should contain projects related to CS, if you are not from CS background, you can still work and find projects on Github. Do independent projects or work on open source projects. If you can’t think of any project ideas, I have created &lt;a href=&quot;https://github.com/vicky002/1000_Projects&quot;&gt;1000 Projects repository, which contains over 500+ projects&lt;/a&gt; right now. Don’t create projects just to show and fill your resume, create something useful. School Management system, Library management system, all such projects are already available on the web. Unless, something you have built something unique, it won’t contribute in your resume.&lt;/p&gt;
+
+&lt;p&gt;So, this was all about the basic skills you need prior to applying for internships.&lt;/p&gt;
+
+&lt;p&gt;If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship and job. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;amp;A, post materials in the group. I’ll highly recommend you to &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;join our FB Group.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Recommended Articles:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;Slack, Amazon, LinkedIn, Browserstack and Mozilla - My internship interview experience&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/&quot;&gt;Slack, San Francisco and Silicon Valley - My Summer 2016&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;
+
+&lt;p&gt;[clickToTweet tweet=”http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/ “ quote=”Slack Internship, San Francisco, and Silicon Valley - Summer 2016” theme=”style5”]&lt;/p&gt;</content><author><name>vicky002</name></author><category term="internship" /><summary type="html">You will be preparing for the interviews but you need to have some basic knowledge of computer science before beginning the preparation phase. In the last previous article, we discussed what is the ideal time to apply for internships and in this article, we are going to discuss what basic skills needed prior to applying for internships and starting the interview preparation.</summary></entry><entry><title type="html">Three Internships mandatory for Engineering Students: Analysis and Discussion</title><link href="/2017/07/three-internships-mandatory" rel="alternate" type="text/html" title="Three Internships mandatory for Engineering Students: Analysis and Discussion" /><published>2017-07-27T16:27:45+00:00</published><updated>2017-07-27T16:27:45+00:00</updated><id>/2017/07/three-internships-mandatory</id><content type="html" xml:base="/2017/07/three-internships-mandatory">&lt;p&gt;Education Minister of India announced today that every engineering student has to undergo minimum three internships. I am glad that Education minister is thinking about the unemployment. As per the reports, 80% of engineering graduates in India are “unemployable”. This definitely tells that our Education system needs to be revamped and training system of the teacher and students needs to be upgraded. Internships definitely help a lot in becoming a better engineer. It gives you exposure to the real world things, one good internship can be easily compared with four years of Engineering. Regarding today’s announcement about three internships, the very first thought that came into my mind was, this is going to be very tough for engineering colleges to provide internships to students. Let’s analyze it in this article.&lt;/p&gt;
+
+&lt;h2 id=&quot;total-engineering-colleges-in-india&quot;&gt;Total Engineering colleges in India:&lt;/h2&gt;
+
+&lt;!-- more --&gt;
+&lt;p&gt;As per the report, there are more than 6500+ engineering colleges in India. The total number of engineering seats in India is around 15,00,000+. So, there are 6500 colleges and if we take an average of total students in any engineering college, considering one college is offering four branches and one branch has up to 60 students. If we do the match, 6500 * 4 * 60 = 15,60,000 students. This means around 15 Lacs students take admission in engineering colleges every year.&lt;/p&gt;
+
+&lt;h3 id=&quot;15-lac-students-will-be-looking-for-internships&quot;&gt;15 Lac students will be looking for internships&lt;/h3&gt;
+
+&lt;p&gt;Now, in the first year of engineering, rarely any student does an internship. They just start the four-year degree course without any prior knowledge of programming.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extra Read:&lt;/strong&gt; &lt;a href=&quot;http://eulercoder.me/2017/07/what-is-the-ideal-time-to-apply-for-internships-and-jobs/&quot;&gt;What is the ideal time to apply for an internship?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the second year, we learn about C, Java, Data Structures, Algorithms and about Web development. The education minister said it will be college’s responsibility to provide internships to students. So, now every student and college faculty also will ask students to start looking for internships after the second year. Consider there are at least 240 students in an engineering college, out of them 40 secured internships on their own. For a college helping 200 students internship in different companies and startups is going to be a tough task. Competition for getting an internship will increase as everyone will be worried about the internship, career, and job.&lt;/p&gt;
+
+&lt;h3 id=&quot;rise-of-training-companies&quot;&gt;Rise of training companies&lt;/h3&gt;
+
+&lt;p&gt;You must be knowing about the training companies, they provide training to new employees, take interns, give them big projects for a particular duration, pay a lower stipend (sometimes it’s unpaid internship) and assign them mentors who are mentors just for the name of it. Friends, this happens a lot, there are hundreds of training companies which are doing this only. In India, people always find a way to fool the system. These training companies will increase and maybe to maintain college’s reputation and show government best results, colleges may contact these companies and ask them to visit colleges.&lt;/p&gt;
+
+&lt;p&gt;I am not saying this is very bad. It is good, rather than sitting at home you will be doing something to improve your own skills. I am talking from the business point of view.&lt;/p&gt;
+
+&lt;h3 id=&quot;if-i-have-just-two-internships-in-my-resume-will-this-affect-me&quot;&gt;If I have just two internships in my resume, will this affect me?&lt;/h3&gt;
+
+&lt;p&gt;No, I don’t think so. For a company, your skills and how you perform in the interview is all that matters the most. Yes, having two or more internships and good projects will definitely help you a lot to get shortlisted. You will have higher chances of getting an interview than those with one internship only. Again, there are so many factors, it will depend on the company you interned, your role there, how solid if your personal projects etc. I am not going into too many details. You can read my &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;summer internship guide here which is recommended by over 1000+ students&lt;/a&gt; on the web and it is one of the top guide available currently.&lt;/p&gt;
+
+&lt;h3 id=&quot;to-the-students-who-will-be-starting-their-engineering-course&quot;&gt;To the students who will be starting their Engineering Course&lt;/h3&gt;
+
+&lt;p&gt;If you are going to start your engineering course very soon starting next month. I’d say do not worry about this right now. This is not going to be implemented very soon, so don’t panic. You are just starting your engineering, enjoy the beginning, do networking, take part in events and **learn to program. **Work on your programming skills in your second year, solve problems on Hackerrank or CodeChef. Try open source development. Try everything and find your love for something and do it well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Read:&lt;/strong&gt; &lt;a href=&quot;http://eulercoder.me/2017/07/competitive-programming-open-source/&quot;&gt;Competitive Programming or Open Source: Which one to choose?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Try for internships after:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Competiton of your 2nd year (Summer Internship)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Winter internship for 5-6 weeks after 5th semester (Mid of 3rd year)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Summer Internship at the end of your internship.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You will have to plan and work accordingly.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is going to be tough for colleges and students as well to get three internships. Governments SWAYAM portal, which is just launched for free online courses, is also not that good. It is a platform for teachers to sign up for courses and learn there about new technologies. College and students will keep struggling about it and there will be these training companies which will benefit from it.&lt;/p&gt;
+
+&lt;p&gt;What do you think about the announcement? If you agree with me and just say yes or comment down below and we will have an open discussion about it.&lt;/p&gt;
+
+&lt;p&gt;Thank you!&lt;/p&gt;
+
+&lt;p&gt;** My Story **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/&quot;&gt;Slack, Amazon, LinkedIn, Browserstack, Mozilla - My Internship Interview Experience&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/&quot;&gt;Summer Internship, San Francisco, and Silicon Valley&lt;/a&gt;
+&lt;!-- more --&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Eulercoder is a platform for everything related to computer science. We weekly send emails with our top articles directly in the mailbox. Subscribe to Eulercoder to get latest updates in engineering and computer science. Lastly, we have a closed &lt;a href=&quot;https://www.facebook.com/groups/eulercoder&quot;&gt;group on Facebook&lt;/a&gt;, join in to discuss issues, queries, tutorials, anything related to CS.&lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;indicates required&lt;/p&gt;
+
+    &lt;p&gt;Email Address  *&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>vicky002</name></author><category term="discussion" /><category term="internshi" /><summary type="html">Education Minister of India announced today that every engineering student has to undergo minimum three internships. I am glad that Education minister is thinking about the unemployment. As per the reports, 80% of engineering graduates in India are “unemployable”. This definitely tells that our Education system needs to be revamped and training system of the teacher and students needs to be upgraded. Internships definitely help a lot in becoming a better engineer. It gives you exposure to the real world things, one good internship can be easily compared with four years of Engineering. Regarding today’s announcement about three internships, the very first thought that came into my mind was, this is going to be very tough for engineering colleges to provide internships to students. Let’s analyze it in this article.</summary></entry><entry><title type="html">Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience</title><link href="/2017/07/slack-amazon-mozilla-linkedin-interview" rel="alternate" type="text/html" title="Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience" /><published>2017-07-25T15:14:37+00:00</published><updated>2017-07-25T15:14:37+00:00</updated><id>/2017/07/slack-amazon-mozilla-linkedin-interview</id><content type="html" xml:base="/2017/07/slack-amazon-mozilla-linkedin-interview">&lt;p&gt;In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same &lt;a href=&quot;https://www.greenhouse.io&quot;&gt;Greenhouse&lt;/a&gt; rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Read&lt;/strong&gt;: &lt;a href=&quot;http://eulercoder.me/2017/07/what-is-the-ideal-time-to-apply-for-internships-and-jobs/&quot;&gt;What is the ideal time to apply for internship?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[This post was written before summer 2016]&lt;/p&gt;
+
+&lt;p&gt;I had already started my internship at &lt;a href=&quot;https://www.codechef.com&quot;&gt;CodeChef&lt;/a&gt; (Jan’16 - April’16), my daily schedule is 8 - 4 PM college and then 4:30 - 9,10 at CodeChef. I reach home by 11-11:30, so I used to sleep late and bunk lectures in college to prepare for the interviews. I have written about the&lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt; interview preparation plan, books and resume tips here &lt;/a&gt;read it after completing this post, Let’s discuss about the interview process today.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+&lt;h3 id=&quot;mozilla&quot;&gt;Mozilla&lt;/h3&gt;
+
+&lt;p&gt;I applied to &lt;a href=&quot;https://www.mozilla.org/en-US&quot;&gt;Mozilla&lt;/a&gt; through &lt;a href=&quot;https://careers.mozilla.org/&quot;&gt;career website&lt;/a&gt; for multiple internship position in many places. I got shortlisted for Developer Tools (Device Simulation) and Engineering Build Productivity intern positions in Paris and Mountain View respectively. For both positions first round was on &lt;a href=&quot;https://www.hackerrank.com&quot;&gt;Hackerrank&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;There were 4 - 5 multiple choice questions and two coding problems.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For each MCQs, you need to give an explanation as well.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Questions were very easy.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Allowed languages depends on the position you’re applying to. For me, allowed language was JavaScript only.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Questions can be found &lt;a href=&quot;https://goo.gl/hX8QU6&quot;&gt;here&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;I got rejected for a Developer Tools (Device Simulation) Intern position in Paris after the first round and moved to the second round for Engineering Build Intern (Mountain View).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Second round was on Skype.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Interview was a bit more technical but easy. I had to write &lt;a href=&quot;http://www.geeksforgeeks.org/write-a-recursive-function-to-print-reverse-of-a-linked-list&quot;&gt;C program to reverse a singly linked list&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And interviewer asked me about my projects and internship.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I had performed well but I don’t know why they replied with this ‘we appreciate your commitment to Mozilla, we will unfortunately not be moving forward at this time.’ I said OK :p.&lt;/p&gt;
+
+&lt;h3 id=&quot;browserstack&quot;&gt;Browserstack&lt;/h3&gt;
+
+&lt;p&gt;I applied through career website and got a response after almost 20 days. First round was on &lt;a href=&quot;https://www.hackerearth.com&quot;&gt;Hackerearth&lt;/a&gt; . There were total three problems to solve in three hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;XPath Query Parse&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Docs Generator&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Server Log Analysis&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Among all my first rounds this was the most challenging. Detailed questions can be found &lt;a href=&quot;https://goo.gl/2OTWXM&quot;&gt;here&lt;/a&gt;. I could solve just one problem in three hours and they rejected me.&lt;/p&gt;
+
+&lt;h3 id=&quot;amazon&quot;&gt;Amazon&lt;/h3&gt;
+
+&lt;p&gt;I got shortlisted for Amazon internship two times. Last year they asked me if I’m available for six months internship which wasn’t possible so I said No. This time I got shortlisted again for 3 months internship. Applied through career care website and received a response from them after 15 - 20 days.&lt;/p&gt;
+
+&lt;p&gt;The first round was on Hackerrank. There were total 2-3 problems to solve in an hour.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/&quot;&gt;Parenthesis Matching problem &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/&quot;&gt;Longest Path in Binary Tree&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I don’t remember the third problem.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Problems were easy, I solved all the three problems and moved to next round.&lt;/p&gt;
+
+&lt;h3 id=&quot;slack&quot;&gt;Slack&lt;/h3&gt;
+
+&lt;p&gt;I had moved to the second round of Amazon internship and suddenly one day BAM! &lt;strong&gt;Subject&lt;/strong&gt; : ‘Phone Interview with &lt;a href=&quot;https://www.slack.com&quot;&gt;Slack&lt;/a&gt;!. I wasn’t expecting this as no internship positions were mentioned on the website. I had mailed them my resume only because I really love the product and wanted to work on it. Read this : &lt;a href=&quot;http://eulercoder.me/2016/02/21/Slack-the-evolution-of-messaging/&quot;&gt;Slack the evolution of messaging&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now I was just focusing on this internship, I didn’t want to lose this one.&lt;/p&gt;
+
+&lt;h4 id=&quot;interview-process&quot;&gt;Interview Process&lt;/h4&gt;
+
+&lt;p&gt;There were total fours rounds. I can’t write about the question but here is the summary of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First round&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First round was with the recruiter it was kind of behavioral interview.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second Round&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the second round I was given a coding assignment with two tasks to complete in a week. Both the tasks were of medium level one Coding task and one design problem. This depends on the position you’re applying for.&lt;/p&gt;
+
+&lt;p&gt;I completed both tasks in 3-4 days and they took 4-5 days to review my solutions. I got a mail after a week saying I’m moving to the next round. Now this was very exciting I started working hard for the next interviews. Next interview was with my mentor and senior engineering manager. I solved almost 50+ problems in 3-4 days on different coding platforms like &lt;a href=&quot;https://leetcode.com&quot;&gt;LeetCode&lt;/a&gt; and &lt;a href=&quot;http://www.topcoder.co&quot;&gt;TopCoder&lt;/a&gt;. I was expecting it to be very technical.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Third Round&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Third round was with the Manager and it wasn’t very technical.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fourth Round&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After, a week I got an email saying I’m moving to the next round. Now this was so exciting and I was trying my hardest. Fourth round was very surprising. We talked about the company and my previous interviews. Finally, I was offered the internship on call.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus Read:&lt;/strong&gt; &lt;a href=&quot;http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/&quot;&gt;Summer Internship Experience, San Francisco and Silicon Valley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Frankly telling I had never imagined that I’d intern in the US. I accepted the offer and will be joining the company in June. Recruiting team is very friendly and helpful. I’m very excited to join the Automation and Testing Team this summer at Slack. [This post was written in 2016]&lt;/p&gt;
+
+&lt;h3 id=&quot;linkedin&quot;&gt;LinkedIn&lt;/h3&gt;
+
+&lt;p&gt;While I was interviewing with Slack (Third round), I got shortlisted for the LinkedIn Internship too. They send me a link of a coding challenge on Hackerrank. I wanted to solve the coding challenges. There were total 3 problems to solve in 3 hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I can not share the full problem statements but problems were purely algorithmic.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Angry Children&lt;/strong&gt;: Distribute X candy packets to K children. A greedy problem.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ZigZagArray&lt;/strong&gt;: Print Array in Zig Zag manner based on some conditions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Acme Substring&lt;/strong&gt;: String Based problem.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After the first round I mailed them about my Internship at Slack.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;Getting a great summer internship&lt;/a&gt; should absolutely be your first priority, nothing else will beat the things you’ll learn and experience. The amount of impact you’ll end up having cannot be matched easily, especially as a student. As a third year student it was my first priority too. I applied to 20+ companies from Best of the best to average companies. One thing that I learnt in these three years is that networking is really important. You should talk to employees, recruiters and alumni. Tell them what you’re doing currently, tell them about your projects, past experiences and publicize it on sites like &lt;a href=&quot;https://www.producthunt.com&quot;&gt;ProductHunt&lt;/a&gt;, &lt;a href=&quot;https://www.reddit.com/&quot;&gt;Reddit&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com&quot;&gt;Hackernews&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are so many opportunities available so the first step to getting an internship, is apply. A lot of people I know are just too afraid to apply, even to companies they really want to work at because they are waiting to get the perfect resume. Even I used to feel the same thanks to &lt;a href=&quot;http://krishmunot.com&quot;&gt;Krish Munot&lt;/a&gt; he’s an awesome guy! Last year in december we were discussing about the internships.&lt;/p&gt;
+
+&lt;p&gt;Here is our short discussion on FB:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Me&lt;/strong&gt;&lt;/em&gt;: &lt;em&gt;I’m thinking of applying for the internship .. next sem for the full time&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Krish&lt;/strong&gt;&lt;/em&gt;: &lt;em&gt;Don’t think. Just apply. Most people make this mistake of not applying. Did you apply for the summer?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Me&lt;/strong&gt;&lt;/em&gt;: &lt;em&gt;No..not sure whether they would shortlist me.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Krish&lt;/strong&gt;: &lt;em&gt;That is there decision bro. Maybe they might think you might be the right fit. Damn! Dont do this ever again man..trust me! You are losing out on a lot of opportunities like that.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And this was true! Thanks to my family and friends for all the support.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Also, &lt;strong&gt;Read this&lt;/strong&gt; &lt;a href=&quot;http://eulercoder.me/2017/07/summer-internship-ultimate-guide/&quot;&gt;guide on summer internship recommended by over 1000+ students&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Friends, if you liked this article and found it useful, please share it with your friends. Let’s help everyone in getting a bettern internship and job. Also if anything is not clear and you want more in-depth information about something, please join our community  - &lt;a href=&quot;https://www.facebook.com/groups/eulercoder/&quot;&gt;Computer Science students group &lt;/a&gt;on Fb. There will be open discussion everyday at 9 PM and there are many other people to help and guide.&lt;/p&gt;
+
+&lt;p&gt;Also, subscribe to our mailing list for weekly mails with top articles, directly in your mailbox. Write your comments below if anything you want me&lt;/p&gt;
+
+&lt;h2 id=&quot;subscribe-to-our-mailing-list&quot;&gt;Subscribe to our mailing list&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;indicates required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Email Address *&lt;/p&gt;</content><author><name>vicky002</name></author><category term="internship" /><category term="jobs" /><summary type="html">In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same Greenhouse rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.</summary></entry></feed>

@@ -1,0 +1,230 @@
+<h1 id="lets-build-a-react-chatroom-component">Let’s Build a React Chatroom Component</h1>
+
+<blockquote>Oh hey, how’s it going!</blockquote>
+
+<p>So — I was building this React Chatroom Component for my side-project, which I don’t think I will be able to launch soon due to <strong>a lot of things</strong>, I would love to chat about. But yeah, instead of letting this sit it my Gitlab for months, I thought open sourcing it to <a href="https://github.com/WigoHunter/react-chatapp">Github</a> might just be a better idea.</p>
+
+<p>Who knows. I might even receive early feedbacks!</p>
+
+<p>And I love writing. So I will try to explain how I built this React Chatroom Component in 100 lines of JavaScript along with some high-level introductions of how React applications and components work!React applications and components work!</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*kjOH0q5D2vKlHq7Z5QrATQ.png" alt="react chatroom - eulercoder" /></p>
+
+<h3 id="why-react">Why React</h3>
+
+<p>I guess you might have your reasons if you decided to click into this post. You might find it cool. You might be hearing a lot of the library and just want to know more about it.</p>
+
+<p>For me, though, React is fun. It really disrupts the minimal unit level in web applications to become functional <strong>components</strong>, where you would define how a component is being rendered, along with the data it consumes and the functionalities it controls.</p>
+
+<p>This largely increases the re-usability of codes.</p>
+
+<p>For instance, I can very much write</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;class Chatroom extends React.Component {
+submitMessage() {
+// JS Code here
+}&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;render() {
+const { chatHistory } = this.props;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;return (
+{/* HTML code here */}
+);
+}
+}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>and from there, I would be able to render a Chatroom anywhere with</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;&lt;Chatroom chatHistory={chatHistory} /&gt;&lt;/code&gt;
+</code></pre></div></div>
+
+<p>You see how data is being streamed in this case. You can simply inject the chat data from your App to a Chatroom component, which you would use just like HTML tags, and in the Chatroom component’s code, you will gain access to the data source with this.props.</p>
+
+<p>Beautiful isn’t it.</p>
+
+<p>And the missing HTML code and JS code are what will be covered in this tutorial.</p>
+
+<p>You can check out my source code on <a href="https://github.com/WigoHunter/react-chatapp">my Github repo</a> where I also have a <a href="https://react-chatapp.surge.sh/">demo</a> hosted on <a href="https://surge.sh">Surge</a> (Definitely recommend Surge for its amazing and free single command line deployment)</p>
+
+<blockquote>Final Disclaimer: I will not include how I stream data with Meteor in this tutorial. That would make this too long to write for me, and of course, for you to read. If I do get the time, I will make another blog post about the createContainer functions that come with Meteor.</blockquote>
+
+<h3 id="create-react-app">Create-React-App</h3>
+
+<p>Another great thing about React is the support of open source community. Since all you will ever make with React are components, people are open sourcing their components like this front-end React-Chatapp on Github or Npm as well.</p>
+
+<p>This pretty much realizes the dream of “<strong>Don’t reinvent the wheels.</strong>” It’s completely possible for you to develop a website or application without writing any of these components. Just look up from Github or any other frameworks and inject the right data into the right components and you are good to go.</p>
+
+<p>It might bring you troubles to config webpacks and those magics in the background at first — But Facebook even mitigates this by providing a CLI to get a React app up and running with a single command line.</p>
+
+<p>So first, if you don’t have this tool installed, let’s first go to your terminal or iTerm and run (assuming npm is installed)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-git"&gt;npm install -g create-react-app
+create-react-app &lt;the project name you want&gt;
+cd &lt;the project name&gt;
+npm start&lt;/code&gt;
+</code></pre></div></div>
+
+<p>from here, you will see a generic starting page run on localhost:3000</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*bwFxqbpXBb0u4JS8IRw9Zg.png" alt="react initilization - eulercoder" /></p>
+
+<p>And if you open the project folder with VSCode (Yup, Microsoft pride.), you will see the App Component in /src like this.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;class App extends Component {
+render() {
+return (
+{/* SKIP: Generic HTML codes */}
+);
+}
+}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>You can try to edit anything here and you will notice the website at localhost:3000 hot reloads. That is, You don’t need to refresh the page, the project will observe the file changes and hot reload the page for you.</p>
+
+<h3 id="build-thechatroom">Build the Chatroom</h3>
+
+<p>SO — Let’s get straight to the point. Let’s modify the render function of this App to only render a background div where we apply an easy Flexbox layout to pin the Chatroom in the center of the page (You can simply copy my CSS code from <a href="http://react-chatapp.surge.sh/static/css/main.b5d0bdf9.css">here</a>, as I won’t be covering CSS in this post), and of course, the Chatroom component itself.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;return (
+&lt;div className=“App”&gt;
+&lt;Chatroom /&gt;
+&lt;/div&gt;
+);&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Notice this should break your project because it doesn’t yet recognize the Chatroom Component. So now let’s plan how we would want our Chatroom to look like.</p>
+
+<p>You might have other ideas, but to me: a chatroom has two most critical missions:</p>
+
+<ul>
+  <li>
+    <p>Render the chat history</p>
+  </li>
+  <li>
+    <p>Allow user to submit a new message</p>
+  </li>
+</ul>
+
+<p>And this is also why I felt like this Component I made for my side-project, could be an alternative example other than to-do apps — Because these two objectives pretty much map to Create and Read operations in CRUD. Of course, Update and Delete are something you could add to chatrooms as well, but I just didn’t plan to have these functions in the prototype level of ChillTime.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*AZHXZeU1kHwjRRQLNKSRxQ.png" alt="chatroom submit message image - eulercoder" />The central part of the chatroom that renders chat history</p>
+
+<h3 id="render-data">Render Data</h3>
+
+<p>In the source code <a href="https://github.com/WigoHunter/react-chatapp/blob/master/src/Chatroom.js">here in src/Chatroom.js</a>, you will see that I have prepared a set, or more specifically, an array of mock data of chat history. And in React, if you want to iterate and render each element in an array, you should make use of the map function.</p>
+
+<p>One thing to note though, is that instead of using React states to store data, in the cases you do have a Backend for data streaming, whether it is with Meteor methods, GraphQL queries, or any other server technics you are familiar with, you should inject data to the Chatroom Component as properties like <em>&lt;Chatroom chatHistory={chatHistory} /&gt;</em>.</p>
+
+<p>For the comparisons of props and states in React, there are already tons of great documents out there. So if you are interested in it, I would recommend you to checkout <a href="https://facebook.github.io/react/docs/state-and-lifecycle.html">this official doc</a>. But in short, I would use State to control the component’s UI status, for example, whether a user is typing or not, and Props for actual data of the application.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;&lt;ul className=“chats” ref=“chats”&gt;
+{
+chats.map((chat) =&gt;
+&lt;Message chat={chat} user={username} /&gt;
+);
+}
+&lt;/ul&gt;&lt;/code&gt;
+</code></pre></div></div>
+
+<p>This is how I really render data with the map function. It will map each element in the array of chats to a Message Component where, this time, I do pass data as properties to this Message Component.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;const Message = ({chat, user}) =&gt; (
+{/* SKIP: HTML codes /}
+{/ Check out details at https://github.com/WigoHunter/react-chatapp/blob/master/src/Message.js */}
+);&lt;/code&gt;
+</code></pre></div></div>
+
+<p>And the functional declaration of this Message Component in <a href="https://github.com/WigoHunter/react-chatapp/blob/master/src/Message.js">src/Message.js</a> is simpler. It doesn’t own JavaScript functions and simply renders HTML codes expecting two data inputs: chat and user to be used in the HTML codes.</p>
+
+<h3 id="submit-newmessage">Submit New Message</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Vxqxe9UPRmzL83ssCOvqKQ.png" alt="submit a new message - eulercoder" />The bottom part that submits a new message</p>
+
+<p>Submitting in React is not much different from what you would do with pure JavaScript, or Vanilla JS if you prefer (xD). Just remember that you can get data from UI with the library ReactDOM that comes with create-react-app. So for example, we have an input like this in the bottom of the chatroom.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;&lt;input type=“text” ref=“msg” /&gt;&lt;/code&gt;
+</code></pre></div></div>
+
+<p>We would be able to get its value by:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;ReactDOM.findDOMNode(this.refs.msg).value&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Therefore the texting part in the bottom would be like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;&lt;form className=“input” onSubmit={(e) =&gt; this.submitMessage(e)}&gt;
+&lt;input type=“text” ref=“msg” /&gt;
+&lt;input type=“submit” value=“Submit” /&gt;
+&lt;/form&gt;&lt;/code&gt;
+</code></pre></div></div>
+
+<p>And in the submitMessage function, (again, since we are using State to store the chat history in this case), we will use the native React function setState to modify the origin state of data and one more additional entry whenever users type and submit. For the sake of UX, let’s also reset the value of the input to an empty string on success.</p>
+
+<p>Another thing worth noting with React state is that it is immutable: so even if you want to insert an element into an array in states, you should use the JavaScript array method <strong>concat</strong> rather than <strong>push</strong>, which actually mutate the value of the state.</p>
+
+<h3 id="finally-deployment-withsurge">Finally, Deployment with Surge</h3>
+
+<p>So if everything goes right, you should have this Chatroom running just fine now. And the final part of deployment is where another great synergy of Create-react-app and <a href="https://surge.sh">Surge</a> comes in handy.</p>
+
+<p>Now just trust me with this.</p>
+
+<p>Go to the root directory of this project in your terminal.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-git"&gt;#If you don’t have surge yet then do this:
+npm install -g surge&lt;/code&gt;
+
+
+
+
+&lt;code class="language-git"&gt;#If you already have surge, or after installing it:
+npm start build
+cd build
+surge&lt;/code&gt;
+</code></pre></div></div>
+
+<p>There you go. Literally, three commands in Terminal and your first React site will be running healthy and at no cost at a <a href="http://Surge.sh">Surge.sh</a> sub-domain just like my <a href="https://react-chatapp.surge.sh">react-chatapp.surge.sh</a> with free and built-in SSL/HTTPS.</p>
+
+<h3 id="whoa-my-firstattempt">Whoa! My First Attempt</h3>
+
+<p>This is the first time I have ever made a blog post that is even close to being a tutorial.</p>
+
+<p>Now I think I did skip some of the codes in this post, primarily because I don’t believe copying all the codes and explain to them line by line is a good way to elaborate. So I took another approach and tried to reason the high-level designs and functions we have in this Chatroom Component, along with the introduction of some concepts and tools that synergy well with React.</p>
+
+<p>I would definitely appreciate if some of you can share some opinions in the comment section.</p>
+
+<p>But yeah, this is how I made this React Chatroom Component in 100 lines explained — Now I am more comfortable to say that at least I made some uses of these codes, and put it aside, for now, to prepare for my GRE test, graduate program applications and job searches!</p>
+
+<p><strong>Highly Recommended articles: </strong></p>
+
+<p>If you are looking for Summer Internship or preparing for full-time job, I highly recommend you to read out <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer Internship: The Ultimate Guide</a>. We have also written a beginner’s guide on <a href="http://eulercoder.me/2017/07/getting-started-open-source/">Getting Started with Open Source Development</a>. Do read them!</p>
+
+<hr />
+
+<p>Anyways, if you are interested in talking to me, perhaps there is something in this tutorial I failed to explain enough, or even if you see potential synergies between you and me (just like create-react-app and surge), feel free to reach me at <a href="mailto:kevin@projectable.hk">kevin@projectable.hk</a> or connect me on <a href="https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4">Linkedin</a>.</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute in our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<hr />
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+

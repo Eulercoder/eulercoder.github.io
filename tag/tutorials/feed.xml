@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>//</title>
+   
+   <link>//</link>
+   <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
+   <language>en-us</language>
+   
+   <title>
+   <![CDATA[ Eulercoder ]]>
+   </title>
+   <description>
+   <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
+   </description>
+   <link>//</link>
+   <image>
+   <url>//assets/images/favicon.png</url>
+   <title>Eulercoder</title>
+   <link>//</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>ChatWeb — Build websites that understand users with full (free) Microsoft Stack</title>
+	  <link>//2017/09/build-chatweb-using-microsoft-stack</link>
+		
+				
+		
+	  <pubDate>2017-09-02T13:41:39+00:00</pubDate>
+	  <guid>//2017/09/build-chatweb-using-microsoft-stack</guid>
+	  <description><![CDATA[
+	     <p>Just another weekend to C&amp;C (Chill &amp; Code) in Taiwan</p>
+
+<h3 id="chatweb">ChatWeb?</h3>
+
+<p>Chatbot has been a hot topic around for sure. I still remember how 4 teams out of the 12 teams in <a href="http://ecjamming.tech">E.C. Jamming</a>, a Hackathon I organized with Microsoft a couple of months ago in Hong Kong, were working on chatbot projects.
+<!-- more -->
+But I am a real web lover and evangelist.</p>
+
+<p>There are great frameworks out there like Google <a href="https://api.ai">API.ai</a>, <a href="https://dev.botframework.com/">Microsoft Bot Framework</a> and <a href="https://www.luis.ai">Microsoft LUIS</a> (Language Understanding Intelligence Service) that enable developers to build and launch chatbots in multiple channels with not much an effort.</p>
+
+<p>In other words, to empower chatbot developers, the tech giants have invested a considerable amount of resources to build up the components and micro-/web-services that can perform a single specific task in a chatbot’s pipeline both efficiently and accurately. For example, LUIS helps you understand a user with training models backed by Machine Learning with a single API endpoint.</p>
+
+<p>Now, why don’t we <strong>take these services to build a website that understands users’ intentions and interests just like a chatbot</strong>, and at the same time, with the rich elements the web has to offer, we are able to provide more interactions than a traditional chatbot.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FMBO66chD18WVdITPk_5VQ.png" alt="background prototype - chatweb Microsoft stack eulercoder" /> The background of prototype was from https://tympanus.net/codrops/2014/09/23/animated-background-headers/[/caption]</p>
+
+<p>In my case, I am now building a personal portfolio page for the applications for graduate programs in the US.</p>
+
+<p>On top of the static, standard resume-alike HTML contents, I am implementing a header that interacts with users and rearranges the styles and components rendered on the page once users ask a specific question regarding my experiences — Just as if I was there, 1 on 1, with this user to answer questions like “What have you been working on at Microsoft?”.</p>
+
+<h4 id="read-build-your-first-slack-bot-using-wolframalpha-api-in-python">Read: <a href="http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/">Build your first Slack Bot using WolframAlpha API in Python</a></h4>
+
+<p>What’s even better is this tutorial and the so-called ChatWeb is built with a server-less architecture (thanks to <a href="https://azure.microsoft.com/en-us/services/functions/">Azure Functions</a>), which means you won’t have to worry about building and maintaining a server at all. Just front-end. Just <strong>ReactJS</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*JdAeqbbDO3LCP-29FbAPZg.png" alt="" /></p>
+
+<p>Everything below assumes a working Azure account. Azure provides free trial for a month for you to play around. Even after the free trial expires, all the products in this architecture have monthly free quotas that are not easily exceeded.</p>
+
+<hr />
+
+<h3 id="contents">Contents</h3>
+
+<ul>
+  <li>
+    <p>Training and Publishing a Microsoft LUIS endpoint</p>
+  </li>
+  <li>
+    <p>Build Azure Functions</p>
+  </li>
+  <li>
+    <p>React and Fetch</p>
+  </li>
+</ul>
+
+<hr />
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*-ZOlRRQFUcOWumuAqUVBPg.png" alt="" /></p>
+
+<h3 id="microsoft-luis">Microsoft LUIS</h3>
+
+<p>So again. LUIS plays a significant role in the chatbot’s ecosystem by empowering bots to understand the literal from users. The end goal of a LUIS endpoint is by consuming a query, it returns a JSON data with the answers to questions like “What does the user want?” and “Any specific entities involved?”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;Example:
+query = "What have you done at Microsoft?&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;-----&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;LUIS API returns
+{
+“query”: “what have you done at microsoft”,&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;“topScoringIntent”: {
+“intent”: “WhatDidYouDo”,
+“score”: 0.729854763
+},&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;“entities”: [ {
+“entity”: “microsoft”,
+“type”: “Company”,
+“startIndex”: 22,
+“endIndex”: 30,
+“score”: 0.9897579
+} ]
+}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>With this information and the functional component rendering mechanism in React JS, you are already ready to build your LUIS web app.</p>
+
+<p>But before we dive into just that, and how we can protect our subscription key with Azure Functions, let me also show you how I trained my language understanding models on <a href="https://www.luis.ai"><strong>LUIS.ai</strong></a>.</p>
+
+<h4 id="step-by-step-guide-to-build-a-luisapp">Step-By-Step Guide to Build a LUIS App</h4>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*cnVWjxUFHP_E78--heNZqw.png" alt="" /></p>
+
+<p>After creating an account on LUIS, you should be led to this page.</p>
+
+<p>Click the button New App. It should ask you about the name of your app and its culture (en-us, for example. I haven’t tried with other cultures.).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*o-Zd3zuwEVg7hpo5KOYf5A.png" alt="" />LUIS Dashboard</p>
+
+<p>On the sidebar, click Intent where you will start to define the possible intents your users might possess. For example, if you are making an e-commerce website, the possible intents the website should observe can be “Purchase”, “Browse”, “Customer Support”, etc. Basically, try to list out all the possible reasons for a user to come and use your app.</p>
+
+<blockquote>In my case of building a portfolio page, I want my LUIS app to help me detect from a sentence if a user is more interested in what did I learn (the technology stacks), or what did I do (the project details), and at which company, so I can deliver a suitable and personalized layout.</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*MoMqIagOd6uKOqdyNHXQew.png" alt="" /></p>
+
+<p>After an intent is created, you can give LUIS some examples where this specific intent should be expected. For this example, I told LUIS a user who asks questions like “What did you do for Microsoft”, “What have you been doing in Microsoft”, etc, are likely to hold the intent of asking “What Did You Do” (Intent) with “Microsoft” being mapped to the company entity.</p>
+
+<p>After you input a solid 10 examples per intents defined, go to <strong>Train &amp; Test</strong> on the sidebar and click “<strong>Train Application</strong>”. LUIS will handle the machine learning part for you.</p>
+
+<p><strong>Magic.</strong></p>
+
+<p>I love being an application developer in the early 21st century; fresh and cool, but not yet completely taken over by AI.</p>
+
+<p>Once it is done, go to “<strong>Publish App</strong>” page and you can straight up just one-click push the app to production and get an endpoint that looks like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-http"&gt;https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/{app id}?subscription-key={app key}&amp;timezoneOffset=0&amp;verbose=true&amp;q={user query}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>And bang.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*h5xztCIsevgeFnH15T4Uug.png" alt="" /></p>
+
+<p>You now have an endpoint that translates a user’s literal inputs, into structured and self-defined intents and entities in JSON format.</p>
+
+<h3 id="azure-functions">Azure Functions</h3>
+
+<p>Now, this step is not compulsory but highly recommended, for the reason that it is generally a bad practice to expose your secrets and keys to client browsers.</p>
+
+<p>Especially LUIS starts to charge you once the amount of your monthly request exceeds 10K — This is not that ambitious as you think. Request means transactions. A happy user who is just too excited to stop asking questions for fun can be one heavy load.</p>
+
+<p>You really don’t want to take the risk to let other people use your subscription keys on their LUIS app — You might not be aware of the usage on other sites, but their bills would be on you.</p>
+
+<p>We could solve this problem by implementing a proxy server, perhaps with Node and Express, and have the HTTP requests done on the backend.</p>
+
+<p>But, <strong>Azure Function is another better solution, if not the best.</strong></p>
+
+<p>And it is very simple.</p>
+
+<p>Let’s see how we can build a proxy endpoint with Azure Functions <strong>in 5 min</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*CpRBltKvIAuA47b-4fycjw.png" alt="" /></p>
+
+<p>Just search “Function App” on Azure Dashboard and create one with an App name (I named mine “LUIS-proxy”), subscription plan (Yep… My Internship at Microsoft ends. Free Trial time.) and all other simple and expected inputs. Nothing should surprise you here.</p>
+
+<p>[caption id=”” align=”alignnone” width=”1600”]<img src="https://cdn-images-1.medium.com/max/1600/1*sJ-Rik66EL4JTkluFb1Abg.png" alt="chatweb microsoft web - eulercoder" /> Click the + next to “Functions” on sidebar to create a Function App[/caption]</p>
+
+<p>So what this Function App is going to do, is that it is going to act just like the LUIS endpoint we got from the previous steps, but without giving users the access to your API IDs and Subscription Keys.</p>
+
+<p>Let me just quote this from the official site of Azure Functions — Who can possibly explain Azure Functions other than the team themselves.</p>
+
+<blockquote>“Functions provides a fully managed compute platform with high reliability and security. With scale on demand, you get the resources you need — when you need them.”</blockquote>
+
+<p>With Azure Functions, the client-side code will be calling this Azure endpoint where it will then complete the HTTP request using API key of LUIS on Azure’s computing platform and simply return the LUIS result to the client side. Think of this like a lambda function on the Azure cloud, if you are familiar with Functional Programming.</p>
+
+<p>Again, if you are not familiar with this, this step is not a must to achieve a website that understands users. This is for security reason. And also, you are welcome to build this proxy with Node and Express stack and setup the API endpoint with <a href="http://eulercoder.me/recommends/digitalocean/">Digital Ocean</a>, <a href="https://www.linode.com/">Linode</a> or <a href="https://www.heroku.com/">Heroku</a>. They are all nice and neat in this case.</p>
+
+<p>But if you decided to follow me on this,</p>
+
+<p>Here is what you will do on your Function App:</p>
+
+<p>[caption id=”” align=”alignnone” width=”2000”]<img src="https://cdn-images-1.medium.com/max/2000/1*E193G13sLrhjOHUDJv3Vzw.png" alt="chat web - Microsoft stack - eulercoder" /> functions[/caption]</p>
+
+<p>This function is written in C#, primarily because I felt like C# can finish the task (simply download the responding resource from LUIS) in a more efficient manner with. <code class="highlighter-rouge">WebClient</code> Azure Functions do support JavaScript, feel free to do this part the way you are comfortable with.</p>
+
+<p>But you can really use this code I wrote to shield any API keys you have from any web-service providers. Just paste the Url link you would use in AJAX into the placeholder I had on this screenshot, and click the <strong>&lt;/&gt; Get function URL</strong> on the top right corner to get the proxy endpoint for LUIS in this case.</p>
+
+<p>Finally, under {Your App} &gt; CORS, remember to define and manage a list of white-list origins to call this endpoint. I really love this feature. This ensures <strong>only your websites have the permission to consume these API endpoints</strong>.</p>
+
+<h3 id="react-andfetch">React and Fetch</h3>
+
+<p>Finally, for the client side code, I am choosing to React once again.</p>
+
+<p>But this time, there are reasons besides “React is cool and clean”. I promise.</p>
+
+<p>React has the ability to control the components rendered with,<code class="highlighter-rouge">this.state</code> we don’t have to do AJAX request so frequently into a callback hell. And the polyfill Fetch library that returns a ES6 Promise works seamlessly with React.</p>
+
+<p>Before I start showing some codes. Remember to run the create-react-app.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-git"&gt;# in your terminal
+create-react-app &lt;project name&gt;
+cd &lt;project name&gt;
+npm install --save whatwg-fetch
+npm start&lt;/code&gt;
+</code></pre></div></div>
+
+<p>This should set you up with everything you will need and also open up the app at localhost:3000.</p>
+
+<p>With fetch and React’s <code class="highlighter-rouge">state</code> available right now, we will be able to let the app render components based on users intent returned from LUIS. My high-level architecture will be something like this (a constructor, a function that handles LUIS query, and a render function)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;… standard React import statements
+import ‘whatwg-fetch’;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;class ChatWeb extends Component {
+constructor(props) {
+super(props);
+this.state = {
+query: “”,
+intent: “”,
+company: “”
+}
+}&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;submitLUISQuery(e) {
+e.preventDefault();&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;fetch ({Azure Functions Endpoint}&amp;query=${this.state.query})
+.then(res =&gt; JSON.parse(res.json()))
+.then(json =&gt; {
+this.setState({
+intent: json.topScoringIntent.intent,
+company: json.entities[0].entity
+});
+});
+}&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;render() {
+const { intent, company } = this.state;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;return ( { intent === “WhatDidYouDo” &amp;&amp; &lt;TheComponentForThisCase company={company} /&gt; } { intent === “WhatDidYouLearn” &amp;&amp; &lt;TheComponentForThisCase company={company} /&gt; } ); } }&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Now I think the control of rendering can certainly be cleaner with <code class="highlighter-rouge">react-router-dom</code>. And my job on this portfolio project, from now on, will be exactly on this — To find a more efficient and modularized way to properly pipeline the technology stacks and data.</p>
+
+<p>Again, this is a concept and high-level prototype that I just can’t wait to share with the community. Especially the new (and last) semester starts this week, and I will be stuck in applications of graduate programs, GRE, and potential job searches (Yes. I am still hoping to have employers sponsoring my visa, so I don’t need OPT that desperately.)</p>
+
+<p>[caption id=”attachment_864” align=”aligncenter” width=”728”]<a href="http://eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer/"><img src="http://eulercoder.me/wp-content/uploads/2017/09/two-year-of-selflearning-in-article-post.jpg" alt="" /></a> Two years of Self-Learning into a developer[/caption]</p>
+
+<h3 id="finally">Finally…</h3>
+
+<p>I just want to say that, of course, this is not an optimal user experience as of the moment. People do not (yet) expect to talk to your websites, which is also the reason these technologies have been used on Chatbot primarily. But I think this is definitely a fun and interesting experiment that I would dive farther— <strong>We can definitely make websites understand users just like chatbots</strong>.</p>
+
+<p>This is really exciting for me!</p>
+
+<p><strong>This opens a lot of new possibility of web UX.</strong></p>
+
+<p>If you do have any better UX design that can synergy with this ChatWeb concept, definitely reach me out at <a href="mailto:kevin@projectable.hk">kevin@projectable.hk</a>, connect me on <a href="https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4">LinkedIn</a>, or simply leave comments below. WE have jobs to do!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Have questions? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

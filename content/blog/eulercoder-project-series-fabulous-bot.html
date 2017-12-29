@@ -1,0 +1,245 @@
+<p>Hello!</p>
+
+<p>In our previous post, Eulercoder <a href="http://eulercoder.me/weekly-project/">announced our weekly project series</a> based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday.</p>
+
+<p>Today <a href="http://eulercoder.me/about">Eulercoder</a> is announcing the very first project in the<a href="http://eulercoder.me/weekly-project/"> weekly projects series</a>, The Fabulous bot for Slack. (Will be available for Messenger, Telegram too)</p>
+
+<h3 id="fabulous-bot-forslack">Fabulous Bot for Slack</h3>
+
+<p>[caption id=”” align=”aligncenter” width=”400”]<img src="https://cdn-images-1.medium.com/max/800/1*BDwu0v1rHBpfFdYGx30yTw.png" alt="fabulous bot - project series" /> Designed by Eulercoder Team[/caption]</p>
+
+<h3 id="the-idea">The Idea</h3>
+
+<p>Most of the top companies and startups are already using Slack and on an average, in the weekdays, people stay active on Slack for almost 5–6 hours. Fabulous Bot is a bot which does the basic work of searching from different platforms and showing the results directly in your Slack channel. Users don’t have to leave Slack, open browser and search for something.</p>
+
+<p><strong>User will be able to</strong></p>
+
+<ul>
+  <li>
+    <p>Search from Google, Wikipedia, YouTube etc—( top 3 results will be shown)</p>
+  </li>
+  <li>
+    <p>Check weather of any city</p>
+  </li>
+  <li>
+    <p>Search Query from Stack Overflow</p>
+  </li>
+  <li>
+    <p>Get commits data of any repository, Branch or pull request</p>
+  </li>
+  <li>
+    <p>Get stocks data</p>
+  </li>
+  <li>
+    <p>Search images from Google Images, Flickr etc</p>
+  </li>
+  <li>
+    <p>Do mathematical Calculations</p>
+  </li>
+  <li>
+    <p>Check meaning of words — From Urban Dictionary</p>
+  </li>
+  <li>
+    <p>View maps</p>
+  </li>
+  <li>
+    <p>and will be able to perform lot more tasks.</p>
+  </li>
+</ul>
+
+<h3 id="how-are-we-going-to-implement-this">How are we going to Implement this?</h3>
+
+<ol>
+  <li>
+    <p>User will call fabulous Bot as <code class="highlighter-rouge">_\fabulous service_name Query_</code>. We will read the service name and Query.
+<em>Ex- </em><strong><em>Service_name</em></strong><em> = YouTube, </em><strong><em>Query</em></strong><em> = despacito</em></p>
+  </li>
+  <li>
+    <p>Most of these services have APIs available. We will call those APIs and get the results.</p>
+  </li>
+  <li>
+    <p>Parse the results in the Slack response format.</p>
+  </li>
+  <li>
+    <p>And post in the Slack channel.</p>
+  </li>
+  <li>
+    <p><strong>What is API is not available? </strong>Then we will use BeautifulSoup (mostly) or Flask to scrap the results form the source code.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-python"&gt;query = quote(query)
+url = "https://encrypted.google.com/search?q={0}".format(query)&lt;/code&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>Here <em>quote</em> function formats the query and using beautiful soup, we are scraping that URL. You can copy that URL and try it in the browser. It works!</li>
+</ol>
+
+<h3 id="what-technologies-we-are-using-to-build-fabulousbot">What Technologies we are using to build Fabulous Bot?</h3>
+
+<ul>
+  <li>
+    <p>Python Programming Language</p>
+  </li>
+  <li>
+    <p>Working with APIs — (Slack and Third Party)</p>
+  </li>
+  <li>
+    <p>BeautifulSoup Framework — in Python</p>
+  </li>
+  <li>
+    <p>Unit Testing in Python</p>
+  </li>
+  <li>
+    <p>AWS for Bot Deployment</p>
+  </li>
+  <li>
+    <p>HTML, Bootstrap or (React) — For the website</p>
+  </li>
+  <li>
+    <p>Shell Scripting</p>
+  </li>
+  <li>
+    <p><a href="http://mrbook.org/blog/tutorials/make/">Makefiles</a></p>
+  </li>
+  <li>
+    <p>Git — For source code management and collaboration</p>
+  </li>
+  <li>
+    <p>Few more — (Depending on the usages as we start working on this)</p>
+  </li>
+</ul>
+
+<h3 id="what-are-the-different-tasks-in-thisproject">What are the different tasks in this project?</h3>
+
+<ul>
+  <li>
+    <p>Create a beautiful website (like our Logo) for Fabulous Bot</p>
+  </li>
+  <li>
+    <p>Write Documentations of the code structure and the working</p>
+  </li>
+  <li>
+    <p>Reviewing Pull Requests, merging and maintaining the repository</p>
+  </li>
+  <li>
+    <p>Project Development.</p>
+  </li>
+</ul>
+
+<h3 id="how-does-the-source-code-folder-structure-looklike">How does the source code folder structure look like?</h3>
+
+<p>Folder structure will look something like this. This is not permanent but we will try to stick to this structure. If you have any suggestions related to this, feel free to post it in <a href="http://bit.ly/EulercoderOnSlack">our Slack channel</a> or <a href="https://github.com/Eulercoder/fabulous/issues/new">make an issue on GitHub</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;.
+├── fabulous
+ ├── plugins [This will contain different supported services]
+ ├── tests [This folder will contains all the tests]
+ ├── fabulous.py [Initiate, test all the available services]
+ ├── server.py [Will handle the server]
+ ├── dummyserver.py [this will create the dummy server]
+├── LICENSE
+├── README.md
+├── bin
+ ├── fabulous   [This file will contain automated installation script]
+├── .gitignore  [files and folders to avoid while pushing code]
+├── setup.py [This file is used to upload project as Python package]
+├── requirements.txt [This is for all the project module requirements]
+├── Makefile [To automagically build and manage the project]&lt;/code&gt;
+</code></pre></div></div>
+
+<h3 id="how-are-we-going-to-collaborate-together">How are we going to collaborate together?</h3>
+
+<ul>
+  <li>
+    <p>All the discussions related to this project will happen on <a href="https://github.com/Eulercoder/fabulous/issues/new">Slack in “fabulousbot” channel</a>.</p>
+  </li>
+  <li>
+    <p>Based on your knowledge set and total number of people working on this, we will assign the tasks. Task assigning will happen in the same channel.</p>
+  </li>
+  <li>
+    <p>Once you agree to work on a task, you are free to set the deadlines. Make sure you try your hardest to meet the deadlines.</p>
+  </li>
+</ul>
+
+<h3 id="who-can-work-on-thisproject">Who can work on this project?</h3>
+
+<ul>
+  <li>
+    <p><strong>Anyone who knows a little programming. </strong>You are more than welcome to join us and contribute to this project.</p>
+  </li>
+  <li>
+    <p>To make sure that our master branch is clean, <em>*YOU WILL NEVER PUSH TO MASTER BRANCH. **</em>(After a warning, user will be removed from the organization)</p>
+  </li>
+  <li>
+    <p>Fork this project in your Github, start working, once you’re done with any feature or fix. Raise a PR, we will review your PR and if everything is perfect, your commits will be merged in to the master branch.</p>
+  </li>
+</ul>
+
+<h3 id="finally-any-specificterms">Finally, any specific terms?</h3>
+
+<ul>
+  <li>
+    <p>Source code can be made private at any stage also, all the contributor names will be made public on the website.</p>
+  </li>
+  <li>
+    <p>Eulercoder is the primary owner of the project.</p>
+  </li>
+  <li>
+    <p>Eulercoder will make this bot public for all the Slack teams. There can be little pricing depending on the extra features that will be added by the Eulercoder team.</p>
+  </li>
+  <li>
+    <p>Eulercoder is totally a non-profit organization, to keep up the work, to handle our daily operations and maintain our websites and hosting, we need to have a source of income.</p>
+  </li>
+</ul>
+
+<h3 id="get-started">Get Started!</h3>
+
+<ul>
+  <li>
+    <p>The very first thing you have to do is — <a href="http://eulercoder.me/about/community/">Join Eulercoder Community on Slack!</a></p>
+  </li>
+  <li>
+    <p>Head over to “fabulousbot” channel and write a short intro, tell us what technologies you know and what you want to learn.</p>
+  </li>
+  <li>
+    <p>Tell us which part of the project, would you like to handle/work on.</p>
+  </li>
+  <li>
+    <p>Once you are in, fork Fabulous Bot repository in your profile.</p>
+  </li>
+  <li>
+    <p>Follow the folder structure and start working.</p>
+  </li>
+  <li>
+    <p>Raise a pull request, once you complete any feature or a fix.</p>
+  </li>
+  <li>
+    <p>Please, write proper commit messages so that our future collaborators can easily understand what your code does from your commit messages.</p>
+  </li>
+</ul>
+
+<p><strong>That’s almost it.</strong></p>
+
+<p>Looking forward to work, collaborate and learn together.</p>
+
+<hr />
+
+<p><em>We started </em><a href="http://eulercoder.me/"><em>Eulercoder</em></a><em> with a mission to be the best computer science portal on the web. We need to do a lot of work, it will require extremely hard work, the content and the courses need to be the best. We extremely value our readers and take each feedback very seriously. With this, today we are launching our Eulercoder weekly project series, I request you to join us. Let’s improve ourselves as a developer and also </em><a href="http://eulercoder.me/contribute/"><em>contribute — help everyone</em></a><em> in becoming better at programming.</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://eepurl.com/bRklFn"><strong>Subscribe to our Weekly Updates</strong></a>**</td>
+      <td> **<a href="https://publicslack.com/slacks/eulercodercommunity/invites/new"><strong>Join Eulercoder Community on Slack!</strong></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our </strong><a href="http://eulercoder.me/about"><strong>Mission and Goal</strong></a><strong>? Write on Eulercoder. Write an </strong><a href="mailto:hi@eulercoder.me"><strong>email to us</strong></a><strong> or </strong><a href="http://eulercoder.me/contact"><strong>contact us</strong></a><strong> for guest posts.</strong></p>
+

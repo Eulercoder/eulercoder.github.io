@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>//</title>
+   
+   <link>//</link>
+   <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
+   <language>en-us</language>
+   
+   <title>
+   <![CDATA[ Eulercoder ]]>
+   </title>
+   <description>
+   <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
+   </description>
+   <link>//</link>
+   <image>
+   <url>//assets/images/favicon.png</url>
+   <title>Eulercoder</title>
+   <link>//</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Getting Started with Open Source</title>
+	  <link>//2017/07/getting-started-open-source</link>
+		
+				
+		
+	  <pubDate>2017-07-23T08:59:00+00:00</pubDate>
+	  <guid>//2017/07/getting-started-open-source</guid>
+	  <description><![CDATA[
+	     <p>After my post on <a href="http://eulercoder.me/2017/07/competitive-programming-open-source/">Competitive programming or Open Source development which one to choose?</a>, I received so many emails asking How to start with open source. I wanted to write about this since a very long time so as the title suggests, this blog post is for beginners who want to work on their own projects or contribute to other open source projects. <strong>This is going to be a long post so grab some snacks, take a notebook and make a note of points that you think may help in the future.</strong></p>
+
+<p>Before we start, Don’t think about:</p>
+
+<p><em>Am I good enough?</em>
+<em>Will my pull request get rejected?</em>
+<em>Will my code bring me shame for years?</em>
+<em>Is it worth the hassle?</em></p>
+
+<p>Many people are afraid to contribute to open source because they don’t feel up to the task or don’t have years of experience or enough in-depth knowledge about something.</p>
+
+<p>Trust me,
+<em>The first time is <strong>always</strong> the hardest, and once you get started contributing to open source you will see how easy it is and what are the benefits and rewards.</em></p>
+
+<p>You do not need a degree or an invitation to contribute to open source. If you want one, you are hereby cordially invited :).</p>
+
+<p>So let’s get started!</p>
+
+<!-- more -->
+<h1 id="so-vicky-tell-me-what-exactly-is-open-source">So Vicky, tell me what exactly is open source?</h1>
+
+<p>The term “open source” refers to something that can be modified and shared because its code is publicly accessible. Open source software is</p>
+
+<blockquote>_a computer software or application with its source code made available for **free** with a **license** which can be modified, changed and distributed to anyone and for any purpose._</blockquote>
+
+<ul>
+  <li>
+    <p><strong>free</strong>: A software is not open source if you need to pay for the source code</p>
+  </li>
+  <li>
+    <p><strong>license</strong>: License provides the rights to study, change and distribute the software.</p>
+  </li>
+</ul>
+
+<p>Companies make their projects open source which allows developers to stop complaining about the bugs or required features and actually solve them.</p>
+
+<h1 id="ok-vicky-now-i-know-about-open-source-but-why-should-i-contribute">Ok Vicky. Now I know about Open Source but why should I contribute?</h1>
+
+<p>I’m glad you asked this question before we actually start the main part. There are tons of benefits associated with open source. I can write another blog post on benefits of Open source.</p>
+
+<p>Below are some benefits of contributing to open source.</p>
+
+<ul>
+  <li>
+    <p>Open source is an excellent way to level-up your skills as a developer. It’s handy to point to your open source projects and contribution work as an example of what you’re capable of.</p>
+  </li>
+  <li>
+    <p>It makes you learn more.</p>
+  </li>
+  <li>
+    <p>Gives a good impression of you that you work with development because you love it. Love it enough to spend your free time on a free project.</p>
+  </li>
+  <li>
+    <p>You help eagerly to make a better software for yourself and others. It gives immense pleasure to contribute to a software which is used by thousands of people.</p>
+  </li>
+  <li>
+    <p>This will improve your development skills, more skills’ means more opportunity, and by working on projects you enjoy, that opportunity can be more enjoyable too.</p>
+  </li>
+  <li>
+    <p>Open source is fun, challenging, and totally worth your time and effort.</p>
+  </li>
+</ul>
+
+<h1 id="whoah-this-seems-very-interesting-vicky-tell-me-the-very-first-step">Whoah! This seems very interesting Vicky, tell me the very first step?</h1>
+
+<p>Yeah! :)
+The undisputed center of the open source universe is <a href="https://github.com/vicky002">GitHub</a>. Github enables individuals and organizations to create projects, fork them and contribute to it. The very step is to learn about <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Git version control system</a>, <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing git in your system</a> and <a href="https://www.atlassian.com/git/tutorials">know about basic git commands</a>. You can also try this <a href="https://try.github.io/levels/1/challenges/1">interactive course on Git</a>.</p>
+
+<p><strong>You know what’s the best thing about Github?</strong> Anyone can fork any project without approval or oversight from the original authors. Changes can be committed locally, pulled to the parent repository with a code review. Anyone can comment on any single line of code or a pull request. You can use your fork immediately in your project.</p>
+
+<p>Oh, I forgot to tell you about these words that developers use :p. Check what’s the meaning of a commit, pull request, fetch, pull, fork, local and parent repository in <a href="https://help.github.com/articles/github-glossary/">Github glossary</a>.</p>
+
+<h1 id="vicky-i-completed-the-first-step-whats-next">Vicky, I completed the first step. What’s next?</h1>
+
+<p>That’s good! You’re now ready to contribute to open source. There are two major ways you can contribute to open source</p>
+
+<ol>
+  <li>
+    <p>Contribute to an existing open source project.</p>
+  </li>
+  <li>
+    <p>Start an open source project.</p>
+  </li>
+</ol>
+
+<p>I am writing on the first aspect - Contributing to an existing project because almost all beginners find this hard. <em>The hardest hurdle in open source is The first contribution</em>. Trust me you may not feel like a super genius, but you definitely don’t need to be one to contribute to open source. It’s just that first contribution to get you started, then you’re hooked. It doesn’t have to be monumental or anything. So <strong>what open source project should you contribute to?</strong> The best answer to this question is: <strong><em>You contribute to something you use regularly.</em></strong> This post is for beginners so I’ll take my project <a href="https://github.com/vicky002/AlgoWiki">AlgoWiki- Collection of all CS resources at one place!</a> and will contribute something to it. It’s extremely easy to contribute to AlgoWiki, it’s just a collection of links. I think this is a perfect project for you and don’t worry I am nice sometimes and accept all pull requests. :p</p>
+
+<p>After your first contribution, search projects on Github that you use regularly. Read code, install it on your local system and start contributing to it.</p>
+
+<h1 id="vicky-im-excited-to-contribute-to-algowiki-tell-me-how">Vicky, I’m excited to contribute to AlgoWiki. Tell me how!</h1>
+
+<p>Ohh That’s super awesome! So let’s get started :). When you see any big project on Github there will always be this three main files.</p>
+
+<ul>
+  <li>
+    <p><strong>README.md</strong>: This contains the description of the project, installation, License, contributors i.e. the summary of the project.</p>
+  </li>
+  <li>
+    <p><strong>LICENSE</strong>: This contains License and other copyright data.</p>
+  </li>
+  <li>
+    <p><strong>Contributing.md</strong>: This file is for developers who want’s to contribute in the project.</p>
+  </li>
+</ul>
+
+<h3 id="fork-the-project">Fork the project:</h3>
+
+<ul>
+  <li>Open <a href="https://github.com/vicky002/AlgoWiki">AlgoWiki</a>, click on fork on the top right corner.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/fork.png" alt="" /></p>
+
+<ul>
+  <li>You can now see AlgoWiki in your profile.</li>
+</ul>
+
+<h3 id="clone-that-repo-in-your-local-machine">Clone that repo in your local machine</h3>
+
+<ul>
+  <li>
+    <p>Open Your Github Profile, open AlgoWiki forked repo in your profile.</p>
+  </li>
+  <li>
+    <p>Copy Clone Link to clipboard.</p>
+  </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/clone.png" alt="" /></p>
+
+<ul>
+  <li>Open terminal in your local machine and paste that URL.
+<code class="highlighter-rouge">git clone https://github.com/{your_username}/AlgoWiki.git</code></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/local_clone.png" alt="" /></p>
+
+<h3 id="making-changes-in-your-local-repository">Making changes in your local repository</h3>
+
+<ul>
+  <li>
+    <p>Read <a href="https://github.com/vicky002/AlgoWiki/wiki/Contribution">Contribution.md</a> file of AlgoWiki. It has all details on how to make changes and maintain section, subsections etc.</p>
+  </li>
+  <li>
+    <p>Now add links of article, videos or books anything you that want to contribute.</p>
+  </li>
+  <li>
+    <p>Save those files.</p>
+  </li>
+</ul>
+
+<h3 id="push-your-local-changes-to-the-main-repository">Push your local changes to the main repository.</h3>
+
+<ul>
+  <li>
+    <p>Now you already know how to add files, commit and push to the main repo.</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">git add file1 file2 file3</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">git commit -m 'commit message'</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">git push origin master</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>You made changes, pushed to master branch from your local machine. This is the to create a pull request.</p>
+  </li>
+</ul>
+
+<h3 id="your-first-pull-request">Your first Pull Request</h3>
+
+<p>For your first <a href="https://help.github.com/articles/using-pull-requests/">pull request</a>, Let the project manager know that you’re new and want some guidance to learn how to get into it. It may so happen that maybe they’re too busy to help if so, move on and find another project. That first contribution is the hardest, you may want some help and coaching. The actual code contribution matters less than learning the process. So find a project or someone who has time and patience to mentor you.</p>
+
+<p>Here, I know you are contributing for the first time so I’ll be kind here and accept your pull requests in AlgoWiki :p and I am 24/7 online to accept pull requests, discuss changes or anything related to my projects.</p>
+
+<ul>
+  <li>Go create a pull request and contribute to AlgoWiki!</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/pull_request.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Once you create a pull request, the owner will check everything.</p>
+  </li>
+  <li>
+    <p>If the author finds it useful, he will merge your pull request.</p>
+  </li>
+  <li>
+    <p>Don’t forget to say thanks because this is your first contribution to open source.</p>
+  </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/vicky002/vicky002.github.io/668523e5290c7da950f8955abf76a8fb9550529a/img/merged.png" alt="" /></p>
+
+<p><strong>Once your pull request is accepted, you can check your GitHub profile. See that green square on your heat map calendar and that streak? Congratulations!! You’ve made an open source contribution!</strong></p>
+
+<p>As you contribute to larger and larger projects, you’ll get better at learning code bases well enough to track down bugs and add functionality.</p>
+
+<p>That’s how you learn. That’s you grow as a developer. And that’s how you prove to future employers that you can collaborate with other people and code that’s worth sharing!</p>
+
+<h1 id="what-i-learned-from-open-source">What I learned from Open Source</h1>
+
+<p>I have learned so many valuable skills from my time using and contributing to open source projects. I’ve learned how many different build systems work, different styles of structuring code and files to enhance readability, Swagger for API I didn’t know existed, etc. etc. etc.</p>
+
+<h4 id="job-opportunities">Job opportunities</h4>
+
+<p>You must be knowing about this. Open source contributions matter a lot. I get so many emails from recruiters to my Github email address. And by developing some street credibility on Github, people start paying attention and are interested in what you’re working on.</p>
+
+<blockquote>
+
+&gt; 
+&gt; When it comes to hiring, I'll take a Github commit log over a resume any day.
+&gt; 
+&gt; 
+— John Resig (@jeresig) [February 5, 2011](https://twitter.com/jeresig/status/33968704983138304)</blockquote>
+
+<h4 id="friends">Friends</h4>
+
+<p>Lots of conversation that started on Github turn into friendships that extend to Twitter. It gets really fun when you meet these awesome people in real life and I’m super excited to meet few people during <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">my internship at Slack in San Francisco</a>. Friends make open source fun and rewarding.</p>
+
+<h3 id="helping-others">Helping others</h3>
+
+<p>One of the most rewarding things when working in open source is when someone says something like: “This is amazing!” “Thank you so much!” “It’s saved me so much time!” or “I wish that I’d found this earlier!” <strong>Call to action</strong>: If a project has saved you some time, go ahead and create an issue to simply tell them thanks. (When shown copied Github projects in college.)</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>If you haven’t contributed to open source before, I recommend you give it a whirl. It’s fun, it’s rewarding, and it’s good for your career. If you’re looking for a good project to contribute to, remember that</p>
+
+<blockquote>You contribute best to something you use regularly.</blockquote>
+
+<p>Contributing to open source has been awesome for me! It’s really hard getting started, but once you get over the first contribution, making future contributions is much easier. It’s not all roses. The open source community has its warts here and there. Keep working at it. You’ll do great! Good luck!</p>
+
+<p>So, <strong>Do yourself a favor and move to Github! Your open source contributions will play in your favor!</strong></p>
+
+<p>PS: You are always welcome to contribute to my projects. Check out my <a href="https://github.com/vicky002?tab=repositories">GitHub Projects</a>.</p>
+
+<p>If you liked this articles. Don’t forget to share it with your friends. :)</p>
+
+<p>Ohh <a href="https://github.com/vicky002/vicky002.github.io/blob/master/_posts/2016-05-02-getting-started-with-open-source.md">see a typo</a>?</p>
+
+<p><a href="https://twitter.com/share">Tweet</a></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>You may also like: <a href="http://eulercoder.me/2017/07/competitive-programming-open-source/">Competitve Programming or Open Source</a></td>
+      <td><a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">My interview experience with Slack, Mozilla, LinkedIn, Browserstack and Amazon</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you.</p>
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>Code Every Day: Eulercoder Motivation</title>
+	  <link>//2017/07/code-every-day-motivation-post</link>
+		
+				
+		
+	  <pubDate>2017-07-23T08:43:54+00:00</pubDate>
+	  <guid>//2017/07/code-every-day-motivation-post</guid>
+	  <description><![CDATA[
+	     <p>I read a blog post and now I’m inspired by <a href="http://ejohn.org/blog/write-code-every-day/">John Resig</a> (Who was in turn, inspired by <a href="http://jenniferdewalt.com/">Jennifer Dewalt</a>), I am going to write code every day, starting today. I hope to write about my coding progress regularly on this blog.</p>
+
+<h1 id="why-i-intend-on-writing-as-i-go-along">Why I intend on writing as I go along</h1>
+
+<ul>
+  <li>
+    <p>Obligate me to actually code every day (though this may not work because this blog has practically no readership)</p>
+  </li>
+  <li>
+    <p>Keep a log of my progress over time</p>
+  </li>
+  <li>
+    <p>Recall the reasoning I used when justifying decisions (e.g. this list describes why I decided to blog while doing this)</p>
+  </li>
+</ul>
+
+<!-- more -->
+
+<h1 id="what-i-hope-to-gain-from-this">What I hope to gain from this</h1>
+
+<ul>
+  <li>
+    <p>Better programming skills and intuition. Improved familiarity with tools, paradigms, etc.</p>
+  </li>
+  <li>
+    <p>Improve my algorithmic knowledge.</p>
+  </li>
+  <li>
+    <p>Learn new languages, frameworks etc. by application rather than just reading docs.</p>
+  </li>
+  <li>
+    <p>Create some interesting projects, hopefully, some worth mentioning in a <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">technical interview</a> or something (for those “describe a time you ran into a problem when programming and how you fixed your problem” type questions)</p>
+  </li>
+  <li>
+    <p>Spend free time more productively (as of now, coding seems like a much more useful way of spending my free time than chatting on WhatsApp or watching prank videos on YouTube)</p>
+  </li>
+  <li>
+    <p>Meet people, become more familiar with the many programming communities on the internet.</p>
+  </li>
+</ul>
+
+<h1 id="ideas-what-to-do-each-day">Ideas what to do each day</h1>
+
+<p>This section is more of just a brainstorm/dump of different ways I can code each day.</p>
+
+<ul>
+  <li>
+    <p>Learn a new language or framework. On my to-learn list: Dart, Go, R and other JavaScript web frameworks.</p>
+  </li>
+  <li>
+    <p>Solve problems on different Coding platforms and Interview problems.</p>
+  </li>
+  <li>
+    <p>Play with APIs and write tools for myself and the community.</p>
+  </li>
+  <li>
+    <p>Contribute to Open Source projects.</p>
+  </li>
+</ul>
+
+<h1 id="what-are-the-projects-currently-im-working-on">What are the projects currently I’m working on</h1>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/vicky002/Charmander">Charmandar</a>: A New Bot for Slack, I’m trying to bring Google right there in your Slack channel. I’m working on it since a month and it is still under development.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/vicky002/Milotic">Milotic Theme</a>: Milotic is a new theme for all text editors available. The theme for sublime and Visual Studio is available and under development for other text Editors.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/vicky002/FCC-DL">FCC-Downloder</a>: FCC-Downloader is script to download all your solutions on <a href="http://freecodecamp.com">FreeCodeCamp</a>.</p>
+  </li>
+  <li>
+    <p><a href="http://freecodecamp.com">FreeCodeCamp</a>: Next Week I’ll be analyzing data of FCC. You can join the <a href="">gitter channel</a> for more information about the project.</p>
+  </li>
+</ul>
+
+<p>That’s all!</p>
+
+<p>If you’re interested in reading my posts, you can <a href="http://eepurl.com/bIgxHz">leave your email here</a> (expect one email in a week :)).</p>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>

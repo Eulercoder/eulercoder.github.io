@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+      <title>//</title>
+   
+   <link>//</link>
+   <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
+   <language>en-us</language>
+   
+   <title>
+   <![CDATA[ Eulercoder ]]>
+   </title>
+   <description>
+   <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
+   </description>
+   <link>//</link>
+   <image>
+   <url>//assets/images/favicon.png</url>
+   <title>Eulercoder</title>
+   <link>//</link>
+   </image>
+   <generator>Jekyll 3.6.2</generator>
+   <lastBuildDate></lastBuildDate>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <ttl>60</ttl>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+	  <title>Eulercoder Project Series —Fabulous Bot First Project Announcement</title>
+	  <link>//2017/09/eulercoder-project-series-fabulous-bot</link>
+		
+				
+		
+	  <pubDate>2017-09-17T09:22:21+00:00</pubDate>
+	  <guid>//2017/09/eulercoder-project-series-fabulous-bot</guid>
+	  <description><![CDATA[
+	     <p>Hello!</p>
+
+<p>In our previous post, Eulercoder <a href="http://eulercoder.me/weekly-project/">announced our weekly project series</a> based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday.</p>
+
+<p>Today <a href="http://eulercoder.me/about">Eulercoder</a> is announcing the very first project in the<a href="http://eulercoder.me/weekly-project/"> weekly projects series</a>, The Fabulous bot for Slack. (Will be available for Messenger, Telegram too)</p>
+
+<h3 id="fabulous-bot-forslack">Fabulous Bot for Slack</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*BDwu0v1rHBpfFdYGx30yTw.png" alt="fabulous bot - project series" /> Designed by Eulercoder Team[/caption]</p>
+
+<h3 id="the-idea">The Idea</h3>
+
+<p>Most of the top companies and startups are already using Slack and on an average, in the weekdays, people stay active on Slack for almost 5–6 hours. Fabulous Bot is a bot which does the basic work of searching from different platforms and showing the results directly in your Slack channel. Users don’t have to leave Slack, open browser and search for something.</p>
+
+<p><strong>User will be able to</strong></p>
+
+<!-- more -->
+
+<ul>
+  <li>
+    <p>Search from Google, Wikipedia, YouTube etc—( top 3 results will be shown)</p>
+  </li>
+  <li>
+    <p>Check weather of any city</p>
+  </li>
+  <li>
+    <p>Search Query from Stack Overflow</p>
+  </li>
+  <li>
+    <p>Get commits data of any repository, Branch or pull request</p>
+  </li>
+  <li>
+    <p>Get stocks data</p>
+  </li>
+  <li>
+    <p>Search images from Google Images, Flickr etc</p>
+  </li>
+  <li>
+    <p>Do mathematical Calculations</p>
+  </li>
+  <li>
+    <p>Check meaning of words — From Urban Dictionary</p>
+  </li>
+  <li>
+    <p>View maps</p>
+  </li>
+  <li>
+    <p>and will be able to perform lot more tasks.</p>
+  </li>
+</ul>
+
+<h3 id="how-are-we-going-to-implement-this">How are we going to Implement this?</h3>
+
+<ol>
+  <li>
+    <p>User will call fabulous Bot as <code class="highlighter-rouge">_\fabulous service_name Query_</code>. We will read the service name and Query.
+<em>Ex- </em><strong><em>Service_name</em></strong><em> = YouTube, </em><strong><em>Query</em></strong><em> = despacito</em></p>
+  </li>
+  <li>
+    <p>Most of these services have APIs available. We will call those APIs and get the results.</p>
+  </li>
+  <li>
+    <p>Parse the results in the Slack response format.</p>
+  </li>
+  <li>
+    <p>And post in the Slack channel.</p>
+  </li>
+  <li>
+    <p><strong>What is API is not available? </strong>Then we will use BeautifulSoup (mostly) or Flask to scrap the results form the source code.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-python"&gt;query = quote(query)
+url = "https://encrypted.google.com/search?q={0}".format(query)&lt;/code&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>Here <em>quote</em> function formats the query and using beautiful soup, we are scraping that URL. You can copy that URL and try it in the browser. It works!</li>
+</ol>
+
+<h3 id="what-technologies-we-are-using-to-build-fabulousbot">What Technologies we are using to build Fabulous Bot?</h3>
+
+<ul>
+  <li>
+    <p>Python Programming Language</p>
+  </li>
+  <li>
+    <p>Working with APIs — (Slack and Third Party)</p>
+  </li>
+  <li>
+    <p>BeautifulSoup Framework — in Python</p>
+  </li>
+  <li>
+    <p>Unit Testing in Python</p>
+  </li>
+  <li>
+    <p>AWS for Bot Deployment</p>
+  </li>
+  <li>
+    <p>HTML, Bootstrap or (React) — For the website</p>
+  </li>
+  <li>
+    <p>Shell Scripting</p>
+  </li>
+  <li>
+    <p><a href="http://mrbook.org/blog/tutorials/make/">Makefiles</a></p>
+  </li>
+  <li>
+    <p>Git — For source code management and collaboration</p>
+  </li>
+  <li>
+    <p>Few more — (Depending on the usages as we start working on this)</p>
+  </li>
+</ul>
+
+<h3 id="what-are-the-different-tasks-in-thisproject">What are the different tasks in this project?</h3>
+
+<ul>
+  <li>
+    <p>Create a beautiful website (like our Logo) for Fabulous Bot</p>
+  </li>
+  <li>
+    <p>Write Documentations of the code structure and the working</p>
+  </li>
+  <li>
+    <p>Reviewing Pull Requests, merging and maintaining the repository</p>
+  </li>
+  <li>
+    <p>Project Development.</p>
+  </li>
+</ul>
+
+<h3 id="how-does-the-source-code-folder-structure-looklike">How does the source code folder structure look like?</h3>
+
+<p>Folder structure will look something like this. This is not permanent but we will try to stick to this structure. If you have any suggestions related to this, feel free to post it in <a href="http://bit.ly/EulercoderOnSlack">our Slack channel</a> or <a href="https://github.com/Eulercoder/fabulous/issues/new">make an issue on GitHub</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;.
+├── fabulous
+ ├── plugins [This will contain different supported services]
+ ├── tests [This folder will contains all the tests]
+ ├── fabulous.py [Initiate, test all the available services]
+ ├── server.py [Will handle the server]
+ ├── dummyserver.py [this will create the dummy server]
+├── LICENSE
+├── README.md
+├── bin
+ ├── fabulous   [This file will contain automated installation script]
+├── .gitignore  [files and folders to avoid while pushing code]
+├── setup.py [This file is used to upload project as Python package]
+├── requirements.txt [This is for all the project module requirements]
+├── Makefile [To automagically build and manage the project]&lt;/code&gt;
+</code></pre></div></div>
+
+<h3 id="how-are-we-going-to-collaborate-together">How are we going to collaborate together?</h3>
+
+<ul>
+  <li>
+    <p>All the discussions related to this project will happen on <a href="https://github.com/Eulercoder/fabulous/issues/new">Slack in “fabulousbot” channel</a>.</p>
+  </li>
+  <li>
+    <p>Based on your knowledge set and total number of people working on this, we will assign the tasks. Task assigning will happen in the same channel.</p>
+  </li>
+  <li>
+    <p>Once you agree to work on a task, you are free to set the deadlines. Make sure you try your hardest to meet the deadlines.</p>
+  </li>
+</ul>
+
+<h3 id="who-can-work-on-thisproject">Who can work on this project?</h3>
+
+<ul>
+  <li>
+    <p><strong>Anyone who knows a little programming. </strong>You are more than welcome to join us and contribute to this project.</p>
+  </li>
+  <li>
+    <p>To make sure that our master branch is clean, <em>*YOU WILL NEVER PUSH TO MASTER BRANCH. **</em>(After a warning, user will be removed from the organization)</p>
+  </li>
+  <li>
+    <p>Fork this project in your Github, start working, once you’re done with any feature or fix. Raise a PR, we will review your PR and if everything is perfect, your commits will be merged in to the master branch.</p>
+  </li>
+</ul>
+
+<h3 id="finally-any-specificterms">Finally, any specific terms?</h3>
+
+<ul>
+  <li>
+    <p>Source code can be made private at any stage also, all the contributor names will be made public on the website.</p>
+  </li>
+  <li>
+    <p>Eulercoder is the primary owner of the project.</p>
+  </li>
+  <li>
+    <p>Eulercoder will make this bot public for all the Slack teams. There can be little pricing depending on the extra features that will be added by the Eulercoder team.</p>
+  </li>
+  <li>
+    <p>Eulercoder is totally a non-profit organization, to keep up the work, to handle our daily operations and maintain our websites and hosting, we need to have a source of income.</p>
+  </li>
+</ul>
+
+<h3 id="get-started">Get Started!</h3>
+
+<ul>
+  <li>
+    <p>The very first thing you have to do is — <a href="http://eulercoder.me/about/community/">Join Eulercoder Community on Slack!</a></p>
+  </li>
+  <li>
+    <p>Head over to “fabulousbot” channel and write a short intro, tell us what technologies you know and what you want to learn.</p>
+  </li>
+  <li>
+    <p>Tell us which part of the project, would you like to handle/work on.</p>
+  </li>
+  <li>
+    <p>Once you are in, fork Fabulous Bot repository in your profile.</p>
+  </li>
+  <li>
+    <p>Follow the folder structure and start working.</p>
+  </li>
+  <li>
+    <p>Raise a pull request, once you complete any feature or a fix.</p>
+  </li>
+  <li>
+    <p>Please, write proper commit messages so that our future collaborators can easily understand what your code does from your commit messages.</p>
+  </li>
+</ul>
+
+<p><strong>That’s almost it.</strong></p>
+
+<p>Looking forward to work, collaborate and learn together.</p>
+
+<hr />
+
+<p><em>We started </em><a href="http://eulercoder.me/"><em>Eulercoder</em></a><em> with a mission to be the best computer science portal on the web. We need to do a lot of work, it will require extremely hard work, the content and the courses need to be the best. We extremely value our readers and take each feedback very seriously. With this, today we are launching our Eulercoder weekly project series, I request you to join us. Let’s improve ourselves as a developer and also </em><a href="http://eulercoder.me/contribute/"><em>contribute — help everyone</em></a><em> in becoming better at programming.</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://eepurl.com/bRklFn"><strong>Subscribe to our Weekly Updates</strong></a>**</td>
+      <td> **<a href="https://publicslack.com/slacks/eulercodercommunity/invites/new"><strong>Join Eulercoder Community on Slack!</strong></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our </strong><a href="http://eulercoder.me/about"><strong>Mission and Goal</strong></a><strong>? Write on Eulercoder. Write an </strong><a href="mailto:hi@eulercoder.me"><strong>email to us</strong></a><strong> or </strong><a href="http://eulercoder.me/contact"><strong>contact us</strong></a><strong> for guest posts.</strong></p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>ChatWeb — Build websites that understand users with full (free) Microsoft Stack</title>
+	  <link>//2017/09/build-chatweb-using-microsoft-stack</link>
+		
+				
+		
+	  <pubDate>2017-09-02T13:41:39+00:00</pubDate>
+	  <guid>//2017/09/build-chatweb-using-microsoft-stack</guid>
+	  <description><![CDATA[
+	     <p>Just another weekend to C&amp;C (Chill &amp; Code) in Taiwan</p>
+
+<h3 id="chatweb">ChatWeb?</h3>
+
+<p>Chatbot has been a hot topic around for sure. I still remember how 4 teams out of the 12 teams in <a href="http://ecjamming.tech">E.C. Jamming</a>, a Hackathon I organized with Microsoft a couple of months ago in Hong Kong, were working on chatbot projects.
+<!-- more -->
+But I am a real web lover and evangelist.</p>
+
+<p>There are great frameworks out there like Google <a href="https://api.ai">API.ai</a>, <a href="https://dev.botframework.com/">Microsoft Bot Framework</a> and <a href="https://www.luis.ai">Microsoft LUIS</a> (Language Understanding Intelligence Service) that enable developers to build and launch chatbots in multiple channels with not much an effort.</p>
+
+<p>In other words, to empower chatbot developers, the tech giants have invested a considerable amount of resources to build up the components and micro-/web-services that can perform a single specific task in a chatbot’s pipeline both efficiently and accurately. For example, LUIS helps you understand a user with training models backed by Machine Learning with a single API endpoint.</p>
+
+<p>Now, why don’t we <strong>take these services to build a website that understands users’ intentions and interests just like a chatbot</strong>, and at the same time, with the rich elements the web has to offer, we are able to provide more interactions than a traditional chatbot.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FMBO66chD18WVdITPk_5VQ.png" alt="background prototype - chatweb Microsoft stack eulercoder" /> The background of prototype was from https://tympanus.net/codrops/2014/09/23/animated-background-headers/[/caption]</p>
+
+<p>In my case, I am now building a personal portfolio page for the applications for graduate programs in the US.</p>
+
+<p>On top of the static, standard resume-alike HTML contents, I am implementing a header that interacts with users and rearranges the styles and components rendered on the page once users ask a specific question regarding my experiences — Just as if I was there, 1 on 1, with this user to answer questions like “What have you been working on at Microsoft?”.</p>
+
+<h4 id="read-build-your-first-slack-bot-using-wolframalpha-api-in-python">Read: <a href="http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/">Build your first Slack Bot using WolframAlpha API in Python</a></h4>
+
+<p>What’s even better is this tutorial and the so-called ChatWeb is built with a server-less architecture (thanks to <a href="https://azure.microsoft.com/en-us/services/functions/">Azure Functions</a>), which means you won’t have to worry about building and maintaining a server at all. Just front-end. Just <strong>ReactJS</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*JdAeqbbDO3LCP-29FbAPZg.png" alt="" /></p>
+
+<p>Everything below assumes a working Azure account. Azure provides free trial for a month for you to play around. Even after the free trial expires, all the products in this architecture have monthly free quotas that are not easily exceeded.</p>
+
+<hr />
+
+<h3 id="contents">Contents</h3>
+
+<ul>
+  <li>
+    <p>Training and Publishing a Microsoft LUIS endpoint</p>
+  </li>
+  <li>
+    <p>Build Azure Functions</p>
+  </li>
+  <li>
+    <p>React and Fetch</p>
+  </li>
+</ul>
+
+<hr />
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*-ZOlRRQFUcOWumuAqUVBPg.png" alt="" /></p>
+
+<h3 id="microsoft-luis">Microsoft LUIS</h3>
+
+<p>So again. LUIS plays a significant role in the chatbot’s ecosystem by empowering bots to understand the literal from users. The end goal of a LUIS endpoint is by consuming a query, it returns a JSON data with the answers to questions like “What does the user want?” and “Any specific entities involved?”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;Example:
+query = "What have you done at Microsoft?&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;-----&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;LUIS API returns
+{
+“query”: “what have you done at microsoft”,&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;“topScoringIntent”: {
+“intent”: “WhatDidYouDo”,
+“score”: 0.729854763
+},&lt;/code&gt;
+
+
+
+
+&lt;code class="language-json"&gt;“entities”: [ {
+“entity”: “microsoft”,
+“type”: “Company”,
+“startIndex”: 22,
+“endIndex”: 30,
+“score”: 0.9897579
+} ]
+}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>With this information and the functional component rendering mechanism in React JS, you are already ready to build your LUIS web app.</p>
+
+<p>But before we dive into just that, and how we can protect our subscription key with Azure Functions, let me also show you how I trained my language understanding models on <a href="https://www.luis.ai"><strong>LUIS.ai</strong></a>.</p>
+
+<h4 id="step-by-step-guide-to-build-a-luisapp">Step-By-Step Guide to Build a LUIS App</h4>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*cnVWjxUFHP_E78--heNZqw.png" alt="" /></p>
+
+<p>After creating an account on LUIS, you should be led to this page.</p>
+
+<p>Click the button New App. It should ask you about the name of your app and its culture (en-us, for example. I haven’t tried with other cultures.).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*o-Zd3zuwEVg7hpo5KOYf5A.png" alt="" />LUIS Dashboard</p>
+
+<p>On the sidebar, click Intent where you will start to define the possible intents your users might possess. For example, if you are making an e-commerce website, the possible intents the website should observe can be “Purchase”, “Browse”, “Customer Support”, etc. Basically, try to list out all the possible reasons for a user to come and use your app.</p>
+
+<blockquote>In my case of building a portfolio page, I want my LUIS app to help me detect from a sentence if a user is more interested in what did I learn (the technology stacks), or what did I do (the project details), and at which company, so I can deliver a suitable and personalized layout.</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*MoMqIagOd6uKOqdyNHXQew.png" alt="" /></p>
+
+<p>After an intent is created, you can give LUIS some examples where this specific intent should be expected. For this example, I told LUIS a user who asks questions like “What did you do for Microsoft”, “What have you been doing in Microsoft”, etc, are likely to hold the intent of asking “What Did You Do” (Intent) with “Microsoft” being mapped to the company entity.</p>
+
+<p>After you input a solid 10 examples per intents defined, go to <strong>Train &amp; Test</strong> on the sidebar and click “<strong>Train Application</strong>”. LUIS will handle the machine learning part for you.</p>
+
+<p><strong>Magic.</strong></p>
+
+<p>I love being an application developer in the early 21st century; fresh and cool, but not yet completely taken over by AI.</p>
+
+<p>Once it is done, go to “<strong>Publish App</strong>” page and you can straight up just one-click push the app to production and get an endpoint that looks like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-http"&gt;https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/{app id}?subscription-key={app key}&amp;timezoneOffset=0&amp;verbose=true&amp;q={user query}&lt;/code&gt;
+</code></pre></div></div>
+
+<p>And bang.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*h5xztCIsevgeFnH15T4Uug.png" alt="" /></p>
+
+<p>You now have an endpoint that translates a user’s literal inputs, into structured and self-defined intents and entities in JSON format.</p>
+
+<h3 id="azure-functions">Azure Functions</h3>
+
+<p>Now, this step is not compulsory but highly recommended, for the reason that it is generally a bad practice to expose your secrets and keys to client browsers.</p>
+
+<p>Especially LUIS starts to charge you once the amount of your monthly request exceeds 10K — This is not that ambitious as you think. Request means transactions. A happy user who is just too excited to stop asking questions for fun can be one heavy load.</p>
+
+<p>You really don’t want to take the risk to let other people use your subscription keys on their LUIS app — You might not be aware of the usage on other sites, but their bills would be on you.</p>
+
+<p>We could solve this problem by implementing a proxy server, perhaps with Node and Express, and have the HTTP requests done on the backend.</p>
+
+<p>But, <strong>Azure Function is another better solution, if not the best.</strong></p>
+
+<p>And it is very simple.</p>
+
+<p>Let’s see how we can build a proxy endpoint with Azure Functions <strong>in 5 min</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*CpRBltKvIAuA47b-4fycjw.png" alt="" /></p>
+
+<p>Just search “Function App” on Azure Dashboard and create one with an App name (I named mine “LUIS-proxy”), subscription plan (Yep… My Internship at Microsoft ends. Free Trial time.) and all other simple and expected inputs. Nothing should surprise you here.</p>
+
+<p>[caption id=”” align=”alignnone” width=”1600”]<img src="https://cdn-images-1.medium.com/max/1600/1*sJ-Rik66EL4JTkluFb1Abg.png" alt="chatweb microsoft web - eulercoder" /> Click the + next to “Functions” on sidebar to create a Function App[/caption]</p>
+
+<p>So what this Function App is going to do, is that it is going to act just like the LUIS endpoint we got from the previous steps, but without giving users the access to your API IDs and Subscription Keys.</p>
+
+<p>Let me just quote this from the official site of Azure Functions — Who can possibly explain Azure Functions other than the team themselves.</p>
+
+<blockquote>“Functions provides a fully managed compute platform with high reliability and security. With scale on demand, you get the resources you need — when you need them.”</blockquote>
+
+<p>With Azure Functions, the client-side code will be calling this Azure endpoint where it will then complete the HTTP request using API key of LUIS on Azure’s computing platform and simply return the LUIS result to the client side. Think of this like a lambda function on the Azure cloud, if you are familiar with Functional Programming.</p>
+
+<p>Again, if you are not familiar with this, this step is not a must to achieve a website that understands users. This is for security reason. And also, you are welcome to build this proxy with Node and Express stack and setup the API endpoint with <a href="http://eulercoder.me/recommends/digitalocean/">Digital Ocean</a>, <a href="https://www.linode.com/">Linode</a> or <a href="https://www.heroku.com/">Heroku</a>. They are all nice and neat in this case.</p>
+
+<p>But if you decided to follow me on this,</p>
+
+<p>Here is what you will do on your Function App:</p>
+
+<p>[caption id=”” align=”alignnone” width=”2000”]<img src="https://cdn-images-1.medium.com/max/2000/1*E193G13sLrhjOHUDJv3Vzw.png" alt="chat web - Microsoft stack - eulercoder" /> functions[/caption]</p>
+
+<p>This function is written in C#, primarily because I felt like C# can finish the task (simply download the responding resource from LUIS) in a more efficient manner with. <code class="highlighter-rouge">WebClient</code> Azure Functions do support JavaScript, feel free to do this part the way you are comfortable with.</p>
+
+<p>But you can really use this code I wrote to shield any API keys you have from any web-service providers. Just paste the Url link you would use in AJAX into the placeholder I had on this screenshot, and click the <strong>&lt;/&gt; Get function URL</strong> on the top right corner to get the proxy endpoint for LUIS in this case.</p>
+
+<p>Finally, under {Your App} &gt; CORS, remember to define and manage a list of white-list origins to call this endpoint. I really love this feature. This ensures <strong>only your websites have the permission to consume these API endpoints</strong>.</p>
+
+<h3 id="react-andfetch">React and Fetch</h3>
+
+<p>Finally, for the client side code, I am choosing to React once again.</p>
+
+<p>But this time, there are reasons besides “React is cool and clean”. I promise.</p>
+
+<p>React has the ability to control the components rendered with,<code class="highlighter-rouge">this.state</code> we don’t have to do AJAX request so frequently into a callback hell. And the polyfill Fetch library that returns a ES6 Promise works seamlessly with React.</p>
+
+<p>Before I start showing some codes. Remember to run the create-react-app.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-git"&gt;# in your terminal
+create-react-app &lt;project name&gt;
+cd &lt;project name&gt;
+npm install --save whatwg-fetch
+npm start&lt;/code&gt;
+</code></pre></div></div>
+
+<p>This should set you up with everything you will need and also open up the app at localhost:3000.</p>
+
+<p>With fetch and React’s <code class="highlighter-rouge">state</code> available right now, we will be able to let the app render components based on users intent returned from LUIS. My high-level architecture will be something like this (a constructor, a function that handles LUIS query, and a render function)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-javascript"&gt;… standard React import statements
+import ‘whatwg-fetch’;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;class ChatWeb extends Component {
+constructor(props) {
+super(props);
+this.state = {
+query: “”,
+intent: “”,
+company: “”
+}
+}&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;submitLUISQuery(e) {
+e.preventDefault();&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;fetch ({Azure Functions Endpoint}&amp;query=${this.state.query})
+.then(res =&gt; JSON.parse(res.json()))
+.then(json =&gt; {
+this.setState({
+intent: json.topScoringIntent.intent,
+company: json.entities[0].entity
+});
+});
+}&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;render() {
+const { intent, company } = this.state;&lt;/code&gt;
+
+
+
+
+&lt;code class="language-javascript"&gt;return ( { intent === “WhatDidYouDo” &amp;&amp; &lt;TheComponentForThisCase company={company} /&gt; } { intent === “WhatDidYouLearn” &amp;&amp; &lt;TheComponentForThisCase company={company} /&gt; } ); } }&lt;/code&gt;
+</code></pre></div></div>
+
+<p>Now I think the control of rendering can certainly be cleaner with <code class="highlighter-rouge">react-router-dom</code>. And my job on this portfolio project, from now on, will be exactly on this — To find a more efficient and modularized way to properly pipeline the technology stacks and data.</p>
+
+<p>Again, this is a concept and high-level prototype that I just can’t wait to share with the community. Especially the new (and last) semester starts this week, and I will be stuck in applications of graduate programs, GRE, and potential job searches (Yes. I am still hoping to have employers sponsoring my visa, so I don’t need OPT that desperately.)</p>
+
+<p>[caption id=”attachment_864” align=”aligncenter” width=”728”]<a href="http://eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer/"><img src="http://eulercoder.me/wp-content/uploads/2017/09/two-year-of-selflearning-in-article-post.jpg" alt="" /></a> Two years of Self-Learning into a developer[/caption]</p>
+
+<h3 id="finally">Finally…</h3>
+
+<p>I just want to say that, of course, this is not an optimal user experience as of the moment. People do not (yet) expect to talk to your websites, which is also the reason these technologies have been used on Chatbot primarily. But I think this is definitely a fun and interesting experiment that I would dive farther— <strong>We can definitely make websites understand users just like chatbots</strong>.</p>
+
+<p>This is really exciting for me!</p>
+
+<p><strong>This opens a lot of new possibility of web UX.</strong></p>
+
+<p>If you do have any better UX design that can synergy with this ChatWeb concept, definitely reach me out at <a href="mailto:kevin@projectable.hk">kevin@projectable.hk</a>, connect me on <a href="https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4">LinkedIn</a>, or simply leave comments below. WE have jobs to do!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Have questions? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>LinkedIn tips that actually work: Set up your News Feed on LinkedIn</title>
+	  <link>//2017/08/linkedin-tips-actually-works</link>
+		
+				
+		
+	  <pubDate>2017-08-30T15:10:34+00:00</pubDate>
+	  <guid>//2017/08/linkedin-tips-actually-works</guid>
+	  <description><![CDATA[
+	     <p>In my experience, scrolling through job boards pumping out applications targeted at large companies isn’t the best way to go about <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">getting a job or internship</a>. By following a few people on LinkedIn, I managed to get into a conversation with Laszlo Bock, the Former Head of People Operations at Google. Here are a few LinkedIn tips on how to take full advantage of your LinkedIn feed.</p>
+
+<h2 id="linkedin-tips-1-finding-who-to-follow">LinkedIn Tips #1: Finding who to follow</h2>
+
+<p>Looking for people to follow can be daunting, but with a little effort, your LinkedIn will supply with tons of useful information. An easy place to start is to click on the 3 dots in the top right any post, and click “improve my feed”</p>
+
+<ul>
+  <li>
+    <p>Following people at companies you want to work for is another easy start. Generally, a few people in every company are very active on LinkedIn. Sometimes they post information about what they like to see at their company and what they are working on (and that knowledge pays off in interviews!)</p>
+  </li>
+  <li>
+    <p>Look at the top contributors on LinkedIn, a lot of them post articles almost daily.</p>
+  </li>
+  <li>
+    <p>Find influential figures, such as Bill Gates. They also post relevant content, especially if they work in tech.</p>
+  </li>
+  <li>
+    <p>Some people (or companies) that don’t work in tech can post useful information too though. For example, Asana, a tool like Slack, has a great LinkedIn and posts lots of workplace-focused articles</p>
+  </li>
+</ul>
+
+<!-- more -->
+
+<h4 id="if-you-go-to-college-follow-your-professors-some-professors-are-very-active-outside-of-teaching-and-have-very-active-linkedin-profiles">If you go to college, follow your professors! Some professors are very active outside of teaching and have very active LinkedIn profiles.</h4>
+
+<p>Read <a href="http://eulercoder.me/2017/08/college-low-gpa-know-everything/">College and Low GPA: Everything you need to know.</a><a href="http://eulercoder.me/2017/08/college-low-gpa-know-everything/"> </a></p>
+
+<ul>
+  <li>
+    <p>If you don’t go to college, you can apply this concept by following professors at nearby or prestigious universities. For example, some Stanford professors post a lot of content and are worth following.</p>
+  </li>
+  <li>
+    <p>Finally, follow all the people you know! I find it fascinating to see what people I used to work with are up to, and some are working at places I dream of working at.</p>
+  </li>
+</ul>
+
+<h4 id="readslack-internship-san-francisco-and-silicon-valley">Read: <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">Slack Internship, San Francisco, and Silicon Valley</a></h4>
+
+<p><strong>Make sure to like and/or comment on things you see on LinkedIn</strong>; your activity shows up on your profile and it looks good if your profile is lively. Being active on LinkedIn shows you care about your professional image.</p>
+
+<p><a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/"><img src="http://eulercoder.me/wp-content/uploads/2017/08/Internship-in-article-post.jpg" alt="Summer Internship guide on eulercoder" /></a></p>
+
+<p>[clickToTweet tweet=”“80% of jobs are found through networking and recommendations” “ quote=”“80% of jobs are found through networking and recommendations” “]</p>
+
+<p>##</p>
+
+<p>##</p>
+
+<p>##</p>
+
+<h2 id="linkedin-tips-2parsing-your-newly-active-feed">LinkedIn Tips #2: Parsing your newly active feed</h2>
+
+<p>After a round of following people, refresh your feed and see if you like the content. I prefer some balance to my feed; I follow a few people who aren’t business serious all the time, and it helps me scroll through my feed without boredom.</p>
+
+<ul>
+  <li>
+    <p><strong>Try to identify people whose content you like:</strong> Just like on Facebook or Instagram, there are always people you look forward to seeing more content from, and clicking on their content and liking it lets LinkedIn’s feed algorithm know you want to see more of them.</p>
+  </li>
+  <li>
+    <p>**Remove people you find dull or boring: **Try to avoid following people who you actively avoid when scrolling through your feed. I remove people or companies that post lots of clickbait-style articles.</p>
+  </li>
+  <li>
+    <p>**Save interesting articles: **Keeping a list of articles that had interesting content or titles for later is great for curbing boredom and you can get even more out of your feed. I try to read at least one helpful article each time I scroll through my feed.</p>
+  </li>
+</ul>
+
+<h4 id="have-you-readmy-internship-interview-experience-with-amazon-slack-mozilla-linkedin-and-browserstack">Have you read: <a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">My Internship Interview Experience with Amazon, Slack, Mozilla, LinkedIn, and Browserstack? </a></h4>
+
+<ul>
+  <li>**Rise and repeat! **This process should be organic and repeated a few times, especially when your interests change or you switch positions. It took me about a month to get it where I was very happy with my feed, and I visited the site a couple of times a week.</li>
+</ul>
+
+<p>Hope these LinkedIn tips help make LinkedIn more appealing as a place to get information. If you don’t have a LinkedIn account already, I would _highly _recommend getting one. It might take a while to set up the first time, but updating is quite easy. It works as a pseudo-resume and allows employers to see a lot more about yourself. I include my LinkedIn on my resume and use my LinkedIn to go into further detail about what is on my resume.</p>
+
+<h3 id="final-linkedin-tips">Final LinkedIn Tips:</h3>
+
+<ol>
+  <li>
+    <p><strong>Follow companies on LinkedIn and people who work at those companies</strong>. They post information about hiring every once in a while; they also post great articles to read about what they do and like. Employers can also see who you follow Sand if you follow their company on LinkedIn. This can help you not get filtered out and shows you really care about the position and company.</p>
+  </li>
+  <li>
+    <p>**Stay active: **After spending time setting up an account and customizing your feed, why not enjoy all the hard work you put in? Keep scrolling, posting, and updating your feed so it stays relevant to your interests. A little work here and there makes your LinkedIn feel like a lot less work overall</p>
+  </li>
+  <li>
+    <p>**Have fun: **If it feels like you’re falling into a pit of professionalism, spice it up a bit and post something that you’re happy about. Even if it’s something you work on outside of your job, posting about hobbies shows your multidimensional, and that is very appealing.</p>
+  </li>
+</ol>
+
+<p>That’s all!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write your comments below. 🙂</p>
+
+<p>If you found this article useful, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you Like <a href="https://www.facebook.com/eulercoder">our FB page</a> and <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a> for discussions and latest updates.</p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+
+	  ]]></description>
+	</item>
+
+	<item>
+	  <title>2 Years of Self-Learning Into a Developer: Eulercoder Motivation</title>
+	  <link>//2017/08/2-years-of-self-learning-into-a-developer</link>
+		
+				
+		
+	  <pubDate>2017-08-06T13:50:37+00:00</pubDate>
+	  <guid>//2017/08/2-years-of-self-learning-into-a-developer</guid>
+	  <description><![CDATA[
+	     <p>#</p>
+
+<p>[caption id=”” align=”alignnone” width=”1024”]<img src="https://cdn-images-1.medium.com/max/1600/1*6Z_FxH-h8rcfDdGb9-gn1w.jpeg" alt="Kevin Hsu teaching students - eulecoder" /> Kevin taking a workshop[/caption]</p>
+
+<h1 id="first-thing-first-self-learning-and-why-did-i-even-start-coding">First thing first. Self-learning and Why did I even start coding?</h1>
+
+<p>My first try with coding was with <a href="https://www.youtube.com/user/sdwuntnu">Dr Wu</a> at National Taiwan Normal University. I was a high school student at the time and Dr Wu was my mentor. During the weekends, he would lead me and another friend to learn coding with assignments like developing a <a href="https://en.wikipedia.org/wiki/Big_two">Big Two game</a> with C++. And that was without any GUI, you would have to play my game with C++ consoles…</p>
+
+<p>And it was certainly fun. The sense of achievement when my program compiles and runs properly was thrilling.</p>
+
+<p>I really liked it, but when the time came to choose a major to pursue in my University career, I was more gravitated towards Business subjects — They somehow seemed cooler to me.</p>
+
+<p>I think I will skip the part where I had my miserable experiences studying Business and doing my first internships (If you are actually interested in knowing this suffering part, do check out my post on LinkedIn — <a href="https://www.linkedin.com/pulse/from-businessstartup-kid-software-engineer-intern-microsoft-hsu">From a Business/Startup Kid to a Software Engineer Intern at Microsoft</a>), but anyway, that was how I started to reconsider my career choices and decided to give coding a second chance.</p>
+
+<p><strong>Read: </strong><a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">Summer Internship: The Ultimate Guide Recommended by 1000+ students</a></p>
+
+<h2 id="have-a-cleargoal">Have a Clear Goal</h2>
+
+<p>In addition to studying Business is really just not my thing, another dominant reason for me to start coding was that I wanted to develop a platform for students to meet other student talents from different backgrounds. I have always been a startup enthusiast. So the ability to develop and deliver a website or app to users was really in demand from myself.</p>
+
+<p>I later think this is also one of the crucial reasons I made it through — I had a straight and clear goal and rationale behind these learning activities.</p>
+
+<p>This is definitely something I would recommend beginners to think about. Try to come up with a goal, the reason why you are thinking about self-learning to code, or even reading this article. That would help you a lot on the way through. In my case, I was <strong>motivated</strong> to dive into web programming.</p>
+
+<p>But you might ask this. How would you know what the <em>right</em> languages or knowledge to start with are?</p>
+
+<p>My answer is that you really have to <strong>do your own research</strong>. Take me for example, I learned that web development can be broke down into frontend and backend components and that frontend typically consists of HTML, CSS while backend can be JavaScript, Python or even Java, C#. And all these research is also a crucial part of my self-learning process. On the other hand, or hands, if you are more into the hot topics like AI, Machine Learning or VR, there are yet other toys to play with.</p>
+
+<!-- more -->
+
+<h2 id="learning-with-online-resources">Learning with Online Resources</h2>
+
+<p>Once you have your own goal, it’s the exciting fun time to mine useful resources online. There are really just a number of great tutorials available on the Internet. A lot of them are even free. Let me try to list down the ones I used and would recommend.</p>
+
+<ul>
+  <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> is a great example of <strong>online resources that are free</strong> when it comes to getting started with learning web programming. It provides detailed step-by-step instructions to create and style website elements (which is called DOM) as well as using JavaScript to interact with them. They did a great job gamify the learning process and community building. You can pretty much find a FreeCodeCamp meetup group in every city (<a href="https://www.facebook.com/groups/free.code.camp.taipei/">FCC TP</a>, for example). I would definitely recommend this to fresh starters to finish until at least the section of JSON APIs and AJAX. These are really important foundations to any complex projects.</li>
+</ul>
+
+<p>[caption id=”” align=”alignnone” width=”1600”]<img src="https://cdn-images-1.medium.com/max/1600/0*5X-j0zr9ZV4Qgt4c.png" alt="image - self-learning on Freecodecamp website" /> Freecodecamp course[/caption]</p>
+
+<ul>
+  <li>Scott from <a href="https://leveluptutorials.com/">Levelup Tutorials</a> is someone I secretly feel like I can’t thank enough to. Once I finish most of the FreeCodeCamp content, I went on to find some video tutorials with real-life examples. I mean, I agree with how some people say technology stacks grow fast nowadays, you don’t have to re-invent the wheel when there are tools and frameworks available to help you build efficient server and UI. After building up solid foundations from FreeCodeCamp, the <a href="https://www.leveluptutorials.com/tutorials/meteor-1-4-for-everyone">Meteor For Everyone</a> and <a href="https://www.leveluptutorials.com/tutorials/meteor-react-for-everyone">Meteor &amp; React For Everyone</a> series from Levelup Tutorials (both free of charge) really prepared me to apply HTML, CSS, JavaScript knowledge onto modern frameworks like Meteor and React using real-world web development examples.</li>
+</ul>
+
+<p>[caption id=”” align=”alignnone” width=”1600”]<img src="https://cdn-images-1.medium.com/max/1600/0*DhmwZYDF_IbEQIK5.png" alt="Image - Self-learning on LevelTuts by eulercoder" /> LevelTuts[/caption]</p>
+
+<ul>
+  <li><a href="https://www.udemy.com/">Udemy</a> is another platform that I would definitely recommend you to check out. Both FCC and LevelupTuts lean towards introducing web technologies. On the other hand, Udemy is a platform where teachers from all over the world upload paid or free tutorials with contents ranged from web development to native apps and even chatbots. Now, because a lot of them are paid, I won’t do specific recommendations on purchasing which ones of them here, but Udemy did do an <a href="https://about.udemy.com/students/student-profile-kevin-hsu/">interview with me</a> (see how active I was using this platform haha). You can always check out the post for some more information.</li>
+</ul>
+
+<p>[caption id=”” align=”alignnone” width=”1600”]<img src="https://cdn-images-1.medium.com/max/1600/0*KhRymPHcW44IoIky.png" alt="Self-learning on Udemy website image - eulercoder" /> Udemy Website[/caption]</p>
+
+<h2 id="build-your-ownprojects">Build Your Own Projects</h2>
+
+<p>After finishing a couple Meteor tutorials with Levelup Tutorials, I really felt empowered and had that desire and confidence to develop projects myself. At the time, I also just bumped into Dr Ray when I interned at Cocoon, a coworking space, who runs <a href="http://appslab.hk/">CityU Apps Lab</a>. So I randomly just asked Dr Ray if I can join his lab although I don’t even study at City University.</p>
+
+<p>He said yes. <strong>Why not</strong>.</p>
+
+<p>We were both excited really. I was the first guy to actually join his lab as a trainee I think. But yeah, this is also something I learn along the way — the Can Do Spirit. If I hadn’t interned at a coworking space, I wouldn’t have met Dr Ray. And if I hadn’t overcome the shyness and demanded challenges for myself, I wouldn’t have come to develop a file streaming web app with the lab — with which experience, I got my first internship as a developer at a wonderful startup called <a href="http://www.25sprout.com/">25Sprout</a> in Taiwan.</p>
+
+<p>Everything above, from getting started to getting my first internship, happened in exactly one year since I started to learn to code.</p>
+
+<p>The point is: try to always look for opportunities building projects with the technologies you like. They are your resume and therefore valuable tickets to your next bigger and more exciting opportunities.</p>
+
+<p>But, you may think, what if there is just no opportunity.</p>
+
+<p>Then <strong>make one</strong>. Build your own personal website for example. This is also something I think every developer should do. I also made <a href="http://kevinhsu.info/">mine</a> (which I am currently revamping) when I finished FreeCodeCamp with Bootstrap. Getting one up and running isn’t just a fine exercise, you will also get to try to ship a website by buying and configuring your first domain and hosting server.</p>
+
+<h2 id="keep-learning">Keep Learning</h2>
+
+<p>Now it’s been another year since I joined 25Sprout as a summer intern. In this year, I do feel like my learning curve has not been as thrilling as it was before, but there are different exciting exposures as I started to lead and develop my dream projects with friends, had my first experience being a speaker in a <a href="https://www.youtube.com/watch?v=auNTp1lc2ZE">student tech conference</a> introducing React and Meteor. I can, in fact, keep this list on and on. I met my partner to co-host a <a href="http://ecjamming.tech/">Hackathon</a> that is nominated as one of the <a href="https://medium.com/@dottechdomains/10-mind-blowing-student-hackathons-from-around-the-world-833c139f8026">Ten Mind-blowing Student Hackathons</a> [Medium Blog Link] from around the world, and finally now working as an intern at Microsoft, a tech giant company I am personally a fan of.</p>
+
+<p>I too had my setbacks along the way, which I mentioned in my <a href="https://www.linkedin.com/pulse/from-businessstartup-kid-software-engineer-intern-microsoft-hsu">blog post</a> on Medium, but all of them have nurtured me to become more ready for my next success (if it does exist, of course, you never know).</p>
+
+<p>If I had to say there’s one thing I’ve learned from the 2 years of self-learning, that is more important than the coding skills, it has to be the ability to be proactive and always looking for next opportunities in the current ones. This is what truly drove and supported me to make every single challenging yet rewarding decisions including even to start learning something that is once completely alien to me — coding.</p>
+
+<hr />
+
+<p>That’s it!</p>
+
+<p>This article was written by Kevin Hsu, read all his articles and <a href="https://medium.com/@kevin.wcb">follow Kevin on Medium</a> also, connect with Kevin on <a href="https://www.linkedin.com/in/kai-chun-kevin-hsu-5428bbb4/">LinkedIn</a>.</p>
+
+<p><strong>Have something to talk about? Want to contribute in our <a href="http://eulercoder.me/about">Mission and Goal</a>? Write on Eulercoder. Write an <a href="mailto:hi@eulercoder.me">email to us</a> or <a href="http://eulercoder.me/contact">contact us</a> for guest posts. </strong></p>
+
+<p>Did you found this article useful? Write in comments, your thoughts on Kevin’s journey and wish him luck. :)</p>
+
+<p>If you found this article motivating, do share with your friends. Let’s help everyone in getting a better internship, job and help them in learning programming. Subscribe to our newsletter and get weekly curated content directly in your mail box. Also, we have our own group on FB, we take Q&amp;A, post materials in the group. I’ll highly recommend you to <a href="https://www.facebook.com/groups/eulercoder">join our FB Group.</a></p>
+
+<h2 id="subscribe-to-our-mailing-list">Subscribe to our mailing list</h2>
+
+<ul>
+  <li>indicates required</li>
+</ul>
+
+<p>Email Address *</p>
+
+<p><strong>Other Recommended articles:</strong></p>
+
+<ul>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/">Slack, Amazon, Mozilla, Browserstack, LinkedIn: My Internship Interview Experience</a></p>
+  </li>
+  <li>
+    <p><a href="http://eulercoder.me/2017/07/basic-skills-needed-internship/">Basic skills needed prior to applying for internships </a></p>
+  </li>
+</ul>
+
+
+	  ]]></description>
+	</item>
+
+
+</channel>
+</rss>
