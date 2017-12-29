@@ -67,7 +67,7 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: vicky002
+username: eulercoder
 repo: eulercoder.github.io
 branch: master
 relative_source: ../eulercoder.github.io/
