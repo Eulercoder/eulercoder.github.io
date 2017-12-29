@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>//</title>
+      <title>/eulercoder.me/</title>
    
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    <image>
-   <url>//assets/images/favicon.png</url>
+   <url>/eulercoder.me/assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/eulercoder.me/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience</title>
-	  <link>//2017/07/slack-amazon-mozilla-linkedin-interview</link>
+	  <link>/eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview</link>
 		
 				
 		
 	  <pubDate>2017-07-25T15:14:37+00:00</pubDate>
-	  <guid>//2017/07/slack-amazon-mozilla-linkedin-interview</guid>
+	  <guid>/eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview</guid>
 	  <description><![CDATA[
 	     <p>In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same <a href="https://www.greenhouse.io">Greenhouse</a> rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.</p>
 
@@ -220,12 +220,12 @@
 
 	<item>
 	  <title>Summer Internship: The Ultimate Guide to get one!</title>
-	  <link>//2017/07/summer-internship-ultimate-guide</link>
+	  <link>/eulercoder.me/2017/07/summer-internship-ultimate-guide</link>
 		
 				
 		
 	  <pubDate>2017-07-23T11:23:30+00:00</pubDate>
-	  <guid>//2017/07/summer-internship-ultimate-guide</guid>
+	  <guid>/eulercoder.me/2017/07/summer-internship-ultimate-guide</guid>
 	  <description><![CDATA[
 	     <p>As a student, each one of us has a dream. Dream of doing a great internship and landing a job in a company that you really love and want to work for! There are jazillion websites, articles, blog posts and videos available on how to land an internship. Chances are, you’ve already read or known 98 percent of this advice: edit and proofread your resume and cover letters, dress appropriately for an interview, be on time or 15 minutes early to an interview, send thank you notes etc. You won’t get any such advice in this blog post. This post will take you from zero to one. Get a notebook and pen, this is going to be a long post. Grab some snacks and start making a note of points that you think would be helpful for you in the future.</p>
 

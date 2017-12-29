@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>//</title>
+      <title>/eulercoder.me/</title>
    
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    <image>
-   <url>//assets/images/favicon.png</url>
+   <url>/eulercoder.me/assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>//</link>
+   <link>/eulercoder.me/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/eulercoder.me/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Eulercoder Project Series —Fabulous Bot First Project Announcement</title>
-	  <link>//2017/09/eulercoder-project-series-fabulous-bot</link>
+	  <link>/eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot</link>
 		
 				
 		
 	  <pubDate>2017-09-17T09:22:21+00:00</pubDate>
-	  <guid>//2017/09/eulercoder-project-series-fabulous-bot</guid>
+	  <guid>/eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot</guid>
 	  <description><![CDATA[
 	     <p>Hello!</p>
 
@@ -289,12 +289,12 @@ url = "https://encrypted.google.com/search?q={0}".format(query)&lt;/code&gt;
 
 	<item>
 	  <title>ChatWeb — Build websites that understand users with full (free) Microsoft Stack</title>
-	  <link>//2017/09/build-chatweb-using-microsoft-stack</link>
+	  <link>/eulercoder.me/2017/09/build-chatweb-using-microsoft-stack</link>
 		
 				
 		
 	  <pubDate>2017-09-02T13:41:39+00:00</pubDate>
-	  <guid>//2017/09/build-chatweb-using-microsoft-stack</guid>
+	  <guid>/eulercoder.me/2017/09/build-chatweb-using-microsoft-stack</guid>
 	  <description><![CDATA[
 	     <p>Just another weekend to C&amp;C (Chill &amp; Code) in Taiwan</p>
 
@@ -578,12 +578,12 @@ const { intent, company } = this.state;&lt;/code&gt;
 
 	<item>
 	  <title>LinkedIn tips that actually work: Set up your News Feed on LinkedIn</title>
-	  <link>//2017/08/linkedin-tips-actually-works</link>
+	  <link>/eulercoder.me/2017/08/linkedin-tips-actually-works</link>
 		
 				
 		
 	  <pubDate>2017-08-30T15:10:34+00:00</pubDate>
-	  <guid>//2017/08/linkedin-tips-actually-works</guid>
+	  <guid>/eulercoder.me/2017/08/linkedin-tips-actually-works</guid>
 	  <description><![CDATA[
 	     <p>In my experience, scrolling through job boards pumping out applications targeted at large companies isn’t the best way to go about <a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide/">getting a job or internship</a>. By following a few people on LinkedIn, I managed to get into a conversation with Laszlo Bock, the Former Head of People Operations at Google. Here are a few LinkedIn tips on how to take full advantage of your LinkedIn feed.</p>
 
@@ -697,12 +697,12 @@ const { intent, company } = this.state;&lt;/code&gt;
 
 	<item>
 	  <title>2 Years of Self-Learning Into a Developer: Eulercoder Motivation</title>
-	  <link>//2017/08/2-years-of-self-learning-into-a-developer</link>
+	  <link>/eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer</link>
 		
 				
 		
 	  <pubDate>2017-08-06T13:50:37+00:00</pubDate>
-	  <guid>//2017/08/2-years-of-self-learning-into-a-developer</guid>
+	  <guid>/eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer</guid>
 	  <description><![CDATA[
 	     <p>#</p>
 
