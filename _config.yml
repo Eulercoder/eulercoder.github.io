@@ -69,11 +69,11 @@ safe: False
 lsi: False
 username: vicky002
 repo: eulercoder.github.io
-branch: gh-pages
+branch: master
 relative_source: ../eulercoder.github.io/
 destination: ../_site/
-production_url:  http://eulercoder.me
-source_url:  http://eulercoder.me
+production_url:  https://eulercoder.github.io
+source_url: https://github.com/Eulercoder/eulercoder.github.io
 
 exclude:
   - README.md
