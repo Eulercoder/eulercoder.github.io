@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/</title>
+      <title>//</title>
    
-   <link>/</link>
+   <link>//</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>/</link>
+   <link>//</link>
    <image>
-   <url>/assets/images/favicon.png</url>
+   <url>//assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>/</link>
+   <link>//</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>College and low GPA: Everything you need to know.</title>
-	  <link>/2017/08/college-low-gpa-know-everything</link>
+	  <link>//2017/08/college-low-gpa-know-everything</link>
 		
 				
 		
 	  <pubDate>2017-08-11T12:25:29+00:00</pubDate>
-	  <guid>/2017/08/college-low-gpa-know-everything</guid>
+	  <guid>//2017/08/college-low-gpa-know-everything</guid>
 	  <description><![CDATA[
 	     <p>Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let’s get started!</p>
 
@@ -150,12 +150,12 @@
 
 	<item>
 	  <title>Twitter Internship and Undergrad Role 2018: Everything you need to know</title>
-	  <link>/2017/08/twitter-internship-undergrad-role-2018</link>
+	  <link>//2017/08/twitter-internship-undergrad-role-2018</link>
 		
 				
 		
 	  <pubDate>2017-08-02T19:18:51+00:00</pubDate>
-	  <guid>/2017/08/twitter-internship-undergrad-role-2018</guid>
+	  <guid>//2017/08/twitter-internship-undergrad-role-2018</guid>
 	  <description><![CDATA[
 	     <p>We just received an email yesterday about Twitter Internship 2018 Application and their undergrad roles. Twitter internship application for 2018 is now live on their career page and in this post, we will be writing about everything you need to know to spend your summer in San Francisco at Twiter HQ, also Twitter has many offices in the US, Canada, Europe and Australia. Twitter’s building was right in front of my building when I was in San Francisco during <a href="http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/">my summer internship at Slack</a>.  Ok, so let’s get started about the <strong>Twitter Internship</strong> and Undergrad application process, preparation plan and few other things that will be helpful in cracking the interview.</p>
 
@@ -346,12 +346,12 @@
 
 	<item>
 	  <title>Basic skills needed prior to applying for internships</title>
-	  <link>/2017/07/basic-skills-needed-internship</link>
+	  <link>//2017/07/basic-skills-needed-internship</link>
 		
 				
 		
 	  <pubDate>2017-07-30T10:14:00+00:00</pubDate>
-	  <guid>/2017/07/basic-skills-needed-internship</guid>
+	  <guid>//2017/07/basic-skills-needed-internship</guid>
 	  <description><![CDATA[
 	     <p>You will be preparing for the interviews but you need to have some basic knowledge of computer science before beginning the preparation phase. In the last previous article, we discussed what is the ideal time to apply for internships and in this article, we are going to discuss what basic skills needed prior to applying for internships and starting the interview preparation.</p>
 
@@ -459,12 +459,12 @@
 
 	<item>
 	  <title>Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience</title>
-	  <link>/2017/07/slack-amazon-mozilla-linkedin-interview</link>
+	  <link>//2017/07/slack-amazon-mozilla-linkedin-interview</link>
 		
 				
 		
 	  <pubDate>2017-07-25T15:14:37+00:00</pubDate>
-	  <guid>/2017/07/slack-amazon-mozilla-linkedin-interview</guid>
+	  <guid>//2017/07/slack-amazon-mozilla-linkedin-interview</guid>
 	  <description><![CDATA[
 	     <p>In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same <a href="https://www.greenhouse.io">Greenhouse</a> rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.</p>
 
@@ -650,12 +650,12 @@
 
 	<item>
 	  <title>Summer Internship: The Ultimate Guide to get one!</title>
-	  <link>/2017/07/summer-internship-ultimate-guide</link>
+	  <link>//2017/07/summer-internship-ultimate-guide</link>
 		
 				
 		
 	  <pubDate>2017-07-23T11:23:30+00:00</pubDate>
-	  <guid>/2017/07/summer-internship-ultimate-guide</guid>
+	  <guid>//2017/07/summer-internship-ultimate-guide</guid>
 	  <description><![CDATA[
 	     <p>As a student, each one of us has a dream. Dream of doing a great internship and landing a job in a company that you really love and want to work for! There are jazillion websites, articles, blog posts and videos available on how to land an internship. Chances are, you’ve already read or known 98 percent of this advice: edit and proofread your resume and cover letters, dress appropriately for an interview, be on time or 15 minutes early to an interview, send thank you notes etc. You won’t get any such advice in this blog post. This post will take you from zero to one. Get a notebook and pen, this is going to be a long post. Grab some snacks and start making a note of points that you think would be helpful for you in the future.</p>
 

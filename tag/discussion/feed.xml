@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/</title>
+      <title>//</title>
    
-   <link>/</link>
+   <link>//</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>/</link>
+   <link>//</link>
    <image>
-   <url>/assets/images/favicon.png</url>
+   <url>//assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>/</link>
+   <link>//</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>College and low GPA: Everything you need to know.</title>
-	  <link>/2017/08/college-low-gpa-know-everything</link>
+	  <link>//2017/08/college-low-gpa-know-everything</link>
 		
 				
 		
 	  <pubDate>2017-08-11T12:25:29+00:00</pubDate>
-	  <guid>/2017/08/college-low-gpa-know-everything</guid>
+	  <guid>//2017/08/college-low-gpa-know-everything</guid>
 	  <description><![CDATA[
 	     <p>Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let’s get started!</p>
 
@@ -150,12 +150,12 @@
 
 	<item>
 	  <title>Three Internships mandatory for Engineering Students: Analysis and Discussion</title>
-	  <link>/2017/07/three-internships-mandatory</link>
+	  <link>//2017/07/three-internships-mandatory</link>
 		
 				
 		
 	  <pubDate>2017-07-27T16:27:45+00:00</pubDate>
-	  <guid>/2017/07/three-internships-mandatory</guid>
+	  <guid>//2017/07/three-internships-mandatory</guid>
 	  <description><![CDATA[
 	     <p>Education Minister of India announced today that every engineering student has to undergo minimum three internships. I am glad that Education minister is thinking about the unemployment. As per the reports, 80% of engineering graduates in India are “unemployable”. This definitely tells that our Education system needs to be revamped and training system of the teacher and students needs to be upgraded. Internships definitely help a lot in becoming a better engineer. It gives you exposure to the real world things, one good internship can be easily compared with four years of Engineering. Regarding today’s announcement about three internships, the very first thought that came into my mind was, this is going to be very tough for engineering colleges to provide internships to students. Let’s analyze it in this article.</p>
 
