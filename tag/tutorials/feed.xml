@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>//</title>
+      <title>/</title>
    
-   <link>//</link>
+   <link>/</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>//</link>
+   <link>/</link>
    <image>
-   <url>//assets/images/favicon.png</url>
+   <url>/assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>//</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>ChatWeb — Build websites that understand users with full (free) Microsoft Stack</title>
-	  <link>//2017/09/build-chatweb-using-microsoft-stack</link>
+	  <link>/2017/09/build-chatweb-using-microsoft-stack</link>
 		
 				
 		
 	  <pubDate>2017-09-02T13:41:39+00:00</pubDate>
-	  <guid>//2017/09/build-chatweb-using-microsoft-stack</guid>
+	  <guid>/2017/09/build-chatweb-using-microsoft-stack</guid>
 	  <description><![CDATA[
 	     <p>Just another weekend to C&amp;C (Chill &amp; Code) in Taiwan</p>
 

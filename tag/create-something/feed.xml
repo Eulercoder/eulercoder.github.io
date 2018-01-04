@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>//</title>
+      <title>/</title>
    
-   <link>//</link>
+   <link>/</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>//</link>
+   <link>/</link>
    <image>
-   <url>//assets/images/favicon.png</url>
+   <url>/assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>//</link>
+   <link>/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Slack Bot using Wolframalpha API : Basic Guide</title>
-	  <link>//2017/07/create-slack-bot-using-wolframalpha-api</link>
+	  <link>/2017/07/create-slack-bot-using-wolframalpha-api</link>
 		
 				
 		
 	  <pubDate>2017-07-23T06:19:54+00:00</pubDate>
-	  <guid>//2017/07/create-slack-bot-using-wolframalpha-api</guid>
+	  <guid>/2017/07/create-slack-bot-using-wolframalpha-api</guid>
 	  <description><![CDATA[
 	     <p>I read a thread on Reddit about WolframAlpha API and I decided to try my hands on it. I created two slack Bot using WolframAlpha and both work very nicely see some of the best tweets from <a href="https://twitter.com/The_L__">L</a>. There is an issue with WolframAlpha API it allows only 2000 API calls in a month, you need to take their paid plans if you make heavy usages.</p>
 
