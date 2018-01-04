@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>//</title>
+      <title>http://eulercoder.me/</title>
    
-   <link>//</link>
+   <link>http://eulercoder.me/</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>//</link>
+   <link>http://eulercoder.me/</link>
    <image>
-   <url>//assets/images/favicon.png</url>
+   <url>http://eulercoder.me/assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>//</link>
+   <link>http://eulercoder.me/</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="http://eulercoder.me/rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>Getting Started with Open Source</title>
-	  <link>//2017/07/getting-started-open-source</link>
+	  <link>http://eulercoder.me/2017/07/getting-started-open-source</link>
 		
 				
 		
 	  <pubDate>2017-07-23T08:59:00+00:00</pubDate>
-	  <guid>//2017/07/getting-started-open-source</guid>
+	  <guid>http://eulercoder.me/2017/07/getting-started-open-source</guid>
 	  <description><![CDATA[
 	     <p>After my post on <a href="http://eulercoder.me/2017/07/competitive-programming-open-source/">Competitive programming or Open Source development which one to choose?</a>, I received so many emails asking How to start with open source. I wanted to write about this since a very long time so as the title suggests, this blog post is for beginners who want to work on their own projects or contribute to other open source projects. <strong>This is going to be a long post so grab some snacks, take a notebook and make a note of points that you think may help in the future.</strong></p>
 
@@ -300,12 +300,12 @@ The undisputed center of the open source universe is <a href="https://github.com
 
 	<item>
 	  <title>Code Every Day: Eulercoder Motivation</title>
-	  <link>//2017/07/code-every-day-motivation-post</link>
+	  <link>http://eulercoder.me/2017/07/code-every-day-motivation-post</link>
 		
 				
 		
 	  <pubDate>2017-07-23T08:43:54+00:00</pubDate>
-	  <guid>//2017/07/code-every-day-motivation-post</guid>
+	  <guid>http://eulercoder.me/2017/07/code-every-day-motivation-post</guid>
 	  <description><![CDATA[
 	     <p>I read a blog post and now I’m inspired by <a href="http://ejohn.org/blog/write-code-every-day/">John Resig</a> (Who was in turn, inspired by <a href="http://jenniferdewalt.com/">Jennifer Dewalt</a>), I am going to write code every day, starting today. I hope to write about my coding progress regularly on this blog.</p>
 
