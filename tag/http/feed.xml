@@ -3,9 +3,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>/eulercoder.me/</title>
+      <title>//</title>
    
-   <link>/eulercoder.me/</link>
+   <link>//</link>
    <description>A place for Eulercoder Community, all about internships, jobs, interviews and some motivation</description>
    <language>en-us</language>
    
@@ -15,26 +15,26 @@
    <description>
    <![CDATA[ A place for Eulercoder Community, all about internships, jobs, interviews and some motivation ]]>
    </description>
-   <link>/eulercoder.me/</link>
+   <link>//</link>
    <image>
-   <url>/eulercoder.me/assets/images/favicon.png</url>
+   <url>//assets/images/favicon.png</url>
    <title>Eulercoder</title>
-   <link>/eulercoder.me/</link>
+   <link>//</link>
    </image>
    <generator>Jekyll 3.6.2</generator>
    <lastBuildDate></lastBuildDate>
-   <atom:link href="/eulercoder.me/rss.xml" rel="self" type="application/rss+xml"/>
+   <atom:link href="//rss.xml" rel="self" type="application/rss+xml"/>
    <ttl>60</ttl>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>HTTP Headers Related to Security</title>
-	  <link>/eulercoder.me/2017/07/http-headers-security-web-applications</link>
+	  <link>//2017/07/http-headers-security-web-applications</link>
 		
 				
 		
 	  <pubDate>2017-07-23T07:39:56+00:00</pubDate>
-	  <guid>/eulercoder.me/2017/07/http-headers-security-web-applications</guid>
+	  <guid>//2017/07/http-headers-security-web-applications</guid>
 	  <description><![CDATA[
 	     <p>This post is about HTTP headers and how it’s useful in security. Among the many standard HTTP headers, some help to improve the security of web applications. This post contains a quick overview of these headers. So let’s get started!</p>
 
