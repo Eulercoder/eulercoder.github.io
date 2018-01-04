@@ -5,7 +5,7 @@ paginate: 10 # it will paginate after this number
 language: 'en-us'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: 
+baseurl: /
 # Website info
 title: Eulercoder
 description: A place for Eulercoder Community, all about internships, jobs, interviews and some motivation
@@ -14,7 +14,7 @@ logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 production_url: http://eulercoder.me
-source_url: https://github.com/eulercoder/eulercoder.github.io/
+source_url: https://github.com/eulercoder/eulercoder.me/
 
 # Social info
 navigation: True # show the navbar links
@@ -71,8 +71,8 @@ repo: eulercoder.github.io
 branch: master
 relative_source: ../eulercoder.github.io/
 destination: ../_site/
-production_url:  https://eulercoder.github.io
-source_url: https://github.com/Eulercoder/eulercoder.github.io
+production_url:  http://eulercoder.me
+source_url: https://github.com/Eulercoder/eulercoder.me
 
 exclude:
   - README.md
