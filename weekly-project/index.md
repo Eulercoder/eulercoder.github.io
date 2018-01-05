@@ -1,7 +1,7 @@
 ---
 layout: page
-current: disclaimer
-title: Disclaimer
+current: Weekly Project
+title: Eulercoder Weekly Project
 navigation: true
 logo: 'assets/images/fevicon/apple-icon-152x152.png'
 class: page-template
