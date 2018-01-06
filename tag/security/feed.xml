@@ -29,12 +29,12 @@
    
 	<item>
 	  <title>HTTP Headers Related to Security</title>
-	  <link>http://eulercoder.me/2017/07/http-headers-security-web-applications</link>
+	  <link>http://eulercoder.me/2017/07/http-headers-security-web-applications/</link>
 		
 				
 		
 	  <pubDate>2017-07-23T07:39:56+00:00</pubDate>
-	  <guid>http://eulercoder.me/2017/07/http-headers-security-web-applications</guid>
+	  <guid>http://eulercoder.me/2017/07/http-headers-security-web-applications/</guid>
 	  <description><![CDATA[
 	     <p>This post is about HTTP headers and how it’s useful in security. Among the many standard HTTP headers, some help to improve the security of web applications. This post contains a quick overview of these headers. So let’s get started!</p>
 

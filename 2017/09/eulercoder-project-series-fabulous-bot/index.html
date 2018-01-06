@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Eulercoder Project Series —Fabulous Bot First Project Announcement</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="http://eulercoder.me/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://eulercoder.me/assets/built/screen.edited.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="A place for Eulercoder Community, all about internships, jobs, interviews and some motivation" />
+    <link rel="shortcut icon" href="http://eulercoder.me/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Eulercoder" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eulercoder Project Series —Fabulous Bot First Project Announcement" />
+    <meta property="og:description" content="Hello! In our previous post, Eulercoder announced our weekly project series based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday. Today Eulercoder is announcing the very" />
+    <meta property="og:url" content="http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/" />
+    <meta property="og:image" content="http://eulercoder.me/assets/images/cover/new_project.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/eulercoder" />
+    <meta property="article:author" content="https://www.facebook.com/eulercoder" />
+    <meta property="article:published_time" content="2017-09-17T09:22:21+00:00" />
+    <meta property="article:modified_time" content="2017-09-17T09:22:21+00:00" />
+    <meta property="article:tag" content="Learning" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eulercoder Project Series —Fabulous Bot First Project Announcement" />
+    <meta name="twitter:description" content="Hello! In our previous post, Eulercoder announced our weekly project series based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday. Today Eulercoder is announcing the very" />
+    <meta name="twitter:url" content="http://eulercoder.me/" />
+    <meta name="twitter:image" content="http://eulercoder.me/assets/images/cover/new_project.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Eulercoder" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Learning" />
+    <meta name="twitter:site" content="@vikesh002" />
+    <meta name="twitter:creator" content="@vikesh002" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://eulercoder.me//assets/images/fevicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://eulercoder.me//assets/images/fevicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://eulercoder.me//assets/images/fevicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://eulercoder.me//assets/images/fevicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://eulercoder.me//assets/images/fevicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://eulercoder.me//assets/images/fevicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://eulercoder.me//assets/images/fevicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://eulercoder.me//assets/images/fevicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://eulercoder.me//assets/images/fevicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="http://eulercoder.me//assets/images/fevicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://eulercoder.me//assets/images/fevicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://eulercoder.me//assets/images/fevicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://eulercoder.me//assets/images/fevicon/favicon-16x16.png">
+    <link rel="manifest" href="http://eulercoder.me//assets/images/fevicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="http://eulercoder.me//assets/images/fevicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Eulercoder",
+        "logo": "http://eulercoder.me/assets/images/blog-icon.png"
+    },
+    "url": "http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://eulercoder.me/assets/images/cover/new_project.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/"
+    },
+    "description": "Hello! In our previous post, Eulercoder announced our weekly project series based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday. Today Eulercoder is announcing the very"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Eulercoder Project Series —Fabulous Bot First Project Announcement" href="http://eulercoder.me/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://eulercoder.me/"><img src="http://eulercoder.meassets/images/blog-icon.png" alt="Eulercoder" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="http://eulercoder.me">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="http://eulercoder.me/weekly-project">Weekly Project</a></li>
+    <li class="nav-about" role="menuitem"><a href="http://eulercoder.me/about">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="http://eulercoder.me/2017/07/summer-internship-ultimate-guide">Internship Guide</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/eulercoder" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/vikesh002" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="17 September 2017">17 September 2017</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='http://eulercoder.me/tag/learning/'>LEARNING</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Eulercoder Project Series —Fabulous Bot First Project Announcement</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(http://eulercoder.me/assets/images/cover/new_project.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>Hello!</p>
+
+<p>In our previous post, Eulercoder <a href="http://eulercoder.me/weekly-project/">announced our weekly project series</a> based on the feedback and suggestions from our readers. We had mentioned that we will be announcing our first project on Saturday — 16th September (2017) but there was a slight delay and today is a Sunday.</p>
+
+<p>Today <a href="http://eulercoder.me/about">Eulercoder</a> is announcing the very first project in the<a href="http://eulercoder.me/weekly-project/"> weekly projects series</a>, The Fabulous bot for Slack. (Will be available for Messenger, Telegram too)</p>
+
+<h3 id="fabulous-bot-forslack">Fabulous Bot for Slack</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*BDwu0v1rHBpfFdYGx30yTw.png" alt="fabulous bot - project series" /> Designed by Eulercoder Team[/caption]</p>
+
+<h3 id="the-idea">The Idea</h3>
+
+<p>Most of the top companies and startups are already using Slack and on an average, in the weekdays, people stay active on Slack for almost 5–6 hours. Fabulous Bot is a bot which does the basic work of searching from different platforms and showing the results directly in your Slack channel. Users don’t have to leave Slack, open browser and search for something.</p>
+
+<p><strong>User will be able to</strong></p>
+
+<!-- more -->
+
+<ul>
+  <li>
+    <p>Search from Google, Wikipedia, YouTube etc—( top 3 results will be shown)</p>
+  </li>
+  <li>
+    <p>Check weather of any city</p>
+  </li>
+  <li>
+    <p>Search Query from Stack Overflow</p>
+  </li>
+  <li>
+    <p>Get commits data of any repository, Branch or pull request</p>
+  </li>
+  <li>
+    <p>Get stocks data</p>
+  </li>
+  <li>
+    <p>Search images from Google Images, Flickr etc</p>
+  </li>
+  <li>
+    <p>Do mathematical Calculations</p>
+  </li>
+  <li>
+    <p>Check meaning of words — From Urban Dictionary</p>
+  </li>
+  <li>
+    <p>View maps</p>
+  </li>
+  <li>
+    <p>and will be able to perform lot more tasks.</p>
+  </li>
+</ul>
+
+<h3 id="how-are-we-going-to-implement-this">How are we going to Implement this?</h3>
+
+<ol>
+  <li>
+    <p>User will call fabulous Bot as <code class="highlighter-rouge">_\fabulous service_name Query_</code>. We will read the service name and Query.
+<em>Ex- </em><strong><em>Service_name</em></strong><em> = YouTube, </em><strong><em>Query</em></strong><em> = despacito</em></p>
+  </li>
+  <li>
+    <p>Most of these services have APIs available. We will call those APIs and get the results.</p>
+  </li>
+  <li>
+    <p>Parse the results in the Slack response format.</p>
+  </li>
+  <li>
+    <p>And post in the Slack channel.</p>
+  </li>
+  <li>
+    <p><strong>What is API is not available? </strong>Then we will use BeautifulSoup (mostly) or Flask to scrap the results form the source code.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-python"&gt;query = quote(query)
+url = "https://encrypted.google.com/search?q={0}".format(query)&lt;/code&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>Here <em>quote</em> function formats the query and using beautiful soup, we are scraping that URL. You can copy that URL and try it in the browser. It works!</li>
+</ol>
+
+<h3 id="what-technologies-we-are-using-to-build-fabulousbot">What Technologies we are using to build Fabulous Bot?</h3>
+
+<ul>
+  <li>
+    <p>Python Programming Language</p>
+  </li>
+  <li>
+    <p>Working with APIs — (Slack and Third Party)</p>
+  </li>
+  <li>
+    <p>BeautifulSoup Framework — in Python</p>
+  </li>
+  <li>
+    <p>Unit Testing in Python</p>
+  </li>
+  <li>
+    <p>AWS for Bot Deployment</p>
+  </li>
+  <li>
+    <p>HTML, Bootstrap or (React) — For the website</p>
+  </li>
+  <li>
+    <p>Shell Scripting</p>
+  </li>
+  <li>
+    <p><a href="http://mrbook.org/blog/tutorials/make/">Makefiles</a></p>
+  </li>
+  <li>
+    <p>Git — For source code management and collaboration</p>
+  </li>
+  <li>
+    <p>Few more — (Depending on the usages as we start working on this)</p>
+  </li>
+</ul>
+
+<h3 id="what-are-the-different-tasks-in-thisproject">What are the different tasks in this project?</h3>
+
+<ul>
+  <li>
+    <p>Create a beautiful website (like our Logo) for Fabulous Bot</p>
+  </li>
+  <li>
+    <p>Write Documentations of the code structure and the working</p>
+  </li>
+  <li>
+    <p>Reviewing Pull Requests, merging and maintaining the repository</p>
+  </li>
+  <li>
+    <p>Project Development.</p>
+  </li>
+</ul>
+
+<h3 id="how-does-the-source-code-folder-structure-looklike">How does the source code folder structure look like?</h3>
+
+<p>Folder structure will look something like this. This is not permanent but we will try to stick to this structure. If you have any suggestions related to this, feel free to post it in <a href="http://bit.ly/EulercoderOnSlack">our Slack channel</a> or <a href="https://github.com/Eulercoder/fabulous/issues/new">make an issue on GitHub</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code class="language-markup"&gt;.
+├── fabulous
+ ├── plugins [This will contain different supported services]
+ ├── tests [This folder will contains all the tests]
+ ├── fabulous.py [Initiate, test all the available services]
+ ├── server.py [Will handle the server]
+ ├── dummyserver.py [this will create the dummy server]
+├── LICENSE
+├── README.md
+├── bin
+ ├── fabulous   [This file will contain automated installation script]
+├── .gitignore  [files and folders to avoid while pushing code]
+├── setup.py [This file is used to upload project as Python package]
+├── requirements.txt [This is for all the project module requirements]
+├── Makefile [To automagically build and manage the project]&lt;/code&gt;
+</code></pre></div></div>
+
+<h3 id="how-are-we-going-to-collaborate-together">How are we going to collaborate together?</h3>
+
+<ul>
+  <li>
+    <p>All the discussions related to this project will happen on <a href="https://github.com/Eulercoder/fabulous/issues/new">Slack in “fabulousbot” channel</a>.</p>
+  </li>
+  <li>
+    <p>Based on your knowledge set and total number of people working on this, we will assign the tasks. Task assigning will happen in the same channel.</p>
+  </li>
+  <li>
+    <p>Once you agree to work on a task, you are free to set the deadlines. Make sure you try your hardest to meet the deadlines.</p>
+  </li>
+</ul>
+
+<h3 id="who-can-work-on-thisproject">Who can work on this project?</h3>
+
+<ul>
+  <li>
+    <p><strong>Anyone who knows a little programming. </strong>You are more than welcome to join us and contribute to this project.</p>
+  </li>
+  <li>
+    <p>To make sure that our master branch is clean, <em>*YOU WILL NEVER PUSH TO MASTER BRANCH. **</em>(After a warning, user will be removed from the organization)</p>
+  </li>
+  <li>
+    <p>Fork this project in your Github, start working, once you’re done with any feature or fix. Raise a PR, we will review your PR and if everything is perfect, your commits will be merged in to the master branch.</p>
+  </li>
+</ul>
+
+<h3 id="finally-any-specificterms">Finally, any specific terms?</h3>
+
+<ul>
+  <li>
+    <p>Source code can be made private at any stage also, all the contributor names will be made public on the website.</p>
+  </li>
+  <li>
+    <p>Eulercoder is the primary owner of the project.</p>
+  </li>
+  <li>
+    <p>Eulercoder will make this bot public for all the Slack teams. There can be little pricing depending on the extra features that will be added by the Eulercoder team.</p>
+  </li>
+  <li>
+    <p>Eulercoder is totally a non-profit organization, to keep up the work, to handle our daily operations and maintain our websites and hosting, we need to have a source of income.</p>
+  </li>
+</ul>
+
+<h3 id="get-started">Get Started!</h3>
+
+<ul>
+  <li>
+    <p>The very first thing you have to do is — <a href="http://eulercoder.me/about/community/">Join Eulercoder Community on Slack!</a></p>
+  </li>
+  <li>
+    <p>Head over to “fabulousbot” channel and write a short intro, tell us what technologies you know and what you want to learn.</p>
+  </li>
+  <li>
+    <p>Tell us which part of the project, would you like to handle/work on.</p>
+  </li>
+  <li>
+    <p>Once you are in, fork Fabulous Bot repository in your profile.</p>
+  </li>
+  <li>
+    <p>Follow the folder structure and start working.</p>
+  </li>
+  <li>
+    <p>Raise a pull request, once you complete any feature or a fix.</p>
+  </li>
+  <li>
+    <p>Please, write proper commit messages so that our future collaborators can easily understand what your code does from your commit messages.</p>
+  </li>
+</ul>
+
+<p><strong>That’s almost it.</strong></p>
+
+<p>Looking forward to work, collaborate and learn together.</p>
+
+<hr />
+
+<p><em>We started </em><a href="http://eulercoder.me/"><em>Eulercoder</em></a><em> with a mission to be the best computer science portal on the web. We need to do a lot of work, it will require extremely hard work, the content and the courses need to be the best. We extremely value our readers and take each feedback very seriously. With this, today we are launching our Eulercoder weekly project series, I request you to join us. Let’s improve ourselves as a developer and also </em><a href="http://eulercoder.me/contribute/"><em>contribute — help everyone</em></a><em> in becoming better at programming.</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="http://eepurl.com/bRklFn"><strong>Subscribe to our Weekly Updates</strong></a>**</td>
+      <td> **<a href="https://publicslack.com/slacks/eulercodercommunity/invites/new"><strong>Join Eulercoder Community on Slack!</strong></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Thank you!</p>
+
+<hr />
+
+<p><strong>Have something to talk about? Want to contribute to our </strong><a href="http://eulercoder.me/about"><strong>Mission and Goal</strong></a><strong>? Write on Eulercoder. Write an </strong><a href="mailto:hi@eulercoder.me"><strong>email to us</strong></a><strong> or </strong><a href="http://eulercoder.me/contact"><strong>contact us</strong></a><strong> for guest posts.</strong></p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Eulercoder</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <form method="post" action="https://eulercoder.us3.list-manage.com/subscribe/post?u=4dcb96f48ac8cb31e6ad01138&amp;id=ba0a5febe9" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="EMAIL" id="mce-EMAIL"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" ><span>Subscribe</span></button>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+</form>
+
+                </section>
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://eulercoder.me/';
+                            this.page.identifier = 'Eulercoder';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://vicky002.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(http://eulercoder.me/assets/images/blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Eulercoder &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="http://eulercoder.me/tag/learning/">Learning</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/">ChatWeb — Build websites that understand users with full (free) Microsoft Stack</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="http://eulercoder.me/2017/08/linkedin-tips-actually-works/">LinkedIn tips that actually work: Set up your News Feed on LinkedIn</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="http://eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer/">2 Years of Self-Learning Into a Developer: Eulercoder Motivation</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="http://eulercoder.me/tag/learning/">
+                                
+                                    See all 3 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/">
+                <div class="post-card-image" style="background-image: url(http://eulercoder.me/assets/images/cover/chatweb.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Learning</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Tutorials</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">ChatWeb — Build websites that understand users with full (free) Microsoft Stack</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Just another weekend to C&amp;C (Chill &amp; Code) in Taiwan ChatWeb? Chatbot has been a hot topic around for sure. I still remember how 4 teams out of the 12 teams in E.C. Jamming,</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://eulercoder.me/">
+            
+                <img src="http://eulercoder.me/assets/images/favicon.png" alt="Eulercoder icon" />
+            
+            <span>Eulercoder</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Eulercoder Project Series —Fabulous Bot First Project Announcement</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Eulercoder+Project+Series+%E2%80%94Fabulous+Bot+First+Project+Announcement&amp;url=http://eulercoder.me2017/09/eulercoder-project-series-fabulous-bot/"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://eulercoder.me2017/09/eulercoder-project-series-fabulous-bot/"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://eulercoder.me/">Eulercoder</a> &copy; 2018</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/">GitHub Pages</a> using
+                    <a href="https://github.com/TryGhost/Casper">Casper</a></section>
+                <nav class="site-footer-nav">
+                    <a href="http://eulercoder.me/disclaimer">Disclaimer</a>
+                    <a href="http://eulercoder.me/privacy-policy">Privacy Policy</a>
+                    <a href="http://eulercoder.me/terms-conditions">Terms and Conditions</a>
+                    <a href="https://facebook.com/eulercoder" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/vikesh002" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="http://eulercoder.me/assets/images/blog-icon.png" alt="Eulercoder" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Eulercoder</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="https://eulercoder.us3.list-manage.com/subscribe/post?u=4dcb96f48ac8cb31e6ad01138&amp;id=ba0a5febe9" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="EMAIL" id="mce-EMAIL"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" ><span>Subscribe</span></button>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="http://eulercoder.me/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="http://eulercoder.me/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45497633-11', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
