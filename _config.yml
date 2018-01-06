@@ -32,7 +32,7 @@ disqus_shortname: vicky002 # replace with your disqus username
 google_analytics: UA-45497633-11 # replace with your GA tracking identifier
 
 # Permalinks
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 # permalink: /author/:author
 # permalink: /tag/:tag
 
