@@ -1,23 +1,21 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/get-started.jpg
-subclass: 'post'
-date: 2017-07-23 08:59:00+00:00
-link: http://eulercoder.me/2017/07/getting-started-open-source/
-slug: getting-started-open-source
 title: Getting Started with Open Source
-wordpress_id: 145
+date: 2017-07-23 08:59:00 Z
 categories:
 - open-source
 tags:
 - code
 - open source
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/get-started.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/getting-started-open-source/
+wordpress_id: 145
 ---
 
 After my post on [Competitive programming or Open Source development which one to choose?](http://eulercoder.me/2017/07/competitive-programming-open-source/), I received so many emails asking How to start with open source. I wanted to write about this since a very long time so as the title suggests, this blog post is for beginners who want to work on their own projects or contribute to other open source projects. **This is going to be a long post so grab some snacks, take a notebook and make a note of points that you think may help in the future.**

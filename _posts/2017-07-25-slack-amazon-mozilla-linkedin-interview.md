@@ -1,24 +1,22 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/slack.jpg
-subclass: 'post'
-date: 2017-07-25 15:14:37+00:00
-link: http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/
-slug: slack-amazon-mozilla-linkedin-interview
 title: 'Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience'
-wordpress_id: 481
+date: 2017-07-25 15:14:37 Z
 categories:
 - internship
 - software-engineering
 tags:
 - internship
 - jobs
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/slack.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/
+wordpress_id: 481
 ---
 
 In Summer 2016, I had applied to 20+ companies for Software engineering internships. Twelve companies sent me that same [Greenhouse](https://www.greenhouse.io) rejection template, three companies said their summer internship positions are full and I got shortlisted for five companies, S.

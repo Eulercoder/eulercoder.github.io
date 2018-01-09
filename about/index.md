@@ -1,11 +1,11 @@
 ---
+title: About
 layout: page
 current: about
-title: About
 navigation: true
-logo: 'assets/images/fevicon/apple-icon-152x152.png'
+logo: assets/images/fevicon/apple-icon-152x152.png
 class: page-template
-subclass: 'post page'
+subclass: post page
 ---
 
 Hi Welcome to EulerCoder! EulerCoder is a non-profit organization on a mission to be the best Computer Science portal on the web. We are a team of developers, software engineers, tech geeks and amazing content writers. If you are a computer science student or someone who loves programming and web development then this site is for you. We write about Open Source, Internship, programming languages (C, C++, Python, Swift, R etc), web development (React, JavaScript, node.js etc), web design, mobile development, tech reviews and mobile tricks.

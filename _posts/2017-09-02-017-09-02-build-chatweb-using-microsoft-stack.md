@@ -1,23 +1,21 @@
 ---
-author: Kevin
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/chatweb.jpeg
-subclass: 'post'
-date: 2017-09-02 13:41:39+00:00
-link: http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/
-slug: build-chatweb-using-microsoft-stack
 title: ChatWeb — Build websites that understand users with full (free) Microsoft Stack
+date: 2017-09-02 13:41:39 Z
 categories:
 - learning
 - tutorials
 tags:
 - learning
 - tutorials
+author: Kevin
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/chatweb.jpeg
+subclass: post
+link: http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/
 ---
 
 Just another weekend to C&C (Chill & Code) in Taiwan

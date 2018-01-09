@@ -1,10 +1,10 @@
 ---
+title: Getting Started with Open Source
+date: 2017-07-23 08:59:00 Z
 author: vicky002
 comments: true
-date: 2017-07-23 08:59:00+00:00
 link: http://eulercoder.me/2017/07/getting-started-open-source/
 slug: getting-started-open-source
-title: Getting Started with Open Source
 wordpress_id: 145
 categories:
 - open-source

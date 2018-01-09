@@ -1,11 +1,11 @@
 ---
+title: Disclaimer
 layout: page
 current: disclaimer
-title: Disclaimer
 navigation: true
-logo: 'assets/images/fevicon/apple-icon-152x152.png'
+logo: assets/images/fevicon/apple-icon-152x152.png
 class: page-template
-subclass: 'post page'
+subclass: post page
 ---
 
 If you require any more information or have any questions about our site’s disclaimer, please feel free to contact us by email at support@eulercoder.me.  

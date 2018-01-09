@@ -1,10 +1,10 @@
 ---
+title: ChatWeb — Build websites that understand users with full (free) Microsoft Stack
+date: 2017-09-02 13:41:39 Z
 author: Kevin
 comments: true
-date: 2017-09-02 13:41:39+00:00
 link: http://eulercoder.me/2017/09/build-chatweb-using-microsoft-stack/
 slug: build-chatweb-using-microsoft-stack
-title: ChatWeb — Build websites that understand users with full (free) Microsoft Stack
 wordpress_id: 833
 categories:
 - learning

@@ -1,22 +1,20 @@
 ---
-author: Nicholas
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-cover:  assets/images/cover/linkedin.jpg
-class: post-template
-subclass: 'post'
-date: 2017-08-30 15:10:34+00:00
-link: http://eulercoder.me/2017/08/linkedin-tips-actually-works/
-slug: linkedin-tips-actually-works
 title: 'LinkedIn tips that actually work: Set up your News Feed on LinkedIn'
-wordpress_id: 845
+date: 2017-08-30 15:10:34 Z
 categories:
 - learning
 tags:
 - learning
+author: Nicholas
+comments: true
+layout: post
+current: post
+navigation: true
+cover: assets/images/cover/linkedin.jpg
+class: post-template
+subclass: post
+link: http://eulercoder.me/2017/08/linkedin-tips-actually-works/
+wordpress_id: 845
 ---
 
 In my experience, scrolling through job boards pumping out applications targeted at large companies isn’t the best way to go about [getting a job or internship](http://eulercoder.me/2017/07/summer-internship-ultimate-guide/). By following a few people on LinkedIn, I managed to get into a conversation with Laszlo Bock, the Former Head of People Operations at Google. Here are a few LinkedIn tips on how to take full advantage of your LinkedIn feed.

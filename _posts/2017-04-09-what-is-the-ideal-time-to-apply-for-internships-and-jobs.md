@@ -1,17 +1,15 @@
 ---
+title: What Is The Ideal Time To Apply For Internships And Jobs
+date: 2017-04-09 14:58:08 Z
 author: vicky
 layout: post
 current: post
 comments: true
-navigation: True
+navigation: true
 class: post-template
-cover:  assets/images/cover/internship_first.jpg
-subclass: 'post'
-date: 2017-04-09T10:58:08-04:00
-title: "What Is The Ideal Time To Apply For Internships And Jobs"
+cover: assets/images/cover/internship_first.jpg
+subclass: post
 ---
-
-
 
 [In the last article](http://blog.eulercoder.me/p/ultimate-course.html), we read about this course on getting software engineering internship and jobs. The course contains series of articles on internships and jobs right from the preparation plan to the first day of the job. If you are visiting this page directly I'd suggest you go and check out [the roadmap for Software engineering jobs.](http://blog.eulercoder.me/p/ultimate-course.html) (Link to Roadmap)
 

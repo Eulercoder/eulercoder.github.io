@@ -1,10 +1,10 @@
 ---
+title: 'Summer Internship: The Ultimate Guide to get one!'
+date: 2017-07-23 11:23:30 Z
 author: vicky002
 comments: true
-date: 2017-07-23 11:23:30+00:00
 link: http://eulercoder.me/2017/07/summer-internship-ultimate-guide/
 slug: summer-internship-ultimate-guide
-title: 'Summer Internship: The Ultimate Guide to get one!'
 wordpress_id: 440
 categories:
 - internship
@@ -13,8 +13,8 @@ tags:
 - internship
 - jobs
 yst_prominent_words:
-- '* *'
-- '* * *'
+- "* *"
+- "* * *"
 - applying for an internship
 - basics of cs
 - book pdf

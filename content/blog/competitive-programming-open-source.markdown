@@ -1,10 +1,10 @@
 ---
+title: 'Competitive Programming and Open Source: Which one to choose'
+date: 2017-07-23 07:39:55 Z
 author: vicky002
 comments: true
-date: 2017-07-23 07:39:55+00:00
 link: http://eulercoder.me/2017/07/competitive-programming-open-source/
 slug: competitive-programming-open-source
-title: 'Competitive Programming and Open Source: Which one to choose'
 wordpress_id: 313
 categories:
 - discussion

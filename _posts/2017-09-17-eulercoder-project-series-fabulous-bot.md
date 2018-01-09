@@ -1,32 +1,21 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-cover:  assets/images/cover/new_project.jpg
-class: post-template
-subclass: 'post'
-date: 2017-09-17T09:22:21+00:00
-link: http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/
-slug: eulercoder-project-series-fabulous-bot
 title: Eulercoder Project Series —Fabulous Bot First Project Announcement
-wordpress_id: 945
+date: 2017-09-17 09:22:21 Z
 categories:
 - weekly-project
 tags:
 - learning
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+cover: assets/images/cover/new_project.jpg
+class: post-template
+subclass: post
+link: http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/
+wordpress_id: 945
 ---
-
-
-
-
-
-
-
-
-
 
 Hello!
 

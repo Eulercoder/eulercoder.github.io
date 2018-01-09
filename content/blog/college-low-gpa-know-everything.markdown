@@ -1,10 +1,10 @@
 ---
+title: 'College and low GPA: Everything you need to know.'
+date: 2017-08-11 12:25:29 Z
 author: vicky002
 comments: true
-date: 2017-08-11 12:25:29+00:00
 link: http://eulercoder.me/2017/08/college-low-gpa-know-everything/
 slug: college-low-gpa-know-everything
-title: 'College and low GPA: Everything you need to know.'
 wordpress_id: 658
 categories:
 - discussion
@@ -34,12 +34,6 @@ yst_prominent_words:
 - resume format
 - will be discussing
 ---
-
-
-
-
-
-	
 
 Many students ask us questions related to college and low GPA. Students with low GPA or those who are in tier three colleges, hesitate in applying for jobs or internships. In this article, we will be discussing and analyzing everything related to college and GPA, its benefits and importance. Also, we will be discussing, whether having a low GPA affect your chances of getting an internship or a job. So let's get started!
 

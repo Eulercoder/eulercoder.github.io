@@ -1,23 +1,21 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/twitter.jpg
-subclass: 'post'
-date: 2017-08-02 19:18:51+00:00
-link: http://eulercoder.me/2017/08/twitter-internship-undergrad-role-2018/
-slug: twitter-internship-undergrad-role-2018
 title: 'Twitter Internship and Undergrad Role 2018: Everything you need to know'
-wordpress_id: 622
+date: 2017-08-02 19:18:51 Z
 categories:
 - internship
 - software-engineering
 tags:
 - internship
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/twitter.jpg
+subclass: post
+link: http://eulercoder.me/2017/08/twitter-internship-undergrad-role-2018/
+wordpress_id: 622
 ---
 
 We just received an email yesterday about Twitter Internship 2018 Application and their undergrad roles. Twitter internship application for 2018 is now live on their career page and in this post, we will be writing about everything you need to know to spend your summer in San Francisco at Twiter HQ, also Twitter has many offices in the US, Canada, Europe and Australia. Twitter's building was right in front of my building when I was in San Francisco during [my summer internship at Slack](http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/).  Ok, so let's get started about the **Twitter Internship** and Undergrad application process, preparation plan and few other things that will be helpful in cracking the interview. 

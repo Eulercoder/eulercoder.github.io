@@ -1,10 +1,10 @@
 ---
+title: 'Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience'
+date: 2017-07-25 15:14:37 Z
 author: vicky002
 comments: true
-date: 2017-07-25 15:14:37+00:00
 link: http://eulercoder.me/2017/07/slack-amazon-mozilla-linkedin-interview/
 slug: slack-amazon-mozilla-linkedin-interview
-title: 'Slack, Amazon, Mozilla, Browserstack: My Internship Interview Experience'
 wordpress_id: 481
 categories:
 - internship

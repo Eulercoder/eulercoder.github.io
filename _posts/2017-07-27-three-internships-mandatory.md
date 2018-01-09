@@ -1,24 +1,22 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/analyse.jpg
-subclass: 'post'
-date: 2017-07-27 16:27:45+00:00
-link: http://eulercoder.me/2017/07/three-internships-mandatory/
-slug: three-internships-mandatory
 title: 'Three Internships mandatory for Engineering Students: Analysis and Discussion'
-wordpress_id: 573
+date: 2017-07-27 16:27:45 Z
 categories:
 - discussion
 - internship
 tags:
 - discussion
 - internshi
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/analyse.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/three-internships-mandatory/
+wordpress_id: 573
 ---
 
 Education Minister of India announced today that every engineering student has to undergo minimum three internships. I am glad that Education minister is thinking about the unemployment. As per the reports, 80% of engineering graduates in India are "unemployable". This definitely tells that our Education system needs to be revamped and training system of the teacher and students needs to be upgraded. Internships definitely help a lot in becoming a better engineer. It gives you exposure to the real world things, one good internship can be easily compared with four years of Engineering. Regarding today's announcement about three internships, the very first thought that came into my mind was, this is going to be very tough for engineering colleges to provide internships to students. Let's analyze it in this article.

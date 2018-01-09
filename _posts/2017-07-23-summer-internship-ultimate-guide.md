@@ -1,24 +1,22 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/analysis.jpg
-subclass: 'post'
-date: 2017-07-23 11:23:30+00:00
-link: http://eulercoder.me/2017/07/summer-internship-ultimate-guide/
-slug: summer-internship-ultimate-guide
 title: 'Summer Internship: The Ultimate Guide to get one!'
-wordpress_id: 440
+date: 2017-07-23 11:23:30 Z
 categories:
 - internship
 - software-engineering
 tags:
 - internship
 - jobs
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/analysis.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/summer-internship-ultimate-guide/
+wordpress_id: 440
 ---
 
 As a student, each one of us has a dream. Dream of doing a great internship and landing a job in a company that you really love and want to work for! There are jazillion websites, articles, blog posts and videos available on how to land an internship. Chances are, you've already read or known 98 percent of this advice: edit and proofread your resume and cover letters, dress appropriately for an interview, be on time or 15 minutes early to an interview, send thank you notes etc. You won't get any such advice in this blog post. This post will take you from zero to one. Get a notebook and pen, this is going to be a long post. Grab some snacks and start making a note of points that you think would be helpful for you in the future.

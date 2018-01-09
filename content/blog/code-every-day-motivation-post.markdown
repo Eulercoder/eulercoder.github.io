@@ -1,10 +1,10 @@
 ---
+title: 'Code Every Day: Eulercoder Motivation'
+date: 2017-07-23 08:43:54 Z
 author: vicky002
 comments: true
-date: 2017-07-23 08:43:54+00:00
 link: http://eulercoder.me/2017/07/code-every-day-motivation-post/
 slug: code-every-day-motivation-post
-title: 'Code Every Day: Eulercoder Motivation'
 wordpress_id: 286
 categories:
 - code-motivation

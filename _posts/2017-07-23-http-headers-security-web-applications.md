@@ -1,24 +1,22 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-cover:  assets/images/cover/lock.jpg
-class: post-template
-subclass: 'post'
-date: 2017-07-23 07:39:56+00:00
-link: http://eulercoder.me/2017/07/http-headers-security-web-applications/
-slug: http-headers-security-web-applications
 title: HTTP Headers Related to Security
-wordpress_id: 317
+date: 2017-07-23 07:39:56 Z
 categories:
 - learning
 - security
 tags:
 - http
 - security
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+cover: assets/images/cover/lock.jpg
+class: post-template
+subclass: post
+link: http://eulercoder.me/2017/07/http-headers-security-web-applications/
+wordpress_id: 317
 ---
 
 This post is about HTTP headers and how it's useful in security. Among the many standard HTTP headers, some help to improve the security of web applications. This post contains a quick overview of these headers. So let's get started!

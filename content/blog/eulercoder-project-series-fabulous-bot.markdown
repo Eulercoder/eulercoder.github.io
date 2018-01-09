@@ -1,10 +1,10 @@
 ---
+title: Eulercoder Project Series —Fabulous Bot First Project Announcement
+date: 2017-09-17 09:22:21 Z
 author: vicky002
 comments: true
-date: 2017-09-17T09:22:21+00:00
 link: http://eulercoder.me/2017/09/eulercoder-project-series-fabulous-bot/
 slug: eulercoder-project-series-fabulous-bot
-title: Eulercoder Project Series —Fabulous Bot First Project Announcement
 wordpress_id: 945
 categories:
 - weekly-project
@@ -32,15 +32,6 @@ yst_prominent_words:
 - start working
 - weekly project series
 ---
-
-
-
-
-
-
-
-
-
 
 Hello!
 

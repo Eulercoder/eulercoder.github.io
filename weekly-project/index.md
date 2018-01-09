@@ -1,11 +1,11 @@
 ---
+title: Eulercoder Weekly Project
 layout: page
 current: Weekly Project
-title: Eulercoder Weekly Project
 navigation: true
-logo: 'assets/images/fevicon/apple-icon-152x152.png'
+logo: assets/images/fevicon/apple-icon-152x152.png
 class: page-template
-subclass: 'post page'
+subclass: post page
 ---
 
 # Eulercoder is starting weekly project series — Learn, Contribute and Share!

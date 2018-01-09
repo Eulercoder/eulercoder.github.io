@@ -1,10 +1,10 @@
 ---
+title: Slack Internship Experience, San Francisco and Silicon Valley
+date: 2017-07-22 02:17:22 Z
 author: vicky002
 comments: true
-date: 2017-07-22 02:17:22+00:00
 link: http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/
 slug: slack-internship-sf-silicon-valley
-title: Slack Internship Experience, San Francisco and Silicon Valley
 wordpress_id: 115
 categories:
 - internship

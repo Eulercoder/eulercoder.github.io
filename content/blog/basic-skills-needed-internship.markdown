@@ -1,10 +1,10 @@
 ---
+title: Basic skills needed prior to applying for internships
+date: 2017-07-30 10:14:00 Z
 author: vicky002
 comments: true
-date: 2017-07-30 10:14:00+00:00
 link: http://eulercoder.me/2017/07/basic-skills-needed-internship/
 slug: basic-skills-needed-internship
-title: Basic skills needed prior to applying for internships
 wordpress_id: 607
 categories:
 - internship
@@ -31,14 +31,6 @@ yst_prominent_words:
 - structures and algorithms
 - will be available on eulercoder
 ---
-
-
-
-
-
-
-
-
 
 You will be preparing for the interviews but you need to have some basic knowledge of computer science before beginning the preparation phase. In the last previous article, we discussed what is the ideal time to apply for internships and in this article, we are going to discuss what basic skills needed prior to applying for internships and starting the interview preparation.
 

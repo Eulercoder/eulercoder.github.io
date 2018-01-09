@@ -1,12 +1,13 @@
 ---
+title: Let's Build a React Chatroom Component in 100 Lines of Code
+date: 2017-08-28 03:10:37 Z
 author: Kevin
 comments: true
-date: 2017-08-28 03:10:37+00:00
 link: http://eulercoder.me/2017/08/react-chatroom-100-lines/
 slug: react-chatroom-100-lines
-title: Let's Build a React Chatroom Component in 100 Lines of Code
 wordpress_id: 823
-tags: ["react"]
+tags:
+- react
 ---
 
 # Let’s Build a React Chatroom Component

@@ -1,23 +1,21 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/developer.jpg
-subclass: 'post'
-date: 2017-07-23 08:43:54+00:00
-link: http://eulercoder.me/2017/07/code-every-day-motivation-post/
-slug: code-every-day-motivation-post
 title: 'Code Every Day: Eulercoder Motivation'
-wordpress_id: 286
+date: 2017-07-23 08:43:54 Z
 categories:
 - code-motivation
 tags:
 - code
 - motivational
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/developer.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/code-every-day-motivation-post/
+wordpress_id: 286
 ---
 
 I read a blog post and now I'm inspired by [John Resig](http://ejohn.org/blog/write-code-every-day/) (Who was in turn, inspired by [Jennifer Dewalt](http://jenniferdewalt.com/)), I am going to write code every day, starting today. I hope to write about my coding progress regularly on this blog.

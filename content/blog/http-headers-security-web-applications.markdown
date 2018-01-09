@@ -1,10 +1,10 @@
 ---
+title: HTTP Headers Related to Security
+date: 2017-07-23 07:39:56 Z
 author: vicky002
 comments: true
-date: 2017-07-23 07:39:56+00:00
 link: http://eulercoder.me/2017/07/http-headers-security-web-applications/
 slug: http-headers-security-web-applications
-title: HTTP Headers Related to Security
 wordpress_id: 317
 categories:
 - learning

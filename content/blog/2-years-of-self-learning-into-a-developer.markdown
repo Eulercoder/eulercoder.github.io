@@ -1,10 +1,10 @@
 ---
+title: '2 Years of Self-Learning Into a Developer: Eulercoder Motivation'
+date: 2017-08-06 13:50:37 Z
 author: Kevin
 comments: true
-date: 2017-08-06 13:50:37+00:00
 link: http://eulercoder.me/2017/08/2-years-of-self-learning-into-a-developer/
 slug: 2-years-of-self-learning-into-a-developer
-title: '2 Years of Self-Learning Into a Developer: Eulercoder Motivation'
 wordpress_id: 640
 categories:
 - code-motivation

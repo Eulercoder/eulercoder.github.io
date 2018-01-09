@@ -1,10 +1,10 @@
 ---
+title: 'Twitter Internship and Undergrad Role 2018: Everything you need to know'
+date: 2017-08-02 19:18:51 Z
 author: vicky002
 comments: true
-date: 2017-08-02 19:18:51+00:00
 link: http://eulercoder.me/2017/08/twitter-internship-undergrad-role-2018/
 slug: twitter-internship-undergrad-role-2018
-title: 'Twitter Internship and Undergrad Role 2018: Everything you need to know'
 wordpress_id: 622
 categories:
 - internship

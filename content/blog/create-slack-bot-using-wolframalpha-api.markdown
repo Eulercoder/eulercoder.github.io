@@ -1,10 +1,10 @@
 ---
+title: 'Slack Bot using Wolframalpha API : Basic Guide'
+date: 2017-07-23 06:19:54 Z
 author: vicky002
 comments: true
-date: 2017-07-23 06:19:54+00:00
 link: http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/
 slug: create-slack-bot-using-wolframalpha-api
-title: 'Slack Bot using Wolframalpha API : Basic Guide'
 wordpress_id: 272
 categories:
 - learning

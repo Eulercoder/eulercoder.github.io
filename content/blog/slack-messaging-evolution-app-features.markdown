@@ -1,10 +1,10 @@
 ---
+title: Slack the evolution of messaging
+date: 2017-07-23 07:39:55 Z
 author: vicky002
 comments: true
-date: 2017-07-23 07:39:55+00:00
 link: http://eulercoder.me/2017/07/slack-messaging-evolution-app-features/
 slug: slack-messaging-evolution-app-features
-title: Slack the evolution of messaging
 wordpress_id: 311
 categories:
 - discussion

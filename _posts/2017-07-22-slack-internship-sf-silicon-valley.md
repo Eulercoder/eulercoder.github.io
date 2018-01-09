@@ -1,20 +1,18 @@
 ---
+title: Slack Internship Experience, San Francisco and Silicon Valley
+date: 2017-07-22 02:17:22 Z
+categories:
+- internship
 author: vicky002
 comments: true
 layout: post
 current: post
-comments: true
-navigation: True
+navigation: true
 class: post-template
-cover:  assets/images/cover/san-francisco.jpg
-subclass: 'post'
-date: 2017-07-22 02:17:22+00:00
+cover: assets/images/cover/san-francisco.jpg
+subclass: post
 link: http://eulercoder.me/2017/07/slack-internship-sf-silicon-valley/
-slug: slack-internship-sf-silicon-valley
-title: Slack Internship Experience, San Francisco and Silicon Valley
 wordpress_id: 115
-categories:
-- internship
 ---
 
 It's been a long time. I'm writing a blog post after almost 3 months, apologies for being away from you all for so long. I was extremely busy during my whole internship, weekdays at work and weekends mostly spent in exploring places, meeting new people and attending events. This post is all about my Slack internship experience and how it feels like to be in San Francisco and Silicon Valley.

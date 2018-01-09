@@ -1,20 +1,18 @@
 ---
+title: Slack the evolution of messaging
+date: 2017-07-23 07:39:55 Z
+categories:
+- discussion
 author: vicky002
 comments: true
 layout: post
 current: post
-comments: true
-navigation: True
-cover:  assets/images/cover/slack.jpg
+navigation: true
+cover: assets/images/cover/slack.jpg
 class: post-template
-subclass: 'post'
-date: 2017-07-23 07:39:55+00:00
+subclass: post
 link: http://eulercoder.me/2017/07/slack-messaging-evolution-app-features/
-slug: slack-messaging-evolution-app-features
-title: Slack the evolution of messaging
 wordpress_id: 311
-categories:
-- discussion
 ---
 
 In the past years, many messaging applications invaded the market, gaining lots of fans and offering many free features that almost destroyed the traditional SMS messaging. Messaging evolution has happened exponentially in the last two years.

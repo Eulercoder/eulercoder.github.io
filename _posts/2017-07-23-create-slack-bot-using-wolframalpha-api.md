@@ -1,24 +1,22 @@
 ---
-author: vicky002
-comments: true
-layout: post
-current: post
-comments: true
-navigation: True
-class: post-template
-cover:  assets/images/cover/slack-bot.jpg
-subclass: 'post'
-date: 2017-07-23 06:19:54+00:00
-link: http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/
-slug: create-slack-bot-using-wolframalpha-api
 title: 'Slack Bot using Wolframalpha API : Basic Guide'
-wordpress_id: 272
+date: 2017-07-23 06:19:54 Z
 categories:
 - learning
 - tutorials
 tags:
 - create-something
 - open source
+author: vicky002
+comments: true
+layout: post
+current: post
+navigation: true
+class: post-template
+cover: assets/images/cover/slack-bot.jpg
+subclass: post
+link: http://eulercoder.me/2017/07/create-slack-bot-using-wolframalpha-api/
+wordpress_id: 272
 ---
 
 I read a thread on Reddit about WolframAlpha API and I decided to try my hands on it. I created two slack Bot using WolframAlpha and both work very nicely see some of the best tweets from [L](https://twitter.com/The_L__). There is an issue with WolframAlpha API it allows only 2000 API calls in a month, you need to take their paid plans if you make heavy usages.

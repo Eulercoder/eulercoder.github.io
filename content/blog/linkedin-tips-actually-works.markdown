@@ -1,10 +1,10 @@
 ---
+title: 'LinkedIn tips that actually work: Set up your News Feed on LinkedIn'
+date: 2017-08-30 15:10:34 Z
 author: Nicholas
 comments: true
-date: 2017-08-30 15:10:34+00:00
 link: http://eulercoder.me/2017/08/linkedin-tips-actually-works/
 slug: linkedin-tips-actually-works
-title: 'LinkedIn tips that actually work: Set up your News Feed on LinkedIn'
 wordpress_id: 845
 categories:
 - learning

@@ -1,17 +1,18 @@
 ---
+title: '2 Years of Self-Learning Into a Developer: Eulercoder Motivation'
+date: 2017-08-06 13:50:37 Z
+tags:
+- learning
+- motivation
 author: Kevin
 layout: post
 current: post
 comments: true
-navigation: True
+navigation: true
 class: post-template
-
-subclass: 'post'
+subclass: post
 cover: assets/images/cover/developer2.jpg
 post_class: post
-date: 2017-08-06 13:50:37+00:00
-title: '2 Years of Self-Learning Into a Developer: Eulercoder Motivation'
-tags: learning motivation
 ---
 
 # 

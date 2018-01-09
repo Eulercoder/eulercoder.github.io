@@ -1,10 +1,10 @@
 ---
+title: 'Three Internships mandatory for Engineering Students: Analysis and Discussion'
+date: 2017-07-27 16:27:45 Z
 author: vicky002
 comments: true
-date: 2017-07-27 16:27:45+00:00
 link: http://eulercoder.me/2017/07/three-internships-mandatory/
 slug: three-internships-mandatory
-title: 'Three Internships mandatory for Engineering Students: Analysis and Discussion'
 wordpress_id: 573
 categories:
 - discussion

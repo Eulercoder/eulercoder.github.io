@@ -1,21 +1,19 @@
 ---
+title: 'Competitive Programming and Open Source: Which one to choose'
+date: 2017-07-23 07:39:55 Z
+categories:
+- discussion
+- open-source
 author: vicky002
 comments: true
 layout: post
 current: post
-comments: true
-navigation: True
+navigation: true
 class: post-template
-cover:  assets/images/cover/question.jpg
-subclass: 'post'
-date: 2017-07-23 07:39:55+00:00
+cover: assets/images/cover/question.jpg
+subclass: post
 link: http://eulercoder.me/2017/07/competitive-programming-open-source/
-slug: competitive-programming-open-source
-title: 'Competitive Programming and Open Source: Which one to choose'
 wordpress_id: 313
-categories:
-- discussion
-- open-source
 ---
 
 Nowadays I'm getting a lot of messages on Quora and Facebook about competitive programming. People ask me "I'm yellow on Codeforces, I applied to many companies but no luck. I never got shortlisted for any company what should I do?". Today I'm going to write my own 'personal thoughts' about competitive programming and development.
