@@ -22,6 +22,9 @@ tags:
 
 ### ChatWeb?
 
+<meta http-equiv="refresh" content="0; url=https://www.eulercoder.com/2017/09/02/chatweb%e2%80%8a-%e2%80%8abuild-websites-that-understand-users-with-full-free-microsoft-stack/">
+<link rel="canonical" href="https://www.eulercoder.com/2017/09/02/chatweb%e2%80%8a-%e2%80%8abuild-websites-that-understand-users-with-full-free-microsoft-stack/" />
+
 
 Chatbot has been a hot topic around for sure. I still remember how 4 teams out of the 12 teams in [E.C. Jamming](http://ecjamming.tech), a Hackathon I organized with Microsoft a couple of months ago in Hong Kong, were working on chatbot projects.
 
